@@ -3058,6 +3058,8 @@
 { m: "Sostenibilidad", t: "Test por Unidades", u: "Los 17 ODS y sus Metas", p: "Aumentar el apoyo a la creación de capacidad estadística en los países en desarrollo (para tener datos fiables sobre los propios ODS) pertenece al...", r: ["ODS 4", "ODS 9", "ODS 16", "ODS 17"], c: "ODS 17", e: "La mejora en la recolección de datos y apoyo técnico institucional se enmarca en las metas sistémicas del ODS 17." },
 
 
+
+
 {
 m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 1: Causas de Pérdida y Tipos de Fallos",
 p: "¿Cuál de los siguientes fallos se clasifica específicamente como un 'Fallo de Sentencia'?",
@@ -3647,7 +3649,7 @@ c: "Porque requiere que el servicio mysqld esté detenido.",
 e: "Al ejecutar 'systemctl stop mysql', los clientes pierden la conexión[cite: 44, 45]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 3: Estrategias",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 3: Estrategias y Clasificación",
 p: "¿Cuál es el objetivo principal de combinar backups completos e incrementales?",
 r: ["Gastar más dinero en discos.", "Optimizar el tiempo de copia y el espacio de almacenamiento.", "Que el administrador trabaje más.", "Evitar usar SQL."],
 c: "Optimizar el tiempo de copia y el espacio de almacenamiento.",
@@ -4109,210 +4111,210 @@ c: "Que minimizan la pérdida de datos (RPO) permitiendo recuperar hasta el últ
 e: "El uso de incrementales es la única forma de garantizar una pérdida de datos mínima en caso de desastre[cite: 97]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Repaso General)",
 p: "Si ocurre un error por un INSERT con una clave duplicada, ¿de qué tipo de fallo estamos hablando?",
 r: ["Fallo de Medios.", "Fallo de Sentencia.", "Fallo de Proceso.", "Fallo de Sistema."],
 c: "Fallo de Sentencia.",
 e: "Los errores por claves duplicadas o de tipos de datos son fallos lógicos en la ejecución de la sentencia [cite: 10-11]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál de los siguientes fallos requiere obligatoriamente restaurar un backup externo?",
 r: ["Fallo de Sentencia.", "Fallo de Proceso.", "Fallo de Medios.", "Fallo de Sistema."],
 c: "Fallo de Medios.",
 e: "El fallo de medios, al ser un daño físico catastrófico, es el único que no tiene recuperación automática y requiere restaurar un backup [cite: 19-21]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué describe la técnica WAL (Write-Ahead Logging)?",
 r: ["Escribir directamente en el disco duro.", "Anotar la acción en la bitácora (Log) antes de escribir el dato en el disco.", "Borrar los logs diariamente.", "Hacer copias de seguridad en caliente."],
 c: "Anotar la acción en la bitácora (Log) antes de escribir el dato en el disco.",
 e: "La técnica WAL asegura que siempre haya un registro de las operaciones por si el sistema cae [cite: 24-26]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Si una transacción estaba incompleta en el momento de un fallo, ¿qué estrategia de recuperación se aplica?",
 r: ["REDO (Rehacer).", "UNDO (Deshacer).", "Point-in-Time.", "Full Backup."],
 c: "UNDO (Deshacer).",
 e: "Al estar incompleta, la acción es borrar sus cambios para dejar la base de datos limpia [cite: 28-30]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál es la función del 'Undo Log' en contraposición al 'Redo Log'?",
 r: ["El Undo Log recupera caídas automáticas y el Redo Log controla la concurrencia.", "El Undo Log permite cancelar transacciones y control de concurrencia, mientras que el Redo Log es para recuperar caídas.", "El Undo Log es para copias físicas y el Redo Log para copias lógicas.", "No existe diferencia entre ellos."],
 c: "El Undo Log permite cancelar transacciones y control de concurrencia, mientras que el Redo Log es para recuperar caídas.",
 e: "Ambos logs tienen funciones específicas para mantener las propiedades ACID en MySQL [cite: 36-39]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué caracteriza a una Copia Fría (Cold Backup)?",
 r: ["Se realiza con el servidor encendido.", "No garantiza consistencia.", "Se realiza con el servidor apagado y ofrece consistencia perfecta.", "Requiere el uso de mysqldump."],
 c: "Se realiza con el servidor apagado y ofrece consistencia perfecta.",
 e: "Al interrumpir el servicio (systemctl stop mysql), asegura que no haya transacciones modificando datos [cite: 43-45]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Un archivo generado por mysqldump contiene principalmente:",
 r: ["Ficheros binarios (.ibd).", "Un log de errores del sistema.", "Sentencias SQL (CREATE, INSERT).", "La configuración del archivo my.ini."],
 c: "Sentencias SQL (CREATE, INSERT).",
 e: "La copia lógica genera código SQL que es portable y editable [cite: 50-51]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál es la diferencia entre un Backup Incremental y uno Diferencial?",
 r: ["El diferencial copia todo y el incremental solo los esquemas.", "El incremental copia desde el último backup (cualquiera), y el diferencial solo desde el último COMPLETO.", "Son exactamente lo mismo.", "El incremental requiere apagar el servidor."],
 c: "El incremental copia desde el último backup (cualquiera), y el diferencial solo desde el último COMPLETO.",
 e: "El incremental es más ligero día a día, mientras que el diferencial crece basándose siempre en el último full backup [cite: 58-59]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Al ejecutar 'SELECT ... INTO OUTFILE', ¿dónde se crea físicamente el fichero resultante?",
 r: ["En el ordenador del cliente.", "En el SERVIDOR, no en el cliente.", "En la nube de MySQL.", "En la memoria RAM temporal."],
 c: "En el SERVIDOR, no en el cliente.",
 e: "Es importante saber que la ruta especificada corresponde al sistema de archivos de la máquina donde reside MySQL [cite: 83-84]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Por qué se prefiere 'LOAD DATA INFILE' sobre múltiples comandos 'INSERT' para importaciones masivas?",
 r: ["Porque ignora los errores lógicos.", "Porque es 20 veces más rápido.", "Porque no requiere permisos.", "Porque funciona sin base de datos."],
 c: "Porque es 20 veces más rápido.",
 e: "Es la herramienta optimizada en MySQL para leer ficheros de texto e introducirlos en tablas [cite: 88-89]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué significa 'Point-in-Time Recovery'?",
 r: ["Recuperar datos hasta un punto exacto en el tiempo antes de un desastre.", "Hacer copias en un minuto determinado del día.", "Borrar datos antiguos.", "Recuperar solo la hora del servidor."],
 c: "Recuperar datos hasta un punto exacto en el tiempo antes de un desastre.",
 e: "El uso de incrementales es esencial para lograr recuperar datos hasta un minuto antes del fallo[cite: 97]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué línea hay que añadir en my.ini o my.cnf para activar el log binario?",
 r: ["enable-logs=true", "log-bin=mysql-bin", "binary-log=1", "start-log-bin"],
 c: "log-bin=mysql-bin",
 e: "Esta directiva, junto con server-id, activa la escritura de los logs binarios necesarios para incrementales [cite: 109-110]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué comando se utiliza para forzar a MySQL a cerrar el archivo de log actual y crear uno nuevo?",
 r: ["mysqladmin flush-logs", "mysqldump --refresh", "mysql --new-log", "systemctl flush mysql"],
 c: "mysqladmin flush-logs",
 e: "Este comando asegura que el backup del log no esté en uso cuando vayamos a copiarlo [cite: 114-115]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Para qué sirve la herramienta 'mysqlbinlog'?",
 r: ["Para borrar los logs antiguos.", "Para ver las sentencias SQL (el REDO) ejecutadas, creando un archivo de texto legible.", "Para crear un backup completo físico.", "Para monitorizar usuarios."],
 c: "Para ver las sentencias SQL (el REDO) ejecutadas, creando un archivo de texto legible.",
 e: "Traduce el formato binario de los logs a instrucciones SQL estándar[cite: 117]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Al aplicar la técnica REDO tras un desastre, ¿qué acción se está llevando a cabo?",
 r: ["Borrar transacciones no confirmadas.", "Se aplican de nuevo los cambios leyendo el Log de aquellas transacciones confirmadas que no llegaron a disco.", "Hacer un volcado de toda la RAM.", "Apagar el servidor."],
 c: "Se aplican de nuevo los cambios leyendo el Log de aquellas transacciones confirmadas que no llegaron a disco.",
 e: "El REDO (Rehacer) garantiza la propiedad de Durabilidad leyendo el log [cite: 31-33, 120-121]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál es la función principal del 'Binlog' (Binary Log)?",
 r: ["El arranque automático del sistema.", "La recuperación de datos hasta un punto exacto en el tiempo.", "Deshacer transacciones incompletas.", "Almacenar claves de usuario."],
 c: "La recuperación de datos hasta un punto exacto en el tiempo.",
 e: "A diferencia del Redo Log, el Binlog no es para fallos de arranque (Crash Recovery), sino para el Point-in-Time y replicación [cite: 40-41]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué ventaja principal tiene una 'Copia Física' (como XtraBackup)?",
 r: ["Es muy portable entre versiones.", "Genera sentencias SQL muy legibles.", "La restauración es instantánea.", "Es la más lenta de todas."],
 c: "La restauración es instantánea.",
 e: "Al copiar directamente los ficheros binarios (.ibd), no hay que procesar comandos SQL, lo que acelera enormemente la restauración [cite: 53-54]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Antes de importar datos con 'LOAD DATA INFILE', se recomienda usar 'TRUNCATE TABLE'. ¿Por qué?",
 r: ["Para optimizar los índices de MySQL.", "Para vaciar la tabla y evitar errores por claves duplicadas al importar.", "Para cambiar el nombre de la tabla.", "Para que el servidor vaya más rápido."],
 c: "Para vaciar la tabla y evitar errores por claves duplicadas al importar.",
 e: "Limpiar la tabla asegura que los nuevos datos no colisionen con los existentes [cite: 90-91]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué opción se usa con mysqldump para hacer backups en caliente en InnoDB sin bloquear tablas?",
 r: ["--routines", "--databases", "--single-transaction", "--hot-backup"],
 c: "--single-transaction",
 e: "Esta opción asegura una foto consistente de los datos sin afectar el rendimiento de escritura de otros usuarios[cite: 64]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "En el comando de restauración 'mysql -u root -p < completo.sql', el operador '<' indica:",
 r: ["Mayor que.", "Redirección de la salida estándar a un archivo.", "Redirección de la entrada estándar desde el archivo .sql hacia el cliente mysql.", "Ejecución en segundo plano."],
 c: "Redirección de la entrada estándar desde el archivo .sql hacia el cliente mysql.",
 e: "El cliente mysql lee e interpreta las sentencias del fichero proporcionado[cite: 72]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Un corte de luz que apaga bruscamente el servidor se considera un:",
 r: ["Fallo de Medios.", "Fallo de Sistema.", "Fallo de Sentencia.", "Fallo Lógico."],
 c: "Fallo de Sistema.",
 e: "La solución ideal para esto es usar un SAI (UPS) acompañado de recuperación por logs [cite: 16-18]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "En un 'Fallo de Proceso', ¿qué información se pierde inmediatamente?",
 r: ["Los datos físicos del disco.", "Los datos alojados en la memoria RAM (Buffers).", "El log binario.", "Los usuarios del sistema."],
 c: "Los datos alojados en la memoria RAM (Buffers).",
 e: "Al morir el servicio mysqld de forma inesperada, la memoria volátil se pierde, requiriendo un Crash Recovery [cite: 12-14]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuáles son las propiedades ACID fundamentales para la recuperación de fallos mencionadas en el texto?",
 r: ["Asociación y Concurrencia.", "Atomicidad y Durabilidad.", "Análisis y Despliegue.", "Archivado y Documentación."],
 c: "Atomicidad y Durabilidad.",
 e: "La recuperación se basa en garantizar que las transacciones sean atómicas (todo o nada) y duraderas (permanentes) [cite: 22-23]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Por qué un 'Hot Backup' requiere herramientas especiales?",
 r: ["Porque el servidor está apagado y necesita encenderse.", "Para no copiar datos 'a medias' mientras el servidor sigue trabajando y recibiendo peticiones.", "Porque MySQL no soporta copias de seguridad.", "Porque solo se pueden hacer en Linux."],
 c: "Para no copiar datos 'a medias' mientras el servidor sigue trabajando y recibiendo peticiones.",
 e: "Sin herramientas adecuadas, la copia podría contener información inconsistente de transacciones a medio terminar [cite: 46-48]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál es la sintaxis SQL correcta para volcar datos a un fichero?",
 r: ["EXPORT TO '/ruta/fichero.txt' FROM tabla;", "SELECT * INTO OUTFILE '/ruta/fichero.txt' FROM tabla;", "DUMP * INTO '/ruta/fichero.txt' FROM tabla;", "SAVE '/ruta/fichero.txt' AS SELECT * FROM tabla;"],
 c: "SELECT * INTO OUTFILE '/ruta/fichero.txt' FROM tabla;",
 e: "Es el comando nativo de MySQL para realizar exportaciones de consultas a texto plano [cite: 82-83]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál es el requisito previo e indispensable para empezar a hacer backups incrementales?",
 r: ["Tener el servidor apagado.", "Hacer un Backup Completo de base.", "Borrar todas las bases de datos.", "Instalar PhpMyAdmin."],
 c: "Hacer un Backup Completo de base.",
 e: "Sin una 'foto total' inicial, los logs incrementales no tienen una estructura sobre la cual aplicar los cambios[cite: 100]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Qué opción de mysqldump usamos para incluir explícitamente bases de datos específicas en el backup?",
 r: ["--include", "--databases", "--schemas", "--only"],
 c: "--databases",
 e: "Permite listar varias bases de datos para incluirlas en el archivo .sql resultante[cite: 63]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "¿Cuál es una de las desventajas de la Copia Física (XtraBackup)?",
 r: ["Es muy lenta de restaurar.", "Solo sirve para la misma versión de MySQL.", "No copia los datos reales, solo la estructura.", "Genera archivos de texto inmensos."],
 c: "Solo sirve para la misma versión de MySQL.",
 e: "Al copiar la estructura binaria interna, existe una fuerte dependencia de la versión del motor de la base de datos [cite: 53-54]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Al restaurar un sistema tras un desastre utilizando incrementales, lo primero que debemos ejecutar es:",
 r: ["mysqladmin flush-logs", "mysqlbinlog", "Restaurar el backup completo (mysql -u root -p < completo.sql).", "Restaurar los logs binarios."],
 c: "Restaurar el backup completo (mysql -u root -p < completo.sql).",
 e: "La base debe restaurarse primero antes de poder aplicar cualquier cambio secuencial de los logs [cite: 122-124]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
 p: "Para realizar una copia lógica básica a un fichero, el comando es:",
 r: ["mysqldump -u usuario -p base_datos > fichero.sql", "mysql -u usuario -p base_datos > fichero.sql", "mysqldump -u usuario -p base_datos < fichero.sql", "mysqladmin backup > fichero.sql"],
 c: "mysqldump -u usuario -p base_datos > fichero.sql",
@@ -5368,10 +5370,8 @@ p: "En resumen, el objetivo principal del Ejercicio 1 es enseñarte a:",
 r: ["Hacer copias físicas de seguridad.", "Configurar el log binario.", "Realizar una copia lógica de emergencia y aprender el proceso de inyectarla de vuelta tras un desastre fatal en una tabla.", "Cambiar contraseñas de usuarios."],
 c: "Realizar una copia lógica de emergencia y aprender el proceso de inyectarla de vuelta tras un desastre fatal en una tabla.",
 e: "Es la maniobra de supervivencia más básica y vital de cualquier administrador de bases de datos."
-}
-];
+},
 
-const testSeguridadBBDDEjercicio2 = [
 {
 m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para lograr el objetivo del Ejercicio 2, ¿qué cláusula principal de SQL debes utilizar?",
