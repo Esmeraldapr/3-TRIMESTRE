@@ -5650,7 +5650,445 @@ p: "Para verificar rápidamente desde MySQL cuántos registros exactos se han de
 r: ["SELECT AMOUNT FROM customer WHERE active=1;", "SELECT COUNT(*) FROM customer WHERE active=1;", "CALCULATE ROWS FROM customer WHERE active=1;", "SHOW COUNT FROM customer;"],
 c: "SELECT COUNT(*) FROM customer WHERE active=1;",
 e: "Realizar un COUNT con las mismas condiciones te da el número mágico (las filas esperadas). Si el CSV tiene esas líneas, la exportación fue un éxito."
-}
+},
+
+// =========================================================================
+    // CATEGORÍA: SOSTENIBILIDAD
+    // TEST 1 DE 5 (15 PREGUNTAS MEZCLADAS)
+    // =========================================================================
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Conceptos Básicos", u: "Bloque 1",
+        p: "¿Cómo se define el concepto de sostenibilidad según el temario?",
+        r: ["La capacidad de producir recursos ilimitados para el crecimiento industrial.", "La capacidad de satisfacer las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer las suyas.", "El equilibrio exclusivo entre el beneficio económico de la empresa y sus accionistas.", "La protección total de los ecosistemas sin intervención humana."],
+        c: "La capacidad de satisfacer las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer las suyas.",
+        e: "Este concepto busca el equilibrio entre el crecimiento económico, la equidad social y la protección ambiental[cite: 3026, 3027]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "ODS",
+        p: "¿Cuáles son los cinco ejes centrales (las '5 P') en los que se basa la Agenda 2030?",
+        r: ["Pobreza, Planeta, Producción, Paz y Alianzas.", "Población, Planeta, Prosperidad, Paz y Participación.", "Planeta, Personas, Prosperidad, Paz y Alianzas (Partnership).", "Planificación, Personas, Producción, Paz y Alianzas."],
+        c: "Planeta, Personas, Prosperidad, Paz y Alianzas (Partnership).",
+        e: "Estos cinco ejes agrupan los 17 Objetivos de Desarrollo Sostenible aprobados por la ONU[cite: 1753]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores Ambientales", u: "Bloque 1",
+        p: "¿Qué calcula el indicador ambiental conocido como 'huella ecológica'?",
+        r: ["La cantidad de Gases de Efecto Invernadero generados por una actividad.", "La superficie ecológicamente productiva necesaria para producir los recursos consumidos y absorber los desechos.", "El volumen de agua potable utilizado en los procesos de fabricación.", "La capacidad de absorción de residuos de un ecosistema específico."],
+        c: "La superficie ecológicamente productiva necesaria para producir los recursos consumidos y absorber los desechos.",
+        e: "Es un indicador clave para medir el impacto de las actividades humanas en el entorno[cite: 3034]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobierno Abierto", u: "V Plan",
+        p: "¿Cuál es el periodo de vigencia del Quinto Plan de Gobierno Abierto de España?",
+        r: ["2020-2024.", "2024-2028.", "2023-2030.", "2025-2029."],
+        c: "2024-2028.",
+        e: "Aprobado en febrero de 2024, marca la hoja de ruta participativa para los próximos cuatro años[cite: 1592]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "Estructura",
+        p: "¿Cuántas metas y objetivos integran la Agenda 2030 para el Desarrollo Sostenible?",
+        r: ["10 objetivos y 100 metas.", "17 objetivos y 169 metas.", "15 objetivos y 150 metas.", "21 objetivos y 8 metas."],
+        c: "17 objetivos y 169 metas.",
+        e: "La Agenda 2030 amplía el alcance de los anteriores Objetivos del Milenio con mayor número de metas y universalidad[cite: 1751]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Sostenibilidad Empresarial", u: "Documentación",
+        p: "¿Cuál es el objetivo principal de un 'Plan de Sostenibilidad' en una organización?",
+        r: ["Reflejar los resultados de sostenibilidad durante el periodo de un año.", "Guiar las acciones de la organización en materia de sostenibilidad a medio y largo plazo.", "Dar cuenta exclusivamente a la autoridad de los riesgos financieros.", "Valorar los impactos medioambientales de un proyecto de obra concreto."],
+        c: "Guiar las acciones de la organización en materia de sostenibilidad a medio y largo plazo.",
+        e: "A diferencia de la memoria (anual), el plan es estratégico y se proyecta habitualmente a 2-4 años[cite: 3022, 3154, 3166]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecosistemas", u: "Conceptos",
+        p: "¿Qué función cumple un 'sumidero' en el ciclo de la actividad económica?",
+        r: ["Es el lugar de donde se extraen las materias primas primarias.", "Es el lugar donde van a parar los residuos generados que los ecosistemas degradan y transforman en fuentes.", "Es una herramienta financiera para compensar emisiones de carbono.", "Es el departamento encargado de la gestión de aguas residuales."],
+        c: "Es el lugar donde van a parar los residuos generados que los ecosistemas degradan y transforman en fuentes.",
+        e: "Los sumideros son fundamentales para que los residuos vuelvan a estar a disposición de la actividad económica tras su degradación natural[cite: 3030, 3031]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "Acciones",
+        p: "¿En qué consiste la acción de 'desmaterializar' para combatir el cambio climático?",
+        r: ["Eliminar por completo el uso de plásticos en la empresa.", "Reducir la necesidad de materiales en la producción y utilizar materiales reciclados.", "Sustituir combustibles fósiles por energías renovables.", "Digitalizar todos los procesos administrativos de la administración pública."],
+        c: "Reducir la necesidad de materiales en la producción y utilizar materiales reciclados.",
+        e: "Junto con descarbonizar, es una de las dos acciones principales para mitigar el cambio climático[cite: 3072]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "Bloque 5",
+        p: "Frente al modelo de producción lineal, ¿qué pretende la economía circular?",
+        r: ["Acelerar la producción de productos 'low cost' para aumentar el consumo.", "Conservar el valor de los productos el mayor tiempo posible y generar el mínimo de residuos.", "Fomentar el desecho rápido para incentivar la innovación constante.", "Eliminar la fase de distribución para reducir la huella de transporte."],
+        c: "Conservar el valor de los productos el mayor tiempo posible y generar el mínimo de residuos.",
+        e: "La economía circular busca mejorar el bienestar social reduciendo los riesgos ambientales y de escasez[cite: 3129, 3130]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "Ventajas",
+        p: "¿Qué ventaja competitiva aporta a una empresa la atracción y retención de talento mediante aspectos ASG?",
+        r: ["Permite pagar salarios más bajos gracias a la imagen de marca.", "Aumenta la motivación y el compromiso de la plantilla al cumplir con su responsabilidad social.", "Exime a la empresa de cumplir con la normativa laboral básica.", "Reduce el número de empleados necesarios para realizar la misma tarea."],
+        c: "Aumenta la motivación y el compromiso de la plantilla al cumplir con su responsabilidad social.",
+        e: "La responsabilidad social y medioambiental es un factor clave para la retención de trabajadores cualificados en la actualidad[cite: 3117, 3118]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Evaluación de Impacto", u: "Doble Materialidad",
+        p: "En el análisis de la 'Doble Materialidad', ¿a qué se refiere la materialidad de impacto?",
+        r: ["A cómo afectan los factores externos al éxito económico de la empresa.", "A cómo afecta la actividad de la empresa a las personas o al entorno (hacia fuera).", "A la valoración de activos físicos de la organización tras un desastre natural.", "A la probabilidad de recibir sanciones administrativas por contaminación."],
+        c: "A cómo afecta la actividad de la empresa a las personas o al entorno (hacia fuera).",
+        e: "La doble materialidad analiza tanto el impacto externo de la empresa como el impacto financiero interno de los factores ASG[cite: 3156]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Políticas Europeas", u: "Pacto Verde",
+        p: "¿Cuál es el objetivo principal del Pacto Verde Europeo para el año 2050?",
+        r: ["Reducir las emisiones de carbono en un 50%.", "Alcanzar la neutralidad en emisiones de carbono (emisiones netas cero).", "Prohibir totalmente el uso de vehículos de combustión en las ciudades.", "Eliminar la dependencia de materiales procedentes de fuera de la Unión Europea."],
+        c: "Alcanzar la neutralidad en emisiones de carbono (emisiones netas cero).",
+        e: "La neutralidad implica que el carbono emitido sea igual al capturado por la naturaleza o tecnología[cite: 3075, 3076]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobierno Abierto", u: "Herramientas",
+        p: "¿Qué es 'HazLab' según el Documento Marco del V Plan de Gobierno Abierto?",
+        r: ["Un sistema de tramitación electrónica de expedientes de sostenibilidad.", "El laboratorio de innovación para la participación creado en el marco del IV Plan.", "Un portal de datos abiertos sobre el cambio climático.", "Un organismo de control de la transparencia en las subvenciones."],
+        c: "El laboratorio de innovación para la participación creado en el marco del IV Plan.",
+        e: "Es una herramienta fundamental para asegurar la participación y la propuesta de soluciones innovadoras[cite: 1647]."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "Instituciones",
+        p: "¿Qué Ministerio es el responsable en España de la Secretaría de Estado para la Agenda 2030?",
+        r: ["Ministerio de Asuntos Exteriores y Cooperación.", "Ministerio de Derechos Sociales, Consumo y Agenda 2030.", "Ministerio de Transición Ecológica y Reto Demográfico.", "Ministerio de la Presidencia y Justicia."],
+        c: "Ministerio de Derechos Sociales, Consumo y Agenda 2030.",
+        e: "Este ministerio coordina las políticas gubernamentales para el cumplimiento de los ODS en España."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "Principios",
+        p: "¿Cuál de los siguientes es un principio básico del ecodiseño?",
+        r: ["Obsolescencia programada.", "Multifuncionalidad (que el producto sirva para varias tareas).", "Uso exclusivo de materiales sintéticos no biodegradables.", "Complejidad en el desmontaje para evitar manipulaciones."],
+        c: "Multifuncionalidad (que el producto sirva para varias tareas).",
+        e: "El ecodiseño busca minimizar el impacto ambiental integrando factores sostenibles desde la fase de diseño[cite: 3140, 3143]."
+    },
+// =========================================================================
+    // CATEGORÍA: SOSTENIBILIDAD
+    // TEST 3 DE 5 (15 PREGUNTAS - PROPIEDAD EXAMENE PARA COLOR DIFERENCIADO)
+    // =========================================================================
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores", u: "TEST 3",
+        p: "¿Qué mide específicamente el indicador conocido como 'huella hídrica'?",
+        r: ["La profundidad de los pozos de agua de una empresa.", "El volumen total de agua dulce utilizada para producir los bienes y servicios producidos.", "La cantidad de agua contaminada que se vierte al mar.", "El consumo de agua exclusivamente en el hogar del empleado."],
+        c: "El volumen total de agua dulce utilizada para producir los bienes y servicios producidos.",
+        e: "Es un indicador multidimensional que permite conocer el consumo de agua en toda la cadena de valor."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Grupos de Interés", u: "TEST 3",
+        p: "¿Cuál de estos se considera un 'stakeholder' o grupo de interés INTERNO de una organización?",
+        r: ["Los proveedores de materias primas.", "Los accionistas y empleados.", "Los medios de comunicación locales.", "Las administraciones públicas."],
+        c: "Los accionistas y empleados.",
+        e: "Los grupos de interés internos son aquellos que forman parte directa de la estructura de la empresa."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Normativa", u: "TEST 3",
+        p: "¿Es obligatorio para una empresa elaborar una Memoria de Sostenibilidad o un Plan de Sostenibilidad?",
+        r: ["Sí, para todas las empresas de más de 10 trabajadores.", "No, con carácter general no son obligatorios, salvo regulaciones específicas de información no financiera.", "Solo si la empresa recibe subvenciones europeas.", "Solo para las empresas que fabrican plásticos."],
+        c: "No, con carácter general no son obligatorios, salvo regulaciones específicas de información no financiera.",
+        e: "A diferencia del impacto ambiental para grandes obras, la memoria y el plan suelen ser voluntarios o sujetos a umbrales de capital/empleo."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 3",
+        p: "Dentro del análisis de Doble Materialidad, ¿qué aspecto se considera material desde la perspectiva financiera?",
+        r: ["Aquel que afecta a las personas o al entorno (hacia fuera).", "Aquel que afecta al éxito económico y al valor de la empresa (hacia dentro).", "Solo los gastos en publicidad institucional.", "La cantidad de residuos que se envían al vertedero."],
+        c: "Aquel que afecta al éxito económico y al valor de la empresa (hacia dentro).",
+        e: "La materialidad financiera analiza cómo los riesgos y oportunidades de sostenibilidad influyen en las cuentas de la empresa."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 3",
+        p: "¿Cuál es la característica principal de las etiquetas ecológicas Tipo I (ISO 14024)?",
+        r: ["Son autodeclaraciones de la propia empresa sin control.", "Son sistemas voluntarios de calificación ambiental que requieren certificación de un tercero independiente.", "Son obligatorias para todos los electrodomésticos.", "Solo informan sobre el consumo de energía."],
+        c: "Son sistemas voluntarios de calificación ambiental que requieren certificación de un tercero independiente.",
+        e: "Al ser verificadas por terceros, ofrecen la mayor fiabilidad al consumidor."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 3",
+        p: "El ODS 12 se refiere a:",
+        r: ["Poner fin a la pobreza en todas sus formas.", "Garantizar modalidades de consumo y producción sostenibles.", "Conservar y utilizar sosteniblemente los océanos.", "Promover sociedades justas, pacíficas e inclusivas."],
+        c: "Garantizar modalidades de consumo y producción sostenibles.",
+        e: "Este objetivo busca reducir la huella ecológica mediante cambios en los métodos de producción y consumo."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecosistemas", u: "TEST 3",
+        p: "¿Cómo se denomina al lugar donde la naturaleza absorbe los residuos para transformarlos de nuevo en recursos?",
+        r: ["Vertedero controlado.", "Sumidero.", "Fuente primaria.", "Depuradora natural."],
+        c: "Sumidero.",
+        e: "Los sumideros son esenciales para el equilibrio económico, permitiendo que los residuos vuelvan a estar a disposición del ciclo productivo."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 3",
+        p: "¿Qué colectivo tiene prioridad en el criterio de Inclusión Social del V Plan para combatir la brecha digital?",
+        r: ["Estudiantes universitarios de informática.", "Población mayor de 65 años.", "Personal de las fuerzas armadas.", "Empresas con menos de 3 empleados."],
+        c: "Población mayor de 65 años.",
+        e: "El plan pone especial foco en asegurar que los mayores no queden excluidos de la administración digital."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Inversión Responsable", u: "TEST 3",
+        p: "¿Qué criterio es fundamental en la Inversión Socialmente Responsable (ISR)?",
+        r: ["Ignorar los riesgos ambientales para maximizar dividendos.", "Valorar el impacto ASG (Ambiental, Social y Gobernanza) junto a la rentabilidad y el riesgo.", "Invertir exclusivamente en empresas estatales.", "Eliminar la inversión en el sector servicios."],
+        c: "Valorar el impacto ASG (Ambiental, Social y Gobernanza) junto a la rentabilidad y el riesgo.",
+        e: "La ISR busca un equilibrio entre el beneficio económico y el impacto ético de los fondos invertidos."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 3",
+        p: "¿Qué se pretende lograr con el principio de ecodiseño 'facilidad de desmontaje'?",
+        r: ["Que el producto se rompa antes para comprar otro.", "Facilitar la reparación del producto y el reciclaje de sus componentes al final de su vida útil.", "Ahorrar costes en la fase de embalaje.", "Evitar que los consumidores manipulen el interior del producto."],
+        c: "Facilitar la reparación del producto y el reciclaje de sus componentes al final de su vida útil.",
+        e: "El desmontaje sencillo permite separar piezas para su reutilización o correcto tratamiento de residuos."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "TEST 3",
+        p: "En el contexto de la acción climática, ¿qué significa 'desmaterializar'?",
+        r: ["Sustituir trabajadores por inteligencia artificial.", "Reducir la cantidad de materiales necesarios para producir un bien o utilizar materiales reciclados.", "Enviar los residuos a plantas de incineración.", "Utilizar solo energía procedente de la biomasa."],
+        c: "Reducir la cantidad de materiales necesarios para producir un bien o utilizar materiales reciclados.",
+        e: "Es una de las claves de la economía circular para reducir la presión sobre los recursos naturales."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 3",
+        p: "¿En qué año se constituyó el Foro de Gobierno Abierto como órgano paritario de colaboración?",
+        r: ["En 2012.", "En 2018.", "En 2024.", "En 2015."],
+        c: "En 2018.",
+        e: "Su creación fue un hito para coordinar la participación entre la Administración y la sociedad civil."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 3",
+        p: "El eje central de la Agenda 2030 referente a 'Partnership' se traduce al español como:",
+        r: ["Participación.", "Alianzas.", "Patrimonio.", "Producción."],
+        c: "Alianzas.",
+        e: "Representa el ODS 17: la necesidad de colaborar entre países, sector público y privado."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 3",
+        p: "¿A qué pilar de las siglas ASG corresponde la preocupación por la diversidad y la seguridad laboral?",
+        r: ["Ambiental (A).", "Social (S).", "Gobernanza (G).", "Administración (A)."],
+        c: "Social (S).",
+        e: "El pilar Social abarca los derechos humanos, la salud laboral y las relaciones con la comunidad."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 3",
+        p: "¿Cuál es el objetivo principal del Estudio de Impacto Ambiental (EIA)?",
+        r: ["Calcular el beneficio neto de la empresa.", "Proporcionar información para prevenir, minimizar o compensar impactos negativos de un proyecto.", "Garantizar que el proyecto sea el más barato posible.", "Informar a los accionistas sobre los dividendos futuros."],
+        c: "Proporcionar información para prevenir, minimizar o compensar impactos negativos de un proyecto.",
+        e: "Es una herramienta preventiva que debe realizarse antes de la ejecución de grandes obras o proyectos."
+    },
+// =========================================================================
+    // CATEGORÍA: SOSTENIBILIDAD
+    // TEST 4 DE 5 (15 PREGUNTAS - ETIQUETA EXAMENE)
+    // =========================================================================
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 4",
+        p: "¿Cuál es el objetivo del ODS 11?",
+        r: ["Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles.", "Garantizar la vida submarina.", "Poner fin al hambre en el mundo.", "Asegurar el pleno empleo para los jóvenes."],
+        c: "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles.",
+        e: "Este objetivo aborda problemas como el transporte público, la vivienda y la reducción del impacto ambiental de las ciudades."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Información No Financiera", u: "TEST 4",
+        p: "¿Cuál es el 'truco' o regla nemotécnica para recordar el objetivo del Estado no financiero?",
+        r: ["1 año = Estado.", "Autoridad = Financiero.", "Medio plazo = Memoria.", "Social = Rendición."],
+        c: "Autoridad = Financiero.",
+        e: "El Estado de Información No Financiera es el documento que sirve específicamente para dar cuenta ante la autoridad administrativa."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "TEST 4",
+        p: "En la economía circular, ¿qué se busca hacer con los residuos que no se pueden evitar?",
+        r: ["Enterrarlos en vertederos alejados de las ciudades.", "Convertirlos en nuevas materias primas para que vuelvan al ciclo económico.", "Incinerarlos para producir energía exclusivamente.", "Exportarlos a países en desarrollo."],
+        c: "Convertirlos en nuevas materias primas para que vuelvan al ciclo económico.",
+        e: "El residuo se considera un recurso mal aprovechado que debe ser reintegrado en la cadena de valor."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 4",
+        p: "¿A qué norma ISO corresponden las etiquetas ambientales Tipo II (Autodeclaraciones)?",
+        r: ["ISO 14024.", "ISO 14021.", "ISO 14025.", "ISO 9001."],
+        c: "ISO 14021.",
+        e: "La norma ISO 14021 regula las declaraciones informativas de la propia empresa sin certificación de terceros."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobernanza", u: "TEST 4",
+        p: "¿Qué aspecto ASG incluye el control de la corrupción y el soborno?",
+        r: ["Ambiental.", "Social.", "Gobernanza.", "Ética Laboral."],
+        c: "Gobernanza.",
+        e: "La gobernanza (G) mide la calidad de la gestión interna, la ética empresarial y el cumplimiento normativo."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 4",
+        p: "El Compromiso 6 del V Plan de Gobierno Abierto se titula:",
+        r: ["Gobernanza Digital.", "Transparencia Activa.", "Educación en Valores.", "Alianzas Internacionales."],
+        c: "Gobernanza Digital.",
+        e: "Se centra en la Estrategia de Datos y Algoritmos Abiertos para una Administración más moderna y ética."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Huella Ecológica", u: "TEST 4",
+        p: "Si la huella ecológica de una población es mayor que la capacidad de su territorio, se dice que hay:",
+        r: ["Superávit ecológico.", "Déficit ecológico.", "Equilibrio estacionario.", "Sostenibilidad absoluta."],
+        c: "Déficit ecológico.",
+        e: "Significa que la población está consumiendo recursos más rápido de lo que el territorio puede regenerarlos."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Principios", u: "TEST 4",
+        p: "El principio de 'quien contamina paga' es un pilar de:",
+        r: ["La caridad empresarial.", "La política medioambiental de la UE.", "El ecodiseño multifuncional.", "La economía lineal."],
+        c: "La política medioambiental de la UE.",
+        e: "Busca que los costes de prevención y reparación del daño ambiental sean asumidos por el responsable."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 4",
+        p: "¿Qué ODS tiene como meta el 'Trabajo decente y crecimiento económico'?",
+        r: ["ODS 1.", "ODS 8.", "ODS 10.", "ODS 12."],
+        c: "ODS 8.",
+        e: "Promueve el crecimiento económico sostenido, el empleo pleno y productivo para todos."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 4",
+        p: "Un aspecto es material en sostenibilidad cuando cumple:",
+        r: ["Solo la materialidad financiera.", "Solo la materialidad de impacto.", "Una o ambas (financiera o de impacto).", "Únicamente si lo decide el Ministerio."],
+        c: "Una o ambas (financiera o de impacto).",
+        e: "Es el criterio para decidir qué información es relevante publicar en las memorias de sostenibilidad."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 4",
+        p: "El principio de 'uso de materiales con bajo impacto' en ecodiseño recomienda:",
+        r: ["Usar materiales reciclados, renovables y no tóxicos.", "Usar solo metales preciosos por su durabilidad.", "Priorizar el plástico virgen por su coste.", "Eliminar el uso de cualquier metal."],
+        c: "Usar materiales reciclados, renovables y no tóxicos.",
+        e: "Busca reducir la toxicidad y el consumo de recursos no renovables desde el inicio."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 4",
+        p: "¿Qué ventaja tiene para una empresa tener un buen desempeño social (S)?",
+        r: ["Pagar menos impuestos directos.", "Mejora de la reputación y las relaciones con la comunidad local.", "Poder contratar a menores de edad.", "Evitar el registro de jornada."],
+        c: "Mejora de la reputación y las relaciones con la comunidad local.",
+        e: "Un impacto social positivo fortalece la 'licencia social' para operar en un territorio."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "TEST 4",
+        p: "¿Qué es el efecto invernadero?",
+        r: ["La limpieza de la atmósfera por la lluvia.", "Un proceso natural donde ciertos gases retienen calor en la atmósfera, manteniendo una temperatura habitable.", "La rotura de la capa de ozono.", "El enfriamiento del planeta debido a la falta de sol."],
+        c: "Un proceso natural donde ciertos gases retienen calor en la atmósfera, manteniendo una temperatura habitable.",
+        e: "El problema actual es el aumento artificial de este proceso por las emisiones humanas (calentamiento global)."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 4",
+        p: "Las Declaraciones Ambientales de Producto (DAP) corresponden al:",
+        r: ["Tipo I.", "Tipo II.", "Tipo III (ISO 14025).", "Tipo IV."],
+        c: "Tipo III (ISO 14025).",
+        e: "Son inventarios de datos ambientales cuantificados basados en el Análisis de Ciclo de Vida (ACV)."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión", u: "TEST 4",
+        p: "¿Quién emite la Declaración de Impacto Ambiental (DIA) tras valorar un proyecto?",
+        r: ["La propia empresa promotora.", "La autoridad medioambiental (ej. Ministerio de Transición Ecológica).", "Un notario público.", "El ayuntamiento más cercano exclusivamente."],
+        c: "La autoridad medioambiental (ej. Ministerio de Transición Ecológica).",
+        e: "La DIA es el documento vinculante que autoriza o no la ejecución del proyecto desde el punto de vista ambiental."
+    },
+// =========================================================================
+    // CATEGORÍA: SOSTENIBILIDAD
+    // TEST 5 DE 5 (15 PREGUNTAS - FINAL SERIE)
+    // =========================================================================
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Documentación", u: "TEST 5",
+        p: "¿Qué documento refleja los resultados de sostenibilidad de una empresa durante UN AÑO?",
+        r: ["Estado no financiero.", "Memoria o Informe de Sostenibilidad.", "Plan de Sostenibilidad.", "ISO 14001."],
+        c: "Memoria o Informe de Sostenibilidad.",
+        e: "Es el documento de reporte anual estándar para comunicar el desempeño a los grupos de interés."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 5",
+        p: "¿Qué principio asegura que se informe sobre las propuestas ciudadanas no aceptadas en el V Plan?",
+        r: ["Rendición de cuentas.", "Innovación tecnológica.", "Publicidad pasiva.", "Jerarquía normativa."],
+        c: "Rendición de cuentas.",
+        e: "La administración debe explicar razonadamente por qué unas propuestas entran en el plan y otras no."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Principios", u: "TEST 5",
+        p: "¿En qué pilar de la sostenibilidad se encuadra la 'Igualdad de Oportunidades'?",
+        r: ["Económico.", "Social.", "Ambiental.", "Institucional."],
+        c: "Social.",
+        e: "El pilar social busca la equidad, la justicia y la igualdad de derechos entre las personas."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 5",
+        p: "¿Cuál es el ODS dedicado a la 'Vida de ecosistemas terrestres'?",
+        r: ["ODS 6.", "ODS 13.", "ODS 15.", "ODS 2."],
+        c: "ODS 15.",
+        e: "Busca gestionar sosteniblemente los bosques, luchar contra la desertificación y frenar la pérdida de biodiversidad."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "TEST 5",
+        p: "El modelo de economía opuesto a la circular se denomina:",
+        r: ["Economía de escala.", "Economía lineal (extraer, fabricar, usar, tirar).", "Economía colaborativa.", "Economía sumergida."],
+        c: "Economía lineal (extraer, fabricar, usar, tirar).",
+        e: "La economía lineal es insostenible porque asume que los recursos son infinitos y los sumideros ilimitados."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Conceptos", u: "TEST 5",
+        p: "¿Qué es un 'ecosistema' según el temario?",
+        r: ["Un grupo de empresas del mismo sector.", "Un sistema biológico formado por una comunidad de seres vivos y su medio físico.", "La base de datos de especies protegidas.", "Un programa informático de gestión ambiental."],
+        c: "Un sistema biológico formado por una comunidad de seres vivos y su medio físico.",
+        e: "Sus componentes mantienen relaciones de interdependencia que aseguran el equilibrio de la vida."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores", u: "TEST 5",
+        p: "¿Para qué sirve el Análisis de Ciclo de Vida (ACV)?",
+        r: ["Para calcular la edad de los empleados.", "Para evaluar el impacto ambiental de un producto desde la extracción de materia prima hasta su desecho.", "Para medir el tiempo de respuesta de los servidores informáticos.", "Para predecir el cierre de una empresa por falta de ventas."],
+        c: "Para evaluar el impacto ambiental de un producto desde la extracción de materia prima hasta su desecho.",
+        e: "Es una visión 'de la cuna a la tumba' fundamental para el ecodiseño."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 5",
+        p: "La 'atracción de inversores' es una ventaja de los criterios ASG porque:",
+        r: ["Los inversores buscan empresas con menos riesgos éticos y ambientales.", "Permite ocultar las pérdidas financieras.", "Obliga al estado a comprar acciones de la empresa.", "Reduce el interés de los préstamos bancarios automáticamente."],
+        c: "Los inversores buscan empresas con menos riesgos éticos y ambientales.",
+        e: "El capital financiero prefiere activos que demuestren resiliencia y compromiso a largo plazo."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 5",
+        p: "El eje transversal 'Transición Ecológica' del V Plan busca:",
+        r: ["Vender todos los coches oficiales de gasolina.", "Fortalecer la rendición de cuentas sobre los fondos verdes.", "Plantar un árbol por cada funcionario.", "Digitalizar los parques naturales."],
+        c: "Fortalecer la rendición de cuentas sobre los fondos verdes.",
+        e: "Se busca transparencia en el uso del dinero público destinado a la sostenibilidad climática."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Impacto Ambiental", u: "TEST 5",
+        p: "¿Es obligatorio el Plan de Sostenibilidad para todas las empresas?",
+        r: ["Sí, por la Ley de Cambio Climático.", "No, es un documento voluntario de carácter estratégico.", "Solo para empresas con más de 500 empleados.", "Solo para las administraciones públicas."],
+        c: "No, es un documento voluntario de carácter estratégico.",
+        e: "Aunque es altamente recomendable, no existe una obligación legal universal de tener un Plan (a diferencia del EIA para ciertos proyectos)."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 5",
+        p: "La etiqueta ecológica de la Unión Europea (la flor) es de:",
+        r: ["Tipo I.", "Tipo II.", "Tipo III.", "Obligatoria para alimentos."],
+        c: "Tipo I.",
+        e: "Es un sistema de certificación oficial de la UE que requiere la verificación de un organismo independiente."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 5",
+        p: "El ODS 3 se centra en:",
+        r: ["Educación de calidad.", "Salud y Bienestar.", "Energía asequible.", "Paz y Justicia."],
+        c: "Salud y Bienestar.",
+        e: "Busca garantizar una vida sana y promover el bienestar para todos en todas las edades."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Matriz de Priorización", u: "TEST 5",
+        p: "En una matriz de impacto/factibilidad, ¿qué medidas se deben implementar primero?",
+        r: ["Las de bajo impacto y alta dificultad.", "Las de alto impacto y baja dificultad (fáciles de hacer y muy relevantes).", "Las que cuestan menos de 100 euros.", "Las que decide el empleado más nuevo."],
+        c: "Las de alto impacto y baja dificultad (fáciles de hacer y muy relevantes).",
+        e: "Se busca maximizar los resultados con el menor esfuerzo organizativo inicial (ganancias rápidas o 'quick wins')."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Inversión Responsable", u: "TEST 5",
+        p: "El acrónimo ISR significa:",
+        r: ["Impuesto sobre Riqueza Sostenible.", "Inversión Socialmente Responsable.", "Informe de Sostenibilidad Regional.", "Innovación Social y Resiliencia."],
+        c: "Inversión Socialmente Responsable.",
+        e: "Es la práctica de invertir de acuerdo con valores éticos y de sostenibilidad ambiental."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "TEST 5",
+        p: "España fue elegida en 2023 para copresidir el Comité Directivo de:",
+        r: ["Naciones Unidas.", "La Alianza para el Gobierno Abierto (OGP).", "La OTAN.", "El Fondo Monetario Internacional."],
+        c: "La Alianza para el Gobierno Abierto (OGP).",
+        e: "Este nombramiento reconoce el liderazgo de España en la promoción de la transparencia y participación ciudadana."
+    },
+
 ];
 
 
