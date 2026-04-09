@@ -3058,8 +3058,6 @@
 { m: "Sostenibilidad", t: "Test por Unidades", u: "Los 17 ODS y sus Metas", p: "Aumentar el apoyo a la creación de capacidad estadística en los países en desarrollo (para tener datos fiables sobre los propios ODS) pertenece al...", r: ["ODS 4", "ODS 9", "ODS 16", "ODS 17"], c: "ODS 17", e: "La mejora en la recolección de datos y apoyo técnico institucional se enmarca en las metas sistémicas del ODS 17." },
 
 
-
-
 {
 m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 1: Causas de Pérdida y Tipos de Fallos",
 p: "¿Cuál de los siguientes fallos se clasifica específicamente como un 'Fallo de Sentencia'?",
@@ -3649,7 +3647,7 @@ c: "Porque requiere que el servicio mysqld esté detenido.",
 e: "Al ejecutar 'systemctl stop mysql', los clientes pierden la conexión[cite: 44, 45]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 3: Estrategias y Clasificación",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 3: Estrategias",
 p: "¿Cuál es el objetivo principal de combinar backups completos e incrementales?",
 r: ["Gastar más dinero en discos.", "Optimizar el tiempo de copia y el espacio de almacenamiento.", "Que el administrador trabaje más.", "Evitar usar SQL."],
 c: "Optimizar el tiempo de copia y el espacio de almacenamiento.",
@@ -4111,210 +4109,210 @@ c: "Que minimizan la pérdida de datos (RPO) permitiendo recuperar hasta el últ
 e: "El uso de incrementales es la única forma de garantizar una pérdida de datos mínima en caso de desastre[cite: 97]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Si ocurre un error por un INSERT con una clave duplicada, ¿de qué tipo de fallo estamos hablando?",
 r: ["Fallo de Medios.", "Fallo de Sentencia.", "Fallo de Proceso.", "Fallo de Sistema."],
 c: "Fallo de Sentencia.",
 e: "Los errores por claves duplicadas o de tipos de datos son fallos lógicos en la ejecución de la sentencia [cite: 10-11]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál de los siguientes fallos requiere obligatoriamente restaurar un backup externo?",
 r: ["Fallo de Sentencia.", "Fallo de Proceso.", "Fallo de Medios.", "Fallo de Sistema."],
 c: "Fallo de Medios.",
 e: "El fallo de medios, al ser un daño físico catastrófico, es el único que no tiene recuperación automática y requiere restaurar un backup [cite: 19-21]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué describe la técnica WAL (Write-Ahead Logging)?",
 r: ["Escribir directamente en el disco duro.", "Anotar la acción en la bitácora (Log) antes de escribir el dato en el disco.", "Borrar los logs diariamente.", "Hacer copias de seguridad en caliente."],
 c: "Anotar la acción en la bitácora (Log) antes de escribir el dato en el disco.",
 e: "La técnica WAL asegura que siempre haya un registro de las operaciones por si el sistema cae [cite: 24-26]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Si una transacción estaba incompleta en el momento de un fallo, ¿qué estrategia de recuperación se aplica?",
 r: ["REDO (Rehacer).", "UNDO (Deshacer).", "Point-in-Time.", "Full Backup."],
 c: "UNDO (Deshacer).",
 e: "Al estar incompleta, la acción es borrar sus cambios para dejar la base de datos limpia [cite: 28-30]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál es la función del 'Undo Log' en contraposición al 'Redo Log'?",
 r: ["El Undo Log recupera caídas automáticas y el Redo Log controla la concurrencia.", "El Undo Log permite cancelar transacciones y control de concurrencia, mientras que el Redo Log es para recuperar caídas.", "El Undo Log es para copias físicas y el Redo Log para copias lógicas.", "No existe diferencia entre ellos."],
 c: "El Undo Log permite cancelar transacciones y control de concurrencia, mientras que el Redo Log es para recuperar caídas.",
 e: "Ambos logs tienen funciones específicas para mantener las propiedades ACID en MySQL [cite: 36-39]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué caracteriza a una Copia Fría (Cold Backup)?",
 r: ["Se realiza con el servidor encendido.", "No garantiza consistencia.", "Se realiza con el servidor apagado y ofrece consistencia perfecta.", "Requiere el uso de mysqldump."],
 c: "Se realiza con el servidor apagado y ofrece consistencia perfecta.",
 e: "Al interrumpir el servicio (systemctl stop mysql), asegura que no haya transacciones modificando datos [cite: 43-45]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Un archivo generado por mysqldump contiene principalmente:",
 r: ["Ficheros binarios (.ibd).", "Un log de errores del sistema.", "Sentencias SQL (CREATE, INSERT).", "La configuración del archivo my.ini."],
 c: "Sentencias SQL (CREATE, INSERT).",
 e: "La copia lógica genera código SQL que es portable y editable [cite: 50-51]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál es la diferencia entre un Backup Incremental y uno Diferencial?",
 r: ["El diferencial copia todo y el incremental solo los esquemas.", "El incremental copia desde el último backup (cualquiera), y el diferencial solo desde el último COMPLETO.", "Son exactamente lo mismo.", "El incremental requiere apagar el servidor."],
 c: "El incremental copia desde el último backup (cualquiera), y el diferencial solo desde el último COMPLETO.",
 e: "El incremental es más ligero día a día, mientras que el diferencial crece basándose siempre en el último full backup [cite: 58-59]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Al ejecutar 'SELECT ... INTO OUTFILE', ¿dónde se crea físicamente el fichero resultante?",
 r: ["En el ordenador del cliente.", "En el SERVIDOR, no en el cliente.", "En la nube de MySQL.", "En la memoria RAM temporal."],
 c: "En el SERVIDOR, no en el cliente.",
 e: "Es importante saber que la ruta especificada corresponde al sistema de archivos de la máquina donde reside MySQL [cite: 83-84]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Por qué se prefiere 'LOAD DATA INFILE' sobre múltiples comandos 'INSERT' para importaciones masivas?",
 r: ["Porque ignora los errores lógicos.", "Porque es 20 veces más rápido.", "Porque no requiere permisos.", "Porque funciona sin base de datos."],
 c: "Porque es 20 veces más rápido.",
 e: "Es la herramienta optimizada en MySQL para leer ficheros de texto e introducirlos en tablas [cite: 88-89]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué significa 'Point-in-Time Recovery'?",
 r: ["Recuperar datos hasta un punto exacto en el tiempo antes de un desastre.", "Hacer copias en un minuto determinado del día.", "Borrar datos antiguos.", "Recuperar solo la hora del servidor."],
 c: "Recuperar datos hasta un punto exacto en el tiempo antes de un desastre.",
 e: "El uso de incrementales es esencial para lograr recuperar datos hasta un minuto antes del fallo[cite: 97]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué línea hay que añadir en my.ini o my.cnf para activar el log binario?",
 r: ["enable-logs=true", "log-bin=mysql-bin", "binary-log=1", "start-log-bin"],
 c: "log-bin=mysql-bin",
 e: "Esta directiva, junto con server-id, activa la escritura de los logs binarios necesarios para incrementales [cite: 109-110]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué comando se utiliza para forzar a MySQL a cerrar el archivo de log actual y crear uno nuevo?",
 r: ["mysqladmin flush-logs", "mysqldump --refresh", "mysql --new-log", "systemctl flush mysql"],
 c: "mysqladmin flush-logs",
 e: "Este comando asegura que el backup del log no esté en uso cuando vayamos a copiarlo [cite: 114-115]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Para qué sirve la herramienta 'mysqlbinlog'?",
 r: ["Para borrar los logs antiguos.", "Para ver las sentencias SQL (el REDO) ejecutadas, creando un archivo de texto legible.", "Para crear un backup completo físico.", "Para monitorizar usuarios."],
 c: "Para ver las sentencias SQL (el REDO) ejecutadas, creando un archivo de texto legible.",
 e: "Traduce el formato binario de los logs a instrucciones SQL estándar[cite: 117]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Al aplicar la técnica REDO tras un desastre, ¿qué acción se está llevando a cabo?",
 r: ["Borrar transacciones no confirmadas.", "Se aplican de nuevo los cambios leyendo el Log de aquellas transacciones confirmadas que no llegaron a disco.", "Hacer un volcado de toda la RAM.", "Apagar el servidor."],
 c: "Se aplican de nuevo los cambios leyendo el Log de aquellas transacciones confirmadas que no llegaron a disco.",
 e: "El REDO (Rehacer) garantiza la propiedad de Durabilidad leyendo el log [cite: 31-33, 120-121]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál es la función principal del 'Binlog' (Binary Log)?",
 r: ["El arranque automático del sistema.", "La recuperación de datos hasta un punto exacto en el tiempo.", "Deshacer transacciones incompletas.", "Almacenar claves de usuario."],
 c: "La recuperación de datos hasta un punto exacto en el tiempo.",
 e: "A diferencia del Redo Log, el Binlog no es para fallos de arranque (Crash Recovery), sino para el Point-in-Time y replicación [cite: 40-41]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué ventaja principal tiene una 'Copia Física' (como XtraBackup)?",
 r: ["Es muy portable entre versiones.", "Genera sentencias SQL muy legibles.", "La restauración es instantánea.", "Es la más lenta de todas."],
 c: "La restauración es instantánea.",
 e: "Al copiar directamente los ficheros binarios (.ibd), no hay que procesar comandos SQL, lo que acelera enormemente la restauración [cite: 53-54]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Antes de importar datos con 'LOAD DATA INFILE', se recomienda usar 'TRUNCATE TABLE'. ¿Por qué?",
 r: ["Para optimizar los índices de MySQL.", "Para vaciar la tabla y evitar errores por claves duplicadas al importar.", "Para cambiar el nombre de la tabla.", "Para que el servidor vaya más rápido."],
 c: "Para vaciar la tabla y evitar errores por claves duplicadas al importar.",
 e: "Limpiar la tabla asegura que los nuevos datos no colisionen con los existentes [cite: 90-91]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué opción se usa con mysqldump para hacer backups en caliente en InnoDB sin bloquear tablas?",
 r: ["--routines", "--databases", "--single-transaction", "--hot-backup"],
 c: "--single-transaction",
 e: "Esta opción asegura una foto consistente de los datos sin afectar el rendimiento de escritura de otros usuarios[cite: 64]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "En el comando de restauración 'mysql -u root -p < completo.sql', el operador '<' indica:",
 r: ["Mayor que.", "Redirección de la salida estándar a un archivo.", "Redirección de la entrada estándar desde el archivo .sql hacia el cliente mysql.", "Ejecución en segundo plano."],
 c: "Redirección de la entrada estándar desde el archivo .sql hacia el cliente mysql.",
 e: "El cliente mysql lee e interpreta las sentencias del fichero proporcionado[cite: 72]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Un corte de luz que apaga bruscamente el servidor se considera un:",
 r: ["Fallo de Medios.", "Fallo de Sistema.", "Fallo de Sentencia.", "Fallo Lógico."],
 c: "Fallo de Sistema.",
 e: "La solución ideal para esto es usar un SAI (UPS) acompañado de recuperación por logs [cite: 16-18]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "En un 'Fallo de Proceso', ¿qué información se pierde inmediatamente?",
 r: ["Los datos físicos del disco.", "Los datos alojados en la memoria RAM (Buffers).", "El log binario.", "Los usuarios del sistema."],
 c: "Los datos alojados en la memoria RAM (Buffers).",
 e: "Al morir el servicio mysqld de forma inesperada, la memoria volátil se pierde, requiriendo un Crash Recovery [cite: 12-14]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuáles son las propiedades ACID fundamentales para la recuperación de fallos mencionadas en el texto?",
 r: ["Asociación y Concurrencia.", "Atomicidad y Durabilidad.", "Análisis y Despliegue.", "Archivado y Documentación."],
 c: "Atomicidad y Durabilidad.",
 e: "La recuperación se basa en garantizar que las transacciones sean atómicas (todo o nada) y duraderas (permanentes) [cite: 22-23]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Por qué un 'Hot Backup' requiere herramientas especiales?",
 r: ["Porque el servidor está apagado y necesita encenderse.", "Para no copiar datos 'a medias' mientras el servidor sigue trabajando y recibiendo peticiones.", "Porque MySQL no soporta copias de seguridad.", "Porque solo se pueden hacer en Linux."],
 c: "Para no copiar datos 'a medias' mientras el servidor sigue trabajando y recibiendo peticiones.",
 e: "Sin herramientas adecuadas, la copia podría contener información inconsistente de transacciones a medio terminar [cite: 46-48]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál es la sintaxis SQL correcta para volcar datos a un fichero?",
 r: ["EXPORT TO '/ruta/fichero.txt' FROM tabla;", "SELECT * INTO OUTFILE '/ruta/fichero.txt' FROM tabla;", "DUMP * INTO '/ruta/fichero.txt' FROM tabla;", "SAVE '/ruta/fichero.txt' AS SELECT * FROM tabla;"],
 c: "SELECT * INTO OUTFILE '/ruta/fichero.txt' FROM tabla;",
 e: "Es el comando nativo de MySQL para realizar exportaciones de consultas a texto plano [cite: 82-83]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál es el requisito previo e indispensable para empezar a hacer backups incrementales?",
 r: ["Tener el servidor apagado.", "Hacer un Backup Completo de base.", "Borrar todas las bases de datos.", "Instalar PhpMyAdmin."],
 c: "Hacer un Backup Completo de base.",
 e: "Sin una 'foto total' inicial, los logs incrementales no tienen una estructura sobre la cual aplicar los cambios[cite: 100]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Qué opción de mysqldump usamos para incluir explícitamente bases de datos específicas en el backup?",
 r: ["--include", "--databases", "--schemas", "--only"],
 c: "--databases",
 e: "Permite listar varias bases de datos para incluirlas en el archivo .sql resultante[cite: 63]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "¿Cuál es una de las desventajas de la Copia Física (XtraBackup)?",
 r: ["Es muy lenta de restaurar.", "Solo sirve para la misma versión de MySQL.", "No copia los datos reales, solo la estructura.", "Genera archivos de texto inmensos."],
 c: "Solo sirve para la misma versión de MySQL.",
 e: "Al copiar la estructura binaria interna, existe una fuerte dependencia de la versión del motor de la base de datos [cite: 53-54]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Al restaurar un sistema tras un desastre utilizando incrementales, lo primero que debemos ejecutar es:",
 r: ["mysqladmin flush-logs", "mysqlbinlog", "Restaurar el backup completo (mysql -u root -p < completo.sql).", "Restaurar los logs binarios."],
 c: "Restaurar el backup completo (mysql -u root -p < completo.sql).",
 e: "La base debe restaurarse primero antes de poder aplicar cualquier cambio secuencial de los logs [cite: 122-124]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6:   (Repaso General)",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Parte 6: Popurrí (Repaso General)",
 p: "Para realizar una copia lógica básica a un fichero, el comando es:",
 r: ["mysqldump -u usuario -p base_datos > fichero.sql", "mysql -u usuario -p base_datos > fichero.sql", "mysqldump -u usuario -p base_datos < fichero.sql", "mysqladmin backup > fichero.sql"],
 c: "mysqldump -u usuario -p base_datos > fichero.sql",
@@ -5092,560 +5090,563 @@ e: "Es la maniobra de supervivencia más básica y vital de cualquier administra
 },
 
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Para hacer la copia de seguridad completa del Ejercicio 1, ¿qué herramienta de la terminal debes invocar primero?",
 r: ["mysql", "mysqladmin", "mysqldump", "mysqlbackup"],
 c: "mysqldump",
 e: "mysqldump es la utilidad de línea de comandos diseñada específicamente para exportar bases de datos a archivos de texto SQL."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El enunciado pide incluir explícitamente 'rutinas'. ¿Qué parámetro debes añadir a mysqldump?",
 r: ["--events", "--routines", "--procedures", "--functions"],
 c: "--routines",
 e: "El parámetro --routines asegura que tanto los procedimientos almacenados como las funciones se incluyan en el archivo de backup."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Cuál es el comando exacto para generar el archivo de backup según el Ejercicio 1?",
 r: ["mysqldump -u root -p --routines sakila > sakila_backup_completo.sql", "mysqldump -u root -p sakila < sakila_backup_completo.sql", "mysql -u root -p --routines sakila > sakila_backup_completo.sql", "mysqldump -u root -p --all-databases > sakila_backup_completo.sql"],
 c: "mysqldump -u root -p --routines sakila > sakila_backup_completo.sql",
 e: "Exportas la BD sakila, incluyes rutinas y rediriges la salida (>) al archivo especificado."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el comando 'mysqldump -u root -p sakila > archivo.sql', ¿qué indica el operador '>'?",
 r: ["Que la base de datos es mayor que el archivo.", "Redirección de entrada: el archivo se mete en la base de datos.", "Redirección de salida: el resultado del comando se guarda en el archivo.", "Que se sobrescriba la base de datos sin preguntar."],
 c: "Redirección de salida: el resultado del comando se guarda en el archivo.",
 e: "El símbolo > captura lo que mysqldump mostraría por pantalla y lo escribe en el fichero."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué sucederá si ejecutas el mysqldump sin el operador '>' ni el nombre del archivo?",
 r: ["Dará un error crítico de sintaxis.", "El servidor se reiniciará.", "Se borrará la base de datos.", "Todo el código SQL se imprimirá de golpe en la pantalla de tu consola."],
 c: "Todo el código SQL se imprimirá de golpe en la pantalla de tu consola.",
 e: "Por defecto, mysqldump envía su salida a la terminal (STDOUT). Necesitas '>' para capturarlo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El Ejercicio 1 pide entrar al cliente MySQL. ¿Cómo lo haces desde la terminal?",
 r: ["mysql -u root -p", "mysqldump -u root -p", "start mysql", "mysqladmin login"],
 c: "mysql -u root -p",
 e: "Para interactuar con la base de datos mediante sentencias SQL, usas el cliente estándar 'mysql'."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Dentro del cliente MySQL, ¿cuál es el comando destructor exacto que pide el ejercicio?",
 r: ["DELETE TABLE sakila.film;", "DROP TABLE sakila.film;", "TRUNCATE TABLE sakila.film;", "REMOVE sakila.film;"],
 c: "DROP TABLE sakila.film;",
 e: "DROP TABLE elimina por completo la estructura de la tabla y todos sus datos del disco."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué diferencia hay entre usar 'DROP TABLE' y 'DELETE FROM' en este ejercicio?",
 r: ["Ninguna, hacen lo mismo.", "DELETE borra las filas pero la tabla sigue existiendo; DROP borra hasta la existencia de la tabla.", "DROP es reversible con CTRL+Z.", "DELETE es más destructivo que DROP."],
 c: "DELETE borra las filas pero la tabla sigue existiendo; DROP borra hasta la existencia de la tabla.",
 e: "El ejercicio quiere que la tabla desaparezca por completo para simular una pérdida total de esa estructura."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si antes de ejecutar el DROP TABLE no has seleccionado la base de datos con 'USE sakila;', ¿por qué 'DROP TABLE sakila.film;' funciona de todos modos?",
 r: ["Porque MySQL sabe que film solo está en sakila.", "Porque estamos usando la notación 'base_de_datos.tabla' para especificar la ruta exacta.", "Porque somos usuarios root.", "No funciona, dará error."],
 c: "Porque estamos usando la notación 'base_de_datos.tabla' para especificar la ruta exacta.",
 e: "Al prefijar la tabla con el nombre de la BD y un punto, puedes ejecutar el comando desde cualquier lugar."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Tras hacer el DROP, ejecutas 'SELECT * FROM sakila.film;'. ¿Qué error esperado devolverá MySQL?",
 r: ["Access denied for user.", "Table 'sakila.film' doesn't exist.", "Empty set (0 rows).", "Syntax error in SQL statement."],
 c: "Table 'sakila.film' doesn't exist.",
 e: "Como hemos hecho un DROP, la tabla ya no existe en el diccionario de datos."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si el SELECT en lugar de error te devolviera 'Empty set (0 sec)', ¿qué habrías hecho mal en el paso anterior?",
 r: ["No estarías en la base de datos correcta.", "Habrías usado TRUNCATE o DELETE en lugar de DROP.", "El backup se habría restaurado solo.", "Habrías escrito mal el SELECT."],
 c: "Habrías usado TRUNCATE o DELETE en lugar de DROP.",
 e: "Empty set significa que la tabla existe pero no tiene filas. El ejercicio pide comprobar que ha desaparecido (DROP)."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Para proceder a la restauración, el ejercicio dice 'Utiliza la consola del sistema operativo'. ¿Qué debes hacer si sigues dentro de MySQL?",
 r: ["Escribir 'OS RESTORE'.", "Apagar el ordenador.", "Escribir 'exit' o 'quit' para volver a la terminal de Windows/Linux.", "Abrir Workbench obligatoriamente."],
 c: "Escribir 'exit' o 'quit' para volver a la terminal de Windows/Linux.",
 e: "La restauración lógica con redirección (<) se ejecuta desde la terminal del sistema, no desde dentro de la consola SQL."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Cuál es el comando exacto para volcar el archivo de vuelta a la base de datos original?",
 r: ["mysql -u root -p sakila > sakila_backup_completo.sql", "mysqldump -u root -p sakila < sakila_backup_completo.sql", "mysql -u root -p sakila < sakila_backup_completo.sql", "mysqladmin -u root -p restore < sakila_backup_completo.sql"],
 c: "mysql -u root -p sakila < sakila_backup_completo.sql",
 e: "Usas el cliente 'mysql', especificas la base de datos destino ('sakila') e inyectas el fichero con '<'."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el comando de restauración, ¿qué hace el operador '<'?",
 r: ["Exporta la base de datos.", "Comprueba que la base de datos sea menor que el archivo.", "Toma el contenido del archivo de la derecha y se lo pasa como comandos al programa de la izquierda.", "Borra la base de datos antes de importar."],
 c: "Toma el contenido del archivo de la derecha y se lo pasa como comandos al programa de la izquierda.",
 e: "Es el operador de redirección de entrada estándar. El cliente MySQL lee el archivo como si teclearas las instrucciones."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El enunciado dice 'machacando lo que hay'. ¿Por qué la restauración no da error de 'Tabla ya existe' al importar el resto de tablas que NO borramos?",
 r: ["Porque MySQL ignora los errores automáticamente.", "Porque mysqldump incluye por defecto instrucciones 'DROP TABLE IF EXISTS' antes de cada 'CREATE TABLE'.", "Porque usamos el comando FORCE.", "Porque sakila no tiene más tablas."],
 c: "Porque mysqldump incluye por defecto instrucciones 'DROP TABLE IF EXISTS' antes de cada 'CREATE TABLE'.",
 e: "Al hacer el backup, se guardan instrucciones para destruir y volver a crear cada tabla, asegurando un reemplazo limpio."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Durante la restauración, la terminal parece quedarse 'congelada' sin mostrar texto y el cursor parpadea. ¿Qué significa?",
 r: ["Que el archivo está corrupto y debes cerrarlo.", "Que el servidor MySQL se ha caído.", "Que el cliente está procesando y ejecutando miles de sentencias SQL en silencio; debes esperar.", "Que la contraseña era incorrecta."],
 c: "Que el cliente está procesando y ejecutando miles de sentencias SQL en silencio; debes esperar.",
 e: "La restauración lógica por terminal no muestra una barra de progreso. La vuelta al prompt normal indica que ha terminado."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si al intentar restaurar escribes `mysqldump -u root -p sakila < archivo.sql`, ¿qué pasará?",
 r: ["Se restaurará correctamente.", "Dará error, porque mysqldump es para extraer datos, no para inyectarlos (eso lo hace el cliente mysql).", "Se borrará el archivo de backup.", "Se creará un bucle infinito."],
 c: "Dará error, porque mysqldump es para extraer datos, no para inyectarlos (eso lo hace el cliente mysql).",
 e: "Es un error común confundir la herramienta. mysqldump saca los datos, mysql los mete."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Una vez terminada la restauración en la terminal, ¿cuál es el siguiente paso según el ejercicio?",
 r: ["Reiniciar el servidor físico.", "Borrar el archivo de backup.", "Volver a entrar al cliente MySQL (mysql -u root -p) para verificar.", "Hacer otro mysqldump."],
 c: "Volver a entrar al cliente MySQL (mysql -u root -p) para verificar.",
 e: "Siempre debes verificar visualmente o mediante consultas que los datos han vuelto a su sitio."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Para verificar que la tabla ha vuelto, ejecutas `SELECT COUNT(*) FROM sakila.film;`. ¿Qué debería devolver si todo ha ido bien?",
 r: ["0", "Un error.", "El número total de películas originales que había en la base de datos (ej. 1000).", "NULL"],
 c: "El número total de películas originales que había en la base de datos (ej. 1000).",
 e: "Un COUNT es la mejor forma de comprobar de un vistazo rápido que todos los registros han sido insertados de nuevo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Imagina que olvidas poner 'sakila' en el comando de restauración: `mysql -u root -p < sakila_backup_completo.sql`. ¿Qué error podrías obtener si el script no crea la BD?",
 r: ["File not found.", "No database selected.", "Access denied.", "Duplicate entry."],
 c: "No database selected.",
 e: "Si el archivo de backup no incluye 'USE sakila;', MySQL no sabrá en qué base de datos volcar las tablas y devolverá este error."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué pasaría en este ejercicio si, además de film, hubieras borrado también la tabla 'actor' antes de restaurar?",
 r: ["La tabla actor no se recuperaría porque solo comprobamos film.", "Daría un error y la restauración se detendría.", "Ambas tablas se recuperarían perfectamente, ya que el backup es 'completo' (de toda la base de datos).", "MySQL bloquearía tu usuario."],
 c: "Ambas tablas se recuperarían perfectamente, ya que el backup es 'completo' (de toda la base de datos).",
 e: "El backup completo guarda la 'foto' de toda la base de datos; restaura todo lo que contuviera en el momento de la copia."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si mientras estás escribiendo el mysqldump te equivocas y pones `--rutines` (mal escrito), ¿qué ocurre?",
 r: ["Lo corrige automáticamente.", "Ignora el parámetro y hace la copia sin rutinas.", "Devuelve un error indicando que la opción no es reconocida y detiene la copia.", "Borra la base de datos por seguridad."],
 c: "Devuelve un error indicando que la opción no es reconocida y detiene la copia.",
 e: "La terminal es estricta con la sintaxis de las banderas; un error tipográfico impide la ejecución."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué extensión de archivo genera la herramienta mysqldump por convención, como se ve en el ejercicio?",
 r: [".csv", ".txt", ".sql", ".ibd"],
 c: ".sql",
 e: "Genera un archivo de texto plano que contiene sentencias del lenguaje SQL."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si quisieras ver las primeras líneas del archivo 'sakila_backup_completo.sql' sin entrar a MySQL, ¿qué comando de la terminal de Linux usarías?",
 r: ["head sakila_backup_completo.sql", "select * from sakila_backup_completo.sql", "show create sakila_backup_completo.sql", "mysql view sakila_backup_completo.sql"],
 c: "head sakila_backup_completo.sql",
 e: "Al ser un archivo de texto, comandos del S.O. como head, cat o more sirven para inspeccionarlo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si durante el Ejercicio 1, al intentar hacer la copia te sale 'Access denied for user root', ¿qué es lo más probable que falte?",
 r: ["La base de datos sakila está vacía.", "Falta poner la contraseña cuando el comando pide el 'Enter password:'.", "El disco duro está roto.", "MySQL no está instalado."],
 c: "Falta poner la contraseña cuando el comando pide el 'Enter password:'.",
 e: "El parámetro -p indica a mysqldump que debe solicitar el prompt de contraseña interactivo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Por qué se usa el parámetro '-u root' en los comandos de este ejercicio?",
 r: ["Para indicar la 'ubicación' del archivo.", "Porque 'root' es la carpeta raíz de Linux.", "Para especificar el 'usuario' administrador que tiene permisos totales para extraer e insertar datos.", "Para decirle a MySQL que use rutas relativas."],
 c: "Para especificar el 'usuario' administrador que tiene permisos totales para extraer e insertar datos.",
 e: "Root es el superusuario de la base de datos, necesario para garantizar que ninguna tabla quede fuera por falta de permisos."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el contexto de la base de datos sakila, ¿qué es exactamente lo que borra el comando 'DROP TABLE sakila.film;'?",
 r: ["Un procedimiento almacenado.", "Solo las filas de datos de las películas.", "La definición de la estructura de la tabla de películas, todos sus índices y todos sus registros.", "Toda la base de datos sakila."],
 c: "La definición de la estructura de la tabla de películas, todos sus índices y todos sus registros.",
 e: "DROP es la orden DDL (Data Definition Language) definitiva para erradicar un objeto de tabla completo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Cuando restauras el archivo 'sakila_backup_completo.sql', ¿qué proceso interno realiza MySQL realmente?",
 r: ["Copiar y pegar archivos físicos en la carpeta Data.", "Descomprimir un archivo ZIP.", "Leer el fichero de arriba a abajo y ejecutar cada sentencia SQL (CREATE, INSERT) de forma secuencial.", "Sincronizar mediante internet."],
 c: "Leer el fichero de arriba a abajo y ejecutar cada sentencia SQL (CREATE, INSERT) de forma secuencial.",
 e: "La restauración lógica no es más que la ejecución automatizada de un script gigante."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si abrieras el archivo 'sakila_backup_completo.sql' con el Bloc de notas, ¿qué verías para la tabla film?",
 r: ["Un galimatías de símbolos binarios.", "La sentencia 'CREATE TABLE film (...)' seguida de múltiples 'INSERT INTO film VALUES (...)'.", "Solo un enlace a la base de datos.", "Una advertencia de seguridad."],
 c: "La sentencia 'CREATE TABLE film (...)' seguida de múltiples 'INSERT INTO film VALUES (...)'.",
 e: "El backup lógico es totalmente transparente y contiene las instrucciones exactas para reconstruir la información."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si haces el backup con mysqldump pero olvidas poner 'sakila', ej: `mysqldump -u root -p > backup.sql`. ¿Qué pasa?",
 r: ["Pregunta qué base de datos quieres copiar.", "Da error de sintaxis, falta el nombre de la base de datos a exportar.", "Hace copia de todas las bases de datos automáticamente.", "Borra la configuración de MySQL."],
 c: "Da error de sintaxis, falta el nombre de la base de datos a exportar.",
 e: "Mysqldump requiere saber explícitamente qué base de datos debe procesar (a menos que se use --all-databases)."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El ejercicio te hace borrar la tabla 'film' a propósito. Esto simula un error humano en el mundo real que clasificaríamos como:",
 r: ["Fallo de Hardware.", "Fallo de Sistema.", "Fallo Lógico / de Sentencia (o borrado accidental).", "Fallo de Red."],
 c: "Fallo Lógico / de Sentencia (o borrado accidental).",
 e: "Un DROP accidental es uno de los desastres lógicos más comunes que requieren restauración desde un backup."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Al restaurar, ¿qué riesgo tiene hacerlo 'machacando lo que hay' si la base de datos hubiera seguido en uso después de hacer el backup?",
 r: ["Que el ordenador se apague.", "Que se perderían todos los datos nuevos (inserciones/modificaciones) introducidos DESPUÉS del momento del backup.", "Ningún riesgo, MySQL fusiona los datos mágicamente.", "Que los datos antiguos se triplican."],
 c: "Que se perderían todos los datos nuevos (inserciones/modificaciones) introducidos DESPUÉS del momento del backup.",
 e: "Restaurar un Full Backup retrocede el estado de TODA la base de datos a esa foto exacta, eliminando cualquier progreso posterior."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si quisieras hacer la restauración de forma más segura para no sobrescribir toda la base de datos entera, ¿qué deberías haber hecho antes de restaurar?",
 r: ["Restaurar el archivo en una base de datos temporal (ej. sakila_recovery), extraer solo la tabla film, e insertarla en la original.", "Borrar todas las demás tablas primero.", "Usar un editor hexadecimal.", "Cambiar la contraseña de root."],
 c: "Restaurar el archivo en una base de datos temporal (ej. sakila_recovery), extraer solo la tabla film, e insertarla en la original.",
 e: "En producción, se suele restaurar el backup en otra instancia o BD paralela para recuperar solo lo perdido sin machacar el trabajo actual del resto de tablas."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El comando de restauración es `mysql -u root -p sakila < archivo.sql`. Si omites el parámetro '-p', ¿qué ocurrirá?",
 r: ["Intentará conectar sin contraseña, fallando si root tiene clave asignada.", "Pedirá la contraseña automáticamente.", "Usará la contraseña por defecto '1234'.", "Creará un usuario nuevo."],
 c: "Intentará conectar sin contraseña, fallando si root tiene clave asignada.",
 e: "El flag -p es estrictamente necesario para que el cliente active la solicitud interactiva de la contraseña."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué pasaría si el archivo 'sakila_backup_completo.sql' pesara 50 GB durante el proceso de restauración?",
 r: ["Terminaría en un segundo.", "La terminal colapsaría y se cerraría.", "Tardaría bastante tiempo (quizás horas), porque el motor tiene que ejecutar millones de instrucciones INSERT una por una.", "Daría error de espacio en disco siempre."],
 c: "Tardaría bastante tiempo (quizás horas), porque el motor tiene que ejecutar millones de instrucciones INSERT una por una.",
 e: "Esta es la principal desventaja de los backups lógicos en bases de datos masivas: el tiempo de restauración."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el comando `DROP TABLE sakila.film;`, el punto sirve para:",
 r: ["Finalizar la sentencia.", "Separar el nombre de la base de datos del nombre de la tabla (Esquema.Tabla).", "Indicar un archivo oculto.", "Multiplicar tablas."],
 c: "Separar el nombre de la base de datos del nombre de la tabla (Esquema.Tabla).",
 e: "Es la notación estándar de SQL para la resolución de nombres cualificados."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si quisieras verificar no solo que la tabla existe, sino ver sus columnas antes de hacer el SELECT final, ¿qué comando usarías?",
 r: ["SHOW DATABASES;", "DESCRIBE sakila.film;", "LIST sakila.film;", "VIEW sakila.film;"],
 c: "DESCRIBE sakila.film;",
 e: "DESCRIBE (o DESC) te muestra la estructura de columnas y tipos de datos de la tabla especificada."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué ocurre con los índices de la tabla 'film' tras realizar el backup y la posterior restauración?",
 r: ["Se pierden para siempre.", "Hay que volver a crearlos a mano.", "Se restauran automáticamente junto con la tabla, ya que mysqldump incluye la estructura completa (CREATE TABLE con sus índices).", "Solo se restauran las claves primarias, no los índices secundarios."],
 c: "Se restauran automáticamente junto con la tabla, ya que mysqldump incluye la estructura completa (CREATE TABLE con sus índices).",
 e: "El CREATE TABLE que genera mysqldump es una copia fiel que incluye claves primarias, foráneas e índices."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si ejecutas la copia con el servidor en producción recibiendo peticiones constantemente, y NO añades `--single-transaction`, ¿qué podría pasar?",
 r: ["Nada, funciona igual.", "La copia podría tener inconsistencias (por ejemplo, registrar el alquiler de una película pero no su pago asociado si ocurrió justo en ese milisegundo).", "El servidor explotaría.", "Mysqldump se niega a arrancar."],
 c: "La copia podría tener inconsistencias (por ejemplo, registrar el alquiler de una película pero no su pago asociado si ocurrió justo en ese milisegundo).",
 e: "Sin aislamiento transaccional, una base de datos en caliente genera copias lógicas inconsistentes."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En resumen, el objetivo principal del Ejercicio 1 es enseñarte a:",
 r: ["Hacer copias físicas de seguridad.", "Configurar el log binario.", "Realizar una copia lógica de emergencia y aprender el proceso de inyectarla de vuelta tras un desastre fatal en una tabla.", "Cambiar contraseñas de usuarios."],
 c: "Realizar una copia lógica de emergencia y aprender el proceso de inyectarla de vuelta tras un desastre fatal en una tabla.",
 e: "Es la maniobra de supervivencia más básica y vital de cualquier administrador de bases de datos."
-},
+}
+];
+
+const testSeguridadBBDDEjercicio2 = [
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para lograr el objetivo del Ejercicio 2, ¿qué cláusula principal de SQL debes utilizar?",
 r: ["mysqldump --csv", "SELECT ... INTO OUTFILE", "EXPORT TABLE ... AS CSV", "SAVE DATA TO ..."],
 c: "SELECT ... INTO OUTFILE",
 e: "Esta es la instrucción nativa de SQL dentro de MySQL para volcar resultados de consultas a archivos de texto en el servidor."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué columnas específicas exige el enunciado que debes extraer de la tabla customer?",
 r: ["*", "customer_id, first_name, last_name", "first_name, last_name, email", "first_name, last_name, active"],
 c: "first_name, last_name, email",
 e: "El ejercicio es muy específico: debes usar 'SELECT first_name, last_name, email' en el inicio de tu consulta."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Cómo aplicas la condición de que 'solo quieren a los clientes actualmente activos'?",
 r: ["HAVING active = 'yes'", "FILTER active = 1", "WHERE active = 1", "IF active = true"],
 c: "WHERE active = 1",
 e: "La cláusula WHERE se encarga de filtrar los registros en base a la condición solicitada antes de exportarlos."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "El archivo de destino debe llamarse 'clientes_activos.csv'. ¿Dónde se coloca este nombre en la sintaxis?",
 r: ["Al final de la sentencia SQL.", "Justo después de INTO OUTFILE y entre comillas simples (ej. INTO OUTFILE 'C:/ruta/clientes_activos.csv').", "Después del FROM customer.", "Antes del SELECT."],
 c: "Justo después de INTO OUTFILE y entre comillas simples (ej. INTO OUTFILE 'C:/ruta/clientes_activos.csv').",
 e: "La ruta y el nombre del archivo se definen inmediatamente como argumento de OUTFILE."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para cumplir el requisito: 'Las columnas deben estar separadas por punto y coma (;)', ¿qué cláusula debes añadir?",
 r: ["COLUMNS SEPARATED BY ';'", "FIELDS TERMINATED BY ';'", "SPLIT BY ';'", "DELIMITER ';'"],
 c: "FIELDS TERMINATED BY ';'",
 e: "En MySQL, la instrucción para definir el separador de columnas en exportaciones/importaciones es FIELDS TERMINATED BY."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Según el enunciado, ¿por qué se pide separar por punto y coma (;) y no por comas (,) en un archivo CSV (Comma Separated Values)?",
 r: ["Porque MySQL no admite comas.", "Porque el punto y coma ocupa menos espacio en disco.", "Porque en España y Europa Excel usa la coma (,) para los decimales matemáticos, y usar comas como separador rompería las tablas.", "Porque es un formato exclusivo de Linux."],
 c: "Porque en España y Europa Excel usa la coma (,) para los decimales matemáticos, y usar comas como separador rompería las tablas.",
 e: "Es un problema de localización clásica. Si exportas con comas, Excel europeo mezclará las columnas con los números decimales."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para cumplir el requisito: 'Los textos deben ir entre comillas dobles', ¿qué cláusula usas?",
 r: ["TEXT WITH '\"'", "WRAPPED BY '\"'", "ENCLOSED BY '\"'", "QUOTED BY '\"'"],
 c: "ENCLOSED BY '\"'",
 e: "OPTIONALLY ENCLOSED BY o simplemente ENCLOSED BY indica qué carácter envolverá el contenido de cada celda de texto."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Cómo evitas que la comilla doble ( \") dentro de ENCLOSED BY '\"' rompa la sintaxis del string en SQL?",
 r: ["No se puede evitar.", "Encerrando la comilla doble entre comillas simples: '\"'", "Escribiendo la palabra DOUBLE_QUOTE.", "Usando un hashtag #."],
 c: "Encerrando la comilla doble entre comillas simples: '\"'",
 e: "MySQL interpreta la comilla simple como delimitador de la cadena y la comilla doble del interior como el carácter literal que quieres usar."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para que 'Cada fila termine con un salto de línea', ¿cuál es la instrucción correcta al final del bloque?",
 r: ["ROWS ENDED BY '\\n'", "LINES TERMINATED BY '\\n'", "END LINE '\\n'", "NEWLINE '\\n'"],
 c: "LINES TERMINATED BY '\\n'",
 e: "Esta cláusula le indica a MySQL qué carácter invisible utilizar para marcar el final de cada registro (fila) en el archivo de texto."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Cuál de las siguientes es la sintaxis COMPLETA y CORRECTA para el Ejercicio 2?",
 r: ["SELECT first_name, last_name, email INTO OUTFILE 'C:/clientes_activos.csv' FIELDS TERMINATED BY ';' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' FROM customer WHERE active=1;", "SELECT first_name, last_name, email FROM customer WHERE active=1 INTO OUTFILE 'C:/clientes_activos.csv';", "mysqldump -u root -p sakila customer --csv > clientes.csv", "LOAD DATA INFILE 'clientes.csv' INTO TABLE customer FIELDS TERMINATED BY ';' WHERE active=1;"],
 c: "SELECT first_name, last_name, email INTO OUTFILE 'C:/clientes_activos.csv' FIELDS TERMINATED BY ';' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' FROM customer WHERE active=1;",
 e: "Esta es la estructura canónica: SELECT [columnas] INTO OUTFILE [ruta] [formato de campos y líneas] FROM [tabla] WHERE [condición]."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si en vez de un PC local ejecutas esto en un servidor en la nube, ¿dónde se guarda el archivo 'clientes_activos.csv'?",
 r: ["En tu carpeta de Descargas del navegador.", "Se envía por correo.", "En el sistema de ficheros del servidor remoto que aloja MySQL, en la ruta especificada.", "En la base de datos como una tabla nueva."],
 c: "En el sistema de ficheros del servidor remoto que aloja MySQL, en la ruta especificada.",
 e: "OUTFILE siempre interactúa con el disco duro de la máquina donde se está ejecutando el servicio mysqld, no la máquina cliente."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si omites la cláusula `WHERE active = 1`, ¿qué pasará con el archivo resultante?",
 r: ["Estará vacío.", "Incluirá a todos los clientes de la tabla, tanto activos como inactivos.", "Dará error de sintaxis.", "Solo incluirá inactivos."],
 c: "Incluirá a todos los clientes de la tabla, tanto activos como inactivos.",
 e: "La ausencia de WHERE provoca que la consulta exporte la totalidad de las filas devueltas por el SELECT."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Al abrir el archivo en Excel o en el Bloc de notas, ¿cómo se vería exactamente el registro de un cliente llamado John Doe con correo john@mail.com?",
 r: ["John;Doe;john@mail.com", "John,Doe,john@mail.com", "\"John\";\"Doe\";\"john@mail.com\"", "'John';'Doe';'john@mail.com'"],
 c: "\"John\";\"Doe\";\"john@mail.com\"",
 e: "Los textos están encerrados por comillas dobles (ENCLOSED BY '\"') y separados por punto y coma (FIELDS TERMINATED BY ';')."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Intentas exportar a 'C:/clientes.csv' pero el servidor devuelve el error de permisos 'Errcode: 13 - Permission denied'. ¿Cuál es la causa?",
 r: ["La tabla customer está vacía.", "El servicio MySQL no tiene permisos a nivel de Windows para escribir archivos en la raíz de C:.", "El usuario root de MySQL está bloqueado.", "Falta el punto y coma final."],
 c: "El servicio MySQL no tiene permisos a nivel de Windows para escribir archivos en la raíz de C:.",
 e: "Es el error más común al usar OUTFILE. El S.O. protege ciertas carpetas. Debes exportar a carpetas permitidas (ej. 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/')."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para solucionar el error de permisos en Windows y asegurar la exportación, ¿qué carpeta especial y configurada por defecto de MySQL deberías usar?",
 r: ["C:/Windows/System32", "El escritorio.", "La carpeta indicada en la variable 'secure_file_priv' (usualmente la carpeta Uploads de ProgramData).", "La papelera de reciclaje."],
 c: "La carpeta indicada en la variable 'secure_file_priv' (usualmente la carpeta Uploads de ProgramData).",
 e: "Por seguridad, MySQL restringe la exportación e importación masiva a la ruta definida en secure_file_priv."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si ya ejecutaste la consulta una vez y el archivo 'clientes_activos.csv' existe, y vuelves a ejecutar el mismo comando exacto, ¿qué ocurre?",
 r: ["Se machaca y se sobrescribe el archivo con los nuevos datos.", "Se añaden los nuevos datos al final (modo append).", "Dará un error indicando que el archivo ya existe; MySQL no sobrescribe archivos por seguridad mediante OUTFILE.", "Pregunta si quieres reemplazarlo."],
 c: "Dará un error indicando que el archivo ya existe; MySQL no sobrescribe archivos por seguridad mediante OUTFILE.",
 e: "Esta es una medida de seguridad interna. Deberás borrar el archivo anterior manualmente del disco duro o cambiarle el nombre a la salida."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "En el código, has puesto la ruta como 'C:\\Users\\admin\\clientes.csv'. MySQL lanza error. ¿Por qué?",
 r: ["En Windows, dentro de sentencias SQL debes usar dobles barras (\\\\) o barras normales (/) porque la barra simple (\\) es el carácter de escape.", "MySQL no funciona en discos C.", "Falta la extensión .txt.", "El nombre del archivo es muy largo."],
 c: "En Windows, dentro de sentencias SQL debes usar dobles barras (\\\\) o barras normales (/) porque la barra simple (\\) es el carácter de escape.",
 e: "Es un error de formato de ruta vital. 'C:/Users/admin/clientes.csv' o 'C:\\\\Users\\\\admin\\\\clientes.csv' funcionarían correctamente."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quieres asegurarte de revisar el archivo de salida con un Bloc de notas y ver los saltos de línea correctamente en Windows antiguos, a veces es mejor usar:",
 r: ["LINES TERMINATED BY '\\n'", "LINES TERMINATED BY '\\r\\n'", "LINES TERMINATED BY '\\t'", "LINES ENDED BY EOF"],
 c: "LINES TERMINATED BY '\\r\\n'",
 e: "El retorno de carro (\\r) seguido de salto de línea (\\n) es el estándar de Windows para nuevas líneas, aunque \\n suele bastar en sistemas modernos."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué pasaría si usas 'SELECT * INTO OUTFILE...' en este ejercicio?",
 r: ["Daría un error.", "Exportaría el nombre, apellido y email únicamente.", "Exportaría todas y cada una de las columnas de la tabla customer (id, store_id, address_id, active, create_date, etc.), incumpliendo el requisito.", "Crearía múltiples archivos."],
 c: "Exportaría todas y cada una de las columnas de la tabla customer (id, store_id, address_id, active, create_date, etc.), incumpliendo el requisito.",
 e: "El asterisco saca todo, por eso se exige listar explícitamente las tres columnas deseadas."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "El comando OUTFILE de este ejercicio se considera:",
 r: ["Una copia de seguridad física completa.", "Un Point-in-Time Recovery.", "Una exportación de datos lógicos específica o volcado de resultados.", "Una restauración diferencial."],
 c: "Una exportación de datos lógicos específica o volcado de resultados.",
 e: "No es un sistema de respaldo como tal, es una herramienta de extracción de datos puntuales para interactuar con otros sistemas."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para ejecutar este comando con éxito, ¿necesitas parar la base de datos (systemctl stop mysql)?",
 r: ["Sí, para que los clientes no cambien sus datos.", "No, la consulta SELECT se ejecuta en caliente y en tiempo real como cualquier otra petición a la base de datos.", "Solo si el servidor es Linux.", "Sí, OUTFILE requiere un Cold Backup."],
 c: "No, la consulta SELECT se ejecuta en caliente y en tiempo real como cualquier otra petición a la base de datos.",
 e: "Es una consulta de lectura estándar que se aprovecha para escribir su output al disco duro sin interrumpir el servicio."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quieres comprobar qué valor tiene tu variable 'secure_file_priv' para saber a qué carpeta puedes exportar, ¿qué ejecutas en MySQL?",
 r: ["SHOW VARIABLES LIKE 'secure_file_priv';", "SELECT secure_file_priv;", "GET FOLDER PRIVILEGES;", "DIR secure_file_priv;"],
 c: "SHOW VARIABLES LIKE 'secure_file_priv';",
 e: "Este comando del sistema te devuelve la ruta exacta autorizada por el motor para leer y escribir archivos."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Al usar `FIELDS TERMINATED BY ';'`, ¿qué ocurre si un cliente se llama 'Luis;Carlos' y lo exportamos sin usar ENCLOSED BY?",
 r: ["Nada, se exporta bien.", "El sistema cambiará el nombre a 'Luis Carlos'.", "El archivo CSV se corromperá lógicamente porque Excel interpretará el ';' del nombre como una nueva columna.", "MySQL lanzará un error y detendrá la exportación."],
 c: "El archivo CSV se corromperá lógicamente porque Excel interpretará el ';' del nombre como una nueva columna.",
 e: "Por eso es vital usar ENCLOSED BY '\"'. Al poner \"Luis;Carlos\", los programas saben que el punto y coma interno pertenece al texto y no es un separador de campo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué tipo de estructura SQL es la que precede a INTO OUTFILE?",
 r: ["Obligatoriamente un UPDATE.", "Un simple SELECT, que puede incluir JOINs, funciones de agregación (SUM, COUNT) u ordenamientos (ORDER BY) con total libertad.", "Solo puede ser un SELECT de una sola tabla sin WHERE.", "Un mysqldump interno."],
 c: "Un simple SELECT, que puede incluir JOINs, funciones de agregación (SUM, COUNT) u ordenamientos (ORDER BY) con total libertad.",
 e: "El bloque SELECT puede ser todo lo complejo que quieras. INTO OUTFILE solo coge el resultado final que saldría por pantalla y lo mete en el archivo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Imagina que el archivo CSV que generaste se debe devolver a la tabla. ¿Qué comando revertiría tu OUTFILE inyectando de vuelta los datos?",
 r: ["INSERT INTO customer FROM 'clientes_activos.csv'", "LOAD DATA INFILE 'C:/.../clientes_activos.csv' INTO TABLE customer FIELDS TERMINATED BY ';' ENCLOSED BY '\"';", "READ OUTFILE 'clientes_activos.csv';", "IMPORT CSV TO customer;"],
 c: "LOAD DATA INFILE 'C:/.../clientes_activos.csv' INTO TABLE customer FIELDS TERMINATED BY ';' ENCLOSED BY '\"';",
 e: "LOAD DATA INFILE es el gemelo inverso de OUTFILE. Necesita que le digas exactamente cómo están separados (;) y encerrados (\") los datos en el fichero para que sepa leerlos."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si un compañero escribe `SELECT email, last_name, first_name INTO OUTFILE ...`, ¿qué cambiará en el archivo respecto a lo pedido?",
 r: ["Nada, SQL ordena alfabéticamente.", "Dará error de compilación.", "Las columnas en el archivo .csv aparecerán en ese orden alterado: primero el correo, luego el apellido y finalmente el nombre.", "MySQL ignorará las columnas."],
 c: "Las columnas en el archivo .csv aparecerán en ese orden alterado: primero el correo, luego el apellido y finalmente el nombre.",
 e: "El orden de las columnas en el archivo CSV dependerá estricta y exclusivamente del orden en el que las listes en el SELECT."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Por qué el ejercicio exige explícitamente usar '\\n' en LINES TERMINATED BY?",
 r: ["Para cifrar el archivo.", "Para asegurar que cada cliente aparezca en una fila nueva (salto de línea), de lo contrario todos los clientes saldrían apelotonados en una sola y larguísima línea de texto.", "Para añadir espacios en blanco.", "Para indicar el final del archivo (End of File)."],
 c: "Para asegurar que cada cliente aparezca en una fila nueva (salto de línea), de lo contrario todos los clientes saldrían apelotonados en una sola y larguísima línea de texto.",
 e: "Sin un finalizador de línea, el sistema de texto no sabe cuándo termina un registro y empieza el siguiente."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Te piden que los encabezados de las columnas (First Name, Last Name, Email) aparezcan en la primera línea del archivo CSV. ¿Puede OUTFILE hacerlo automáticamente?",
 r: ["Sí, es la opción por defecto.", "Sí, añadiendo WITH HEADERS.", "No de forma nativa sencilla; OUTFILE solo exporta los datos brutos. Para añadir cabeceras suele recurrirse a un truco uniendo (UNION) un select con textos manuales.", "Sí, usando INCLUDE TITLES."],
 c: "No de forma nativa sencilla; OUTFILE solo exporta los datos brutos. Para añadir cabeceras suele recurrirse a un truco uniendo (UNION) un select con textos manuales.",
 e: "Es una limitación famosa de OUTFILE: solo escupe las filas resultantes, no la metadata de las columnas."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Al exportar con el cliente activo, ¿qué valor exacto debes poner en el comando? `active = ...`",
 r: ["active = TRUE", "active = 'active'", "active = 1", "active = YES"],
 c: "active = 1",
 e: "En la base de datos sakila, la columna active suele ser un tinyint(1) usado como booleano, donde 1 representa verdadero (activo)."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Imagina que olvidas poner el `ENCLOSED BY '\"'`. En su lugar, el texto de un apellido contiene un punto y coma (;). ¿Qué pasará al abrirlo en Excel?",
 r: ["Excel lo leerá perfectamente.", "Excel desplazará los datos de ese cliente hacia la derecha, arruinando la alineación de la columna email.", "El archivo no se podrá abrir.", "MySQL crasheará el sistema operativo."],
 c: "Excel desplazará los datos de ese cliente hacia la derecha, arruinando la alineación de la columna email.",
 e: "Excel ve el ';' y dice: '¡Ah! ¡Nueva columna!', rompiendo la estructura tabular para esa fila concreta."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Ejecutas el comando completo del Ejercicio 2 en la terminal y pulsas Enter. ¿Qué mensaje de éxito muestra MySQL?",
 r: ["Backup completed successfully.", "CSV File generated at C:/...", "Query OK, X rows affected (Y sec)", "Data Exported: 100%"],
 c: "Query OK, X rows affected (Y sec)",
 e: "MySQL te devuelve el mensaje estándar de éxito, indicando cuántas filas (rows) ha logrado volcar al archivo."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para abrir el archivo generado 'clientes_activos.csv' de forma inmediata desde un PC con Windows para comprobar que ha salido bien, la mejor herramienta rápida es:",
 r: ["Microsoft Word.", "Bloc de notas (Notepad) o Notepad++.", "Adobe Reader.", "Photoshop."],
 c: "Bloc de notas (Notepad) o Notepad++.",
 e: "Un archivo CSV es texto crudo. Abrirlo con un editor de texto simple es la mejor manera de verificar los delimitadores (;) y las comillas (\") sin que Excel lo formatee antes."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si la tabla 'customer' tuviera 10 millones de clientes activos, ¿qué pasaría al ejecutar el OUTFILE?",
 r: ["Daría error por exceso de filas.", "Solo exportaría los primeros 1000.", "Tardaría bastante tiempo en escribir el archivo y generaría un fichero de texto de gran peso (varios Gigabytes).", "Crearía automáticamente varios archivos CSV segmentados."],
 c: "Tardaría bastante tiempo en escribir el archivo y generaría un fichero de texto de gran peso (varios Gigabytes).",
 e: "OUTFILE no tiene paginación automática. Escribirá el archivo completo de un tirón, pudiendo llenar el disco si no hay espacio."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué pasaría si usas la cláusula `FIELDS TERMINATED BY ','` pero en tu ordenador europeo haces doble clic para abrirlo con Excel?",
 r: ["Saldría perfectamente estructurado.", "Excel pondría toda la línea junta en la columna A porque está esperando puntos y comas (;).", "Excel traducirá el archivo a español automáticamente.", "Las comas se borrarán."],
 c: "Excel pondría toda la línea junta en la columna A porque está esperando puntos y comas (;).",
 e: "En configuraciones regionales donde la coma (,) es el decimal (ej. 3,14), Excel asume que el separador de listas de un CSV es el punto y coma (;)."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "En la sentencia de exportación, ¿en qué punto exacto debe escribirse la parte de INTO OUTFILE?",
 r: ["Siempre después del WHERE final.", "Obligatoriamente en la primera línea.", "Se acostumbra a poner justo antes del FROM, entre el listado de columnas (SELECT) y la tabla de origen.", "Al final del todo seguido de un punto."],
 c: "Se acostumbra a poner justo antes del FROM, entre el listado de columnas (SELECT) y la tabla de origen.",
 e: "Aunque en algunas versiones se tolera al final, el estándar y la mejor práctica de legibilidad de MySQL lo ubica antes del FROM."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quisieras añadir también un filtro para exportar solo a los clientes de la tienda 1, ¿cómo modificarías el bloque WHERE?",
 r: ["WHERE active = 1 AND store_id = 1", "WHERE active = 1 OR store_id = 1", "WHERE active = 1 FILTER store_id = 1", "WHERE store_id = 1 THEN active = 1"],
 c: "WHERE active = 1 AND store_id = 1",
 e: "Simplemente añades más lógica booleana con AND para restringir aún más el bloque de datos que será volcado."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Imagina que la tabla customer está sufriendo constantes inserciones y actualizaciones simultáneas (muchos usuarios a la vez). ¿El comando OUTFILE bloquea la tabla entera mientras se crea el archivo?",
 r: ["Sí, bloquea la base de datos hasta que termine.", "En InnoDB, si no se especifica un bloqueo explícito, actúa como una consulta de lectura consistente normal y no bloquea las inserciones concurrentes.", "Borra los datos a medida que los exporta.", "Desconecta al resto de usuarios."],
 c: "En InnoDB, si no se especifica un bloqueo explícito, actúa como una consulta de lectura consistente normal y no bloquea las inserciones concurrentes.",
 e: "Es una operación de lectura (SELECT). Gracias a la concurrencia multiversión de InnoDB, la operatividad del sistema no se detiene."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quieres exportar los nombres en orden alfabético, ¿qué cláusula añadirías justo ANTES del INTO OUTFILE o al FINAL del comando?",
 r: ["ALPHABETICAL last_name", "ORDER BY last_name ASC", "SORT last_name", "GROUP BY last_name"],
 c: "ORDER BY last_name ASC",
 e: "Un SELECT es un SELECT. Puedes aplicar ordenamiento al final de la consulta (después del WHERE) para que el CSV nazca ya ordenado."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Una vez completado el Ejercicio 2 con éxito, ¿cuál es la mayor vulnerabilidad de seguridad del archivo generado 'clientes_activos.csv'?",
 r: ["Que tiene un virus.", "Que el texto plano no está encriptado y contiene información personal (nombres, emails) vulnerable a robo de datos si el servidor no es seguro.", "Que caduca al mes.", "Que cambia los datos internamente de forma aleatoria."],
 c: "Que el texto plano no está encriptado y contiene información personal (nombres, emails) vulnerable a robo de datos si el servidor no es seguro.",
 e: "Los CSV con PII (Información Personal Identificable) son un riesgo grave de seguridad; deben eliminarse o protegerse inmediatamente tras la exportación."
 },
 {
-m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para verificar rápidamente desde MySQL cuántos registros exactos se han debido exportar al CSV, usarías la consulta:",
 r: ["SELECT AMOUNT FROM customer WHERE active=1;", "SELECT COUNT(*) FROM customer WHERE active=1;", "CALCULATE ROWS FROM customer WHERE active=1;", "SHOW COUNT FROM customer;"],
 c: "SELECT COUNT(*) FROM customer WHERE active=1;",
@@ -5760,6 +5761,115 @@ e: "Realizar un COUNT con las mismas condiciones te da el número mágico (las f
         r: ["Obsolescencia programada.", "Multifuncionalidad (que el producto sirva para varias tareas).", "Uso exclusivo de materiales sintéticos no biodegradables.", "Complejidad en el desmontaje para evitar manipulaciones."],
         c: "Multifuncionalidad (que el producto sirva para varias tareas).",
         e: "El ecodiseño busca minimizar el impacto ambiental integrando factores sostenibles desde la fase de diseño[cite: 3140, 3143]."
+    }
+// =========================================================================
+    // CATEGORÍA: SOSTENIBILIDAD
+    // TEST 2 DE 5 (15 PREGUNTAS - ETIQUETA ESPECIAL)
+    // =========================================================================
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 2",
+        p: "¿Qué significan las siglas ASG (o ESG en inglés) en el contexto de la sostenibilidad empresarial?",
+        r: ["Administración, Seguridad y Gerencia.", "Ambiental, Social y Gobernanza.", "Ahorro, Sostenibilidad y Garantía.", "Asistencia, Sociedad y Gestión."],
+        c: "Ambiental, Social y Gobernanza.",
+        e: "Son los tres pilares que se utilizan para medir el impacto ético y de sostenibilidad de una inversión o empresa."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Información No Financiera", u: "TEST 2",
+        p: "¿Qué documento tiene como objetivo principal dar cuenta a la autoridad de la evolución de aspectos ASG?",
+        r: ["Memoria de Sostenibilidad.", "Estado de Información No Financiera.", "Plan de Sostenibilidad.", "Informe de Impacto Ambiental."],
+        c: "Estado de Información No Financiera.",
+        e: "Este documento está enfocado específicamente en la rendición de cuentas ante la autoridad administrativa."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "TEST 2",
+        p: "¿Cuál es el objetivo principal de la denominada 'economía circular'?",
+        r: ["Aumentar la velocidad de rotación de los productos.", "Optimizar el uso de recursos, reducir el consumo de materias primas y aprovechar los residuos.", "Sustituir el consumo de energía eléctrica por gas natural.", "Eliminar por completo la propiedad privada de los bienes de consumo."],
+        c: "Optimizar el uso de recursos, reducir el consumo de materias primas y aprovechar los residuos.",
+        e: "Busca que el valor de los productos y materiales se mantenga en el ciclo económico durante el mayor tiempo posible."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobernanza", u: "TEST 2",
+        p: "Dentro de los criterios ASG, ¿qué aspecto se evalúa en el pilar de 'Gobernanza'?",
+        r: ["Las emisiones de gases de efecto invernadero.", "La diversidad de la plantilla.", "La estructura de los consejos de administración y la transparencia en la gestión.", "La gestión del agua en las fábricas."],
+        c: "La estructura de los consejos de administración y la transparencia en la gestión.",
+        e: "La gobernanza se refiere a cómo se dirige y controla la empresa, incluyendo ética y anticorrupción."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 2",
+        p: "En el análisis de doble materialidad, ¿qué evalúa la 'materialidad financiera'?",
+        r: ["Cómo afecta la actividad de la empresa al cambio climático.", "Cómo afectan los factores externos de sostenibilidad al éxito económico de la empresa.", "El balance de pérdidas y ganancias ordinario.", "La cantidad de subvenciones recibidas."],
+        c: "Cómo afectan los factores externos de sostenibilidad al éxito económico de la empresa.",
+        e: "Es el enfoque 'del entorno hacia dentro', analizando riesgos y oportunidades financieras derivadas de la sostenibilidad."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores", u: "TEST 2",
+        p: "¿Qué es la 'huella de carbono'?",
+        r: ["La superficie de tierra necesaria para producir alimentos.", "La totalidad de gases de efecto invernadero emitidos por efecto directo o indirecto de un individuo o producto.", "La cantidad de residuos sólidos no reciclables que genera una empresa.", "El consumo total de energía eléctrica anual."],
+        c: "La totalidad de gases de efecto invernadero emitidos por efecto directo o indirecto de un individuo o producto.",
+        e: "Se mide en unidades de dióxido de carbono equivalente (CO2eq)."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 2",
+        p: "¿Cuál es el ODS número 13?",
+        r: ["Paz, justicia e instituciones sólidas.", "Acción por el clima.", "Vida de ecosistemas terrestres.", "Energía asequible y no contaminante."],
+        c: "Acción por el clima.",
+        e: "Este objetivo insta a adoptar medidas urgentes para combatir el cambio climático y sus efectos."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Documentación", u: "TEST 2",
+        p: "¿Qué periodo de tiempo suele abarcar un 'Plan de Sostenibilidad' estratégico?",
+        r: ["Un año.", "De dos a cuatro años.", "Diez años obligatoriamente.", "Seis meses."],
+        c: "De dos a cuatro años.",
+        e: "A diferencia de la memoria anual, el plan es un documento de guía a medio y largo plazo."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Impacto Ambiental", u: "TEST 2",
+        p: "¿Qué documento valora específicamente los impactos ambientales de un proyecto concreto para tomar decisiones previas?",
+        r: ["Plan de Sostenibilidad.", "Informe o Estudio de Impacto Ambiental.", "Estado de Información No Financiera.", "Balance de Sostenibilidad."],
+        c: "Informe o Estudio de Impacto Ambiental.",
+        e: "Es obligatorio para grandes proyectos y busca evitar o minimizar daños antes de que se produzcan."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Etiquetado", u: "TEST 2",
+        p: "¿Qué caracteriza a las 'autodeclaraciones ambientales' según el temario?",
+        r: ["Son verificadas por un organismo externo acreditado.", "Son declaraciones de la propia empresa sobre su producto sin verificación externa.", "Son obligatorias para todos los productos electrónicos.", "Solo pueden usarse en el sector alimentario."],
+        c: "Son declaraciones de la propia empresa sobre su producto sin verificación externa.",
+        e: "Se diferencian de las ecoetiquetas oficiales en que no requieren auditoría externa de terceros."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Inversión Responsable", u: "TEST 2",
+        p: "¿Qué es la Inversión Socialmente Responsable (ISR)?",
+        r: ["Aquella que solo busca la rentabilidad máxima sin importar el sector.", "Aquella que valora rentabilidad y riesgo junto con el impacto ASG de la empresa.", "Una inversión exclusiva de los gobiernos.", "Un fondo de pensiones para funcionarios."],
+        c: "Aquella que valora rentabilidad y riesgo junto con el impacto ASG de la empresa.",
+        e: "Integra criterios extra-financieros en el proceso de análisis y toma de decisiones de inversión."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Principios", u: "TEST 2",
+        p: "¿En qué consiste la acción de 'descarbonizar'?",
+        r: ["Eliminar el uso de papel en las oficinas.", "Reducir o eliminar las emisiones de carbono mediante el uso de energías renovables.", "Prohibir la fabricación de productos de plástico.", "Reducir la plantilla de una organización."],
+        c: "Reducir o eliminar las emisiones de carbono mediante el uso de energías renovables.",
+        e: "Es una estrategia fundamental para alcanzar la neutralidad climática."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Análisis de Priorización", u: "TEST 2",
+        p: "¿Para qué sirve la 'matriz de impacto o factibilidad' en sostenibilidad?",
+        r: ["Para calcular el sueldo de los directivos.", "Para priorizar qué medidas implementar según su relevancia frente a la dificultad de ponerlas en marcha.", "Para medir el nivel de ruido de una fábrica.", "Para registrar las patentes de ecodiseño."],
+        c: "Para priorizar qué medidas implementar según su relevancia frente a la dificultad de ponerlas en marcha.",
+        e: "Es una herramienta de gestión estratégica para optimizar recursos en sostenibilidad."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 2",
+        p: "El ODS 17 se denomina:",
+        r: ["Alianzas para lograr los objetivos.", "Ciudades y comunidades sostenibles.", "Reducción de las desigualdades.", "Vida submarina."],
+        c: "Alianzas para lograr los objetivos.",
+        e: "Se centra en fortalecer la movilización de recursos y la cooperación internacional."
+    },
+    {
+        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 2",
+        p: "El principio de 'multifuncionalidad' en el ecodiseño busca:",
+        r: ["Que el producto tenga muchas piezas distintas.", "Que un mismo producto pueda realizar varias tareas para evitar comprar otros.", "Que el producto sea difícil de reparar.", "Que el envase sea más grande que el producto."],
+        c: "Que un mismo producto pueda realizar varias tareas para evitar comprar otros.",
+        e: "Busca la eficiencia en el uso de recursos desde la concepción del producto."
     },
 // =========================================================================
     // CATEGORÍA: SOSTENIBILIDAD
@@ -6087,8 +6197,7 @@ e: "Realizar un COUNT con las mismas condiciones te da el número mágico (las f
         r: ["Naciones Unidas.", "La Alianza para el Gobierno Abierto (OGP).", "La OTAN.", "El Fondo Monetario Internacional."],
         c: "La Alianza para el Gobierno Abierto (OGP).",
         e: "Este nombramiento reconoce el liderazgo de España en la promoción de la transparencia y participación ciudadana."
-    },
-
+    }
 ];
 
 
