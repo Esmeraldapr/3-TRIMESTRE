@@ -5090,280 +5090,280 @@ e: "Es la maniobra de supervivencia más básica y vital de cualquier administra
 },
 
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Para hacer la copia de seguridad completa del Ejercicio 1, ¿qué herramienta de la terminal debes invocar primero?",
 r: ["mysql", "mysqladmin", "mysqldump", "mysqlbackup"],
 c: "mysqldump",
 e: "mysqldump es la utilidad de línea de comandos diseñada específicamente para exportar bases de datos a archivos de texto SQL."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El enunciado pide incluir explícitamente 'rutinas'. ¿Qué parámetro debes añadir a mysqldump?",
 r: ["--events", "--routines", "--procedures", "--functions"],
 c: "--routines",
 e: "El parámetro --routines asegura que tanto los procedimientos almacenados como las funciones se incluyan en el archivo de backup."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Cuál es el comando exacto para generar el archivo de backup según el Ejercicio 1?",
 r: ["mysqldump -u root -p --routines sakila > sakila_backup_completo.sql", "mysqldump -u root -p sakila < sakila_backup_completo.sql", "mysql -u root -p --routines sakila > sakila_backup_completo.sql", "mysqldump -u root -p --all-databases > sakila_backup_completo.sql"],
 c: "mysqldump -u root -p --routines sakila > sakila_backup_completo.sql",
 e: "Exportas la BD sakila, incluyes rutinas y rediriges la salida (>) al archivo especificado."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el comando 'mysqldump -u root -p sakila > archivo.sql', ¿qué indica el operador '>'?",
 r: ["Que la base de datos es mayor que el archivo.", "Redirección de entrada: el archivo se mete en la base de datos.", "Redirección de salida: el resultado del comando se guarda en el archivo.", "Que se sobrescriba la base de datos sin preguntar."],
 c: "Redirección de salida: el resultado del comando se guarda en el archivo.",
 e: "El símbolo > captura lo que mysqldump mostraría por pantalla y lo escribe en el fichero."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué sucederá si ejecutas el mysqldump sin el operador '>' ni el nombre del archivo?",
 r: ["Dará un error crítico de sintaxis.", "El servidor se reiniciará.", "Se borrará la base de datos.", "Todo el código SQL se imprimirá de golpe en la pantalla de tu consola."],
 c: "Todo el código SQL se imprimirá de golpe en la pantalla de tu consola.",
 e: "Por defecto, mysqldump envía su salida a la terminal (STDOUT). Necesitas '>' para capturarlo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El Ejercicio 1 pide entrar al cliente MySQL. ¿Cómo lo haces desde la terminal?",
 r: ["mysql -u root -p", "mysqldump -u root -p", "start mysql", "mysqladmin login"],
 c: "mysql -u root -p",
 e: "Para interactuar con la base de datos mediante sentencias SQL, usas el cliente estándar 'mysql'."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Dentro del cliente MySQL, ¿cuál es el comando destructor exacto que pide el ejercicio?",
 r: ["DELETE TABLE sakila.film;", "DROP TABLE sakila.film;", "TRUNCATE TABLE sakila.film;", "REMOVE sakila.film;"],
 c: "DROP TABLE sakila.film;",
 e: "DROP TABLE elimina por completo la estructura de la tabla y todos sus datos del disco."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué diferencia hay entre usar 'DROP TABLE' y 'DELETE FROM' en este ejercicio?",
 r: ["Ninguna, hacen lo mismo.", "DELETE borra las filas pero la tabla sigue existiendo; DROP borra hasta la existencia de la tabla.", "DROP es reversible con CTRL+Z.", "DELETE es más destructivo que DROP."],
 c: "DELETE borra las filas pero la tabla sigue existiendo; DROP borra hasta la existencia de la tabla.",
 e: "El ejercicio quiere que la tabla desaparezca por completo para simular una pérdida total de esa estructura."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si antes de ejecutar el DROP TABLE no has seleccionado la base de datos con 'USE sakila;', ¿por qué 'DROP TABLE sakila.film;' funciona de todos modos?",
 r: ["Porque MySQL sabe que film solo está en sakila.", "Porque estamos usando la notación 'base_de_datos.tabla' para especificar la ruta exacta.", "Porque somos usuarios root.", "No funciona, dará error."],
 c: "Porque estamos usando la notación 'base_de_datos.tabla' para especificar la ruta exacta.",
 e: "Al prefijar la tabla con el nombre de la BD y un punto, puedes ejecutar el comando desde cualquier lugar."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Tras hacer el DROP, ejecutas 'SELECT * FROM sakila.film;'. ¿Qué error esperado devolverá MySQL?",
 r: ["Access denied for user.", "Table 'sakila.film' doesn't exist.", "Empty set (0 rows).", "Syntax error in SQL statement."],
 c: "Table 'sakila.film' doesn't exist.",
 e: "Como hemos hecho un DROP, la tabla ya no existe en el diccionario de datos."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si el SELECT en lugar de error te devolviera 'Empty set (0 sec)', ¿qué habrías hecho mal en el paso anterior?",
 r: ["No estarías en la base de datos correcta.", "Habrías usado TRUNCATE o DELETE en lugar de DROP.", "El backup se habría restaurado solo.", "Habrías escrito mal el SELECT."],
 c: "Habrías usado TRUNCATE o DELETE en lugar de DROP.",
 e: "Empty set significa que la tabla existe pero no tiene filas. El ejercicio pide comprobar que ha desaparecido (DROP)."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Para proceder a la restauración, el ejercicio dice 'Utiliza la consola del sistema operativo'. ¿Qué debes hacer si sigues dentro de MySQL?",
 r: ["Escribir 'OS RESTORE'.", "Apagar el ordenador.", "Escribir 'exit' o 'quit' para volver a la terminal de Windows/Linux.", "Abrir Workbench obligatoriamente."],
 c: "Escribir 'exit' o 'quit' para volver a la terminal de Windows/Linux.",
 e: "La restauración lógica con redirección (<) se ejecuta desde la terminal del sistema, no desde dentro de la consola SQL."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Cuál es el comando exacto para volcar el archivo de vuelta a la base de datos original?",
 r: ["mysql -u root -p sakila > sakila_backup_completo.sql", "mysqldump -u root -p sakila < sakila_backup_completo.sql", "mysql -u root -p sakila < sakila_backup_completo.sql", "mysqladmin -u root -p restore < sakila_backup_completo.sql"],
 c: "mysql -u root -p sakila < sakila_backup_completo.sql",
 e: "Usas el cliente 'mysql', especificas la base de datos destino ('sakila') e inyectas el fichero con '<'."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el comando de restauración, ¿qué hace el operador '<'?",
 r: ["Exporta la base de datos.", "Comprueba que la base de datos sea menor que el archivo.", "Toma el contenido del archivo de la derecha y se lo pasa como comandos al programa de la izquierda.", "Borra la base de datos antes de importar."],
 c: "Toma el contenido del archivo de la derecha y se lo pasa como comandos al programa de la izquierda.",
 e: "Es el operador de redirección de entrada estándar. El cliente MySQL lee el archivo como si teclearas las instrucciones."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El enunciado dice 'machacando lo que hay'. ¿Por qué la restauración no da error de 'Tabla ya existe' al importar el resto de tablas que NO borramos?",
 r: ["Porque MySQL ignora los errores automáticamente.", "Porque mysqldump incluye por defecto instrucciones 'DROP TABLE IF EXISTS' antes de cada 'CREATE TABLE'.", "Porque usamos el comando FORCE.", "Porque sakila no tiene más tablas."],
 c: "Porque mysqldump incluye por defecto instrucciones 'DROP TABLE IF EXISTS' antes de cada 'CREATE TABLE'.",
 e: "Al hacer el backup, se guardan instrucciones para destruir y volver a crear cada tabla, asegurando un reemplazo limpio."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Durante la restauración, la terminal parece quedarse 'congelada' sin mostrar texto y el cursor parpadea. ¿Qué significa?",
 r: ["Que el archivo está corrupto y debes cerrarlo.", "Que el servidor MySQL se ha caído.", "Que el cliente está procesando y ejecutando miles de sentencias SQL en silencio; debes esperar.", "Que la contraseña era incorrecta."],
 c: "Que el cliente está procesando y ejecutando miles de sentencias SQL en silencio; debes esperar.",
 e: "La restauración lógica por terminal no muestra una barra de progreso. La vuelta al prompt normal indica que ha terminado."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si al intentar restaurar escribes `mysqldump -u root -p sakila < archivo.sql`, ¿qué pasará?",
 r: ["Se restaurará correctamente.", "Dará error, porque mysqldump es para extraer datos, no para inyectarlos (eso lo hace el cliente mysql).", "Se borrará el archivo de backup.", "Se creará un bucle infinito."],
 c: "Dará error, porque mysqldump es para extraer datos, no para inyectarlos (eso lo hace el cliente mysql).",
 e: "Es un error común confundir la herramienta. mysqldump saca los datos, mysql los mete."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Una vez terminada la restauración en la terminal, ¿cuál es el siguiente paso según el ejercicio?",
 r: ["Reiniciar el servidor físico.", "Borrar el archivo de backup.", "Volver a entrar al cliente MySQL (mysql -u root -p) para verificar.", "Hacer otro mysqldump."],
 c: "Volver a entrar al cliente MySQL (mysql -u root -p) para verificar.",
 e: "Siempre debes verificar visualmente o mediante consultas que los datos han vuelto a su sitio."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Para verificar que la tabla ha vuelto, ejecutas `SELECT COUNT(*) FROM sakila.film;`. ¿Qué debería devolver si todo ha ido bien?",
 r: ["0", "Un error.", "El número total de películas originales que había en la base de datos (ej. 1000).", "NULL"],
 c: "El número total de películas originales que había en la base de datos (ej. 1000).",
 e: "Un COUNT es la mejor forma de comprobar de un vistazo rápido que todos los registros han sido insertados de nuevo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Imagina que olvidas poner 'sakila' en el comando de restauración: `mysql -u root -p < sakila_backup_completo.sql`. ¿Qué error podrías obtener si el script no crea la BD?",
 r: ["File not found.", "No database selected.", "Access denied.", "Duplicate entry."],
 c: "No database selected.",
 e: "Si el archivo de backup no incluye 'USE sakila;', MySQL no sabrá en qué base de datos volcar las tablas y devolverá este error."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué pasaría en este ejercicio si, además de film, hubieras borrado también la tabla 'actor' antes de restaurar?",
 r: ["La tabla actor no se recuperaría porque solo comprobamos film.", "Daría un error y la restauración se detendría.", "Ambas tablas se recuperarían perfectamente, ya que el backup es 'completo' (de toda la base de datos).", "MySQL bloquearía tu usuario."],
 c: "Ambas tablas se recuperarían perfectamente, ya que el backup es 'completo' (de toda la base de datos).",
 e: "El backup completo guarda la 'foto' de toda la base de datos; restaura todo lo que contuviera en el momento de la copia."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si mientras estás escribiendo el mysqldump te equivocas y pones `--rutines` (mal escrito), ¿qué ocurre?",
 r: ["Lo corrige automáticamente.", "Ignora el parámetro y hace la copia sin rutinas.", "Devuelve un error indicando que la opción no es reconocida y detiene la copia.", "Borra la base de datos por seguridad."],
 c: "Devuelve un error indicando que la opción no es reconocida y detiene la copia.",
 e: "La terminal es estricta con la sintaxis de las banderas; un error tipográfico impide la ejecución."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué extensión de archivo genera la herramienta mysqldump por convención, como se ve en el ejercicio?",
 r: [".csv", ".txt", ".sql", ".ibd"],
 c: ".sql",
 e: "Genera un archivo de texto plano que contiene sentencias del lenguaje SQL."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si quisieras ver las primeras líneas del archivo 'sakila_backup_completo.sql' sin entrar a MySQL, ¿qué comando de la terminal de Linux usarías?",
 r: ["head sakila_backup_completo.sql", "select * from sakila_backup_completo.sql", "show create sakila_backup_completo.sql", "mysql view sakila_backup_completo.sql"],
 c: "head sakila_backup_completo.sql",
 e: "Al ser un archivo de texto, comandos del S.O. como head, cat o more sirven para inspeccionarlo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si durante el Ejercicio 1, al intentar hacer la copia te sale 'Access denied for user root', ¿qué es lo más probable que falte?",
 r: ["La base de datos sakila está vacía.", "Falta poner la contraseña cuando el comando pide el 'Enter password:'.", "El disco duro está roto.", "MySQL no está instalado."],
 c: "Falta poner la contraseña cuando el comando pide el 'Enter password:'.",
 e: "El parámetro -p indica a mysqldump que debe solicitar el prompt de contraseña interactivo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Por qué se usa el parámetro '-u root' en los comandos de este ejercicio?",
 r: ["Para indicar la 'ubicación' del archivo.", "Porque 'root' es la carpeta raíz de Linux.", "Para especificar el 'usuario' administrador que tiene permisos totales para extraer e insertar datos.", "Para decirle a MySQL que use rutas relativas."],
 c: "Para especificar el 'usuario' administrador que tiene permisos totales para extraer e insertar datos.",
 e: "Root es el superusuario de la base de datos, necesario para garantizar que ninguna tabla quede fuera por falta de permisos."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el contexto de la base de datos sakila, ¿qué es exactamente lo que borra el comando 'DROP TABLE sakila.film;'?",
 r: ["Un procedimiento almacenado.", "Solo las filas de datos de las películas.", "La definición de la estructura de la tabla de películas, todos sus índices y todos sus registros.", "Toda la base de datos sakila."],
 c: "La definición de la estructura de la tabla de películas, todos sus índices y todos sus registros.",
 e: "DROP es la orden DDL (Data Definition Language) definitiva para erradicar un objeto de tabla completo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Cuando restauras el archivo 'sakila_backup_completo.sql', ¿qué proceso interno realiza MySQL realmente?",
 r: ["Copiar y pegar archivos físicos en la carpeta Data.", "Descomprimir un archivo ZIP.", "Leer el fichero de arriba a abajo y ejecutar cada sentencia SQL (CREATE, INSERT) de forma secuencial.", "Sincronizar mediante internet."],
 c: "Leer el fichero de arriba a abajo y ejecutar cada sentencia SQL (CREATE, INSERT) de forma secuencial.",
 e: "La restauración lógica no es más que la ejecución automatizada de un script gigante."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si abrieras el archivo 'sakila_backup_completo.sql' con el Bloc de notas, ¿qué verías para la tabla film?",
 r: ["Un galimatías de símbolos binarios.", "La sentencia 'CREATE TABLE film (...)' seguida de múltiples 'INSERT INTO film VALUES (...)'.", "Solo un enlace a la base de datos.", "Una advertencia de seguridad."],
 c: "La sentencia 'CREATE TABLE film (...)' seguida de múltiples 'INSERT INTO film VALUES (...)'.",
 e: "El backup lógico es totalmente transparente y contiene las instrucciones exactas para reconstruir la información."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si haces el backup con mysqldump pero olvidas poner 'sakila', ej: `mysqldump -u root -p > backup.sql`. ¿Qué pasa?",
 r: ["Pregunta qué base de datos quieres copiar.", "Da error de sintaxis, falta el nombre de la base de datos a exportar.", "Hace copia de todas las bases de datos automáticamente.", "Borra la configuración de MySQL."],
 c: "Da error de sintaxis, falta el nombre de la base de datos a exportar.",
 e: "Mysqldump requiere saber explícitamente qué base de datos debe procesar (a menos que se use --all-databases)."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El ejercicio te hace borrar la tabla 'film' a propósito. Esto simula un error humano en el mundo real que clasificaríamos como:",
 r: ["Fallo de Hardware.", "Fallo de Sistema.", "Fallo Lógico / de Sentencia (o borrado accidental).", "Fallo de Red."],
 c: "Fallo Lógico / de Sentencia (o borrado accidental).",
 e: "Un DROP accidental es uno de los desastres lógicos más comunes que requieren restauración desde un backup."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Al restaurar, ¿qué riesgo tiene hacerlo 'machacando lo que hay' si la base de datos hubiera seguido en uso después de hacer el backup?",
 r: ["Que el ordenador se apague.", "Que se perderían todos los datos nuevos (inserciones/modificaciones) introducidos DESPUÉS del momento del backup.", "Ningún riesgo, MySQL fusiona los datos mágicamente.", "Que los datos antiguos se triplican."],
 c: "Que se perderían todos los datos nuevos (inserciones/modificaciones) introducidos DESPUÉS del momento del backup.",
 e: "Restaurar un Full Backup retrocede el estado de TODA la base de datos a esa foto exacta, eliminando cualquier progreso posterior."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si quisieras hacer la restauración de forma más segura para no sobrescribir toda la base de datos entera, ¿qué deberías haber hecho antes de restaurar?",
 r: ["Restaurar el archivo en una base de datos temporal (ej. sakila_recovery), extraer solo la tabla film, e insertarla en la original.", "Borrar todas las demás tablas primero.", "Usar un editor hexadecimal.", "Cambiar la contraseña de root."],
 c: "Restaurar el archivo en una base de datos temporal (ej. sakila_recovery), extraer solo la tabla film, e insertarla en la original.",
 e: "En producción, se suele restaurar el backup en otra instancia o BD paralela para recuperar solo lo perdido sin machacar el trabajo actual del resto de tablas."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "El comando de restauración es `mysql -u root -p sakila < archivo.sql`. Si omites el parámetro '-p', ¿qué ocurrirá?",
 r: ["Intentará conectar sin contraseña, fallando si root tiene clave asignada.", "Pedirá la contraseña automáticamente.", "Usará la contraseña por defecto '1234'.", "Creará un usuario nuevo."],
 c: "Intentará conectar sin contraseña, fallando si root tiene clave asignada.",
 e: "El flag -p es estrictamente necesario para que el cliente active la solicitud interactiva de la contraseña."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué pasaría si el archivo 'sakila_backup_completo.sql' pesara 50 GB durante el proceso de restauración?",
 r: ["Terminaría en un segundo.", "La terminal colapsaría y se cerraría.", "Tardaría bastante tiempo (quizás horas), porque el motor tiene que ejecutar millones de instrucciones INSERT una por una.", "Daría error de espacio en disco siempre."],
 c: "Tardaría bastante tiempo (quizás horas), porque el motor tiene que ejecutar millones de instrucciones INSERT una por una.",
 e: "Esta es la principal desventaja de los backups lógicos en bases de datos masivas: el tiempo de restauración."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En el comando `DROP TABLE sakila.film;`, el punto sirve para:",
 r: ["Finalizar la sentencia.", "Separar el nombre de la base de datos del nombre de la tabla (Esquema.Tabla).", "Indicar un archivo oculto.", "Multiplicar tablas."],
 c: "Separar el nombre de la base de datos del nombre de la tabla (Esquema.Tabla).",
 e: "Es la notación estándar de SQL para la resolución de nombres cualificados."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si quisieras verificar no solo que la tabla existe, sino ver sus columnas antes de hacer el SELECT final, ¿qué comando usarías?",
 r: ["SHOW DATABASES;", "DESCRIBE sakila.film;", "LIST sakila.film;", "VIEW sakila.film;"],
 c: "DESCRIBE sakila.film;",
 e: "DESCRIBE (o DESC) te muestra la estructura de columnas y tipos de datos de la tabla especificada."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "¿Qué ocurre con los índices de la tabla 'film' tras realizar el backup y la posterior restauración?",
 r: ["Se pierden para siempre.", "Hay que volver a crearlos a mano.", "Se restauran automáticamente junto con la tabla, ya que mysqldump incluye la estructura completa (CREATE TABLE con sus índices).", "Solo se restauran las claves primarias, no los índices secundarios."],
 c: "Se restauran automáticamente junto con la tabla, ya que mysqldump incluye la estructura completa (CREATE TABLE con sus índices).",
 e: "El CREATE TABLE que genera mysqldump es una copia fiel que incluye claves primarias, foráneas e índices."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "Si ejecutas la copia con el servidor en producción recibiendo peticiones constantemente, y NO añades `--single-transaction`, ¿qué podría pasar?",
 r: ["Nada, funciona igual.", "La copia podría tener inconsistencias (por ejemplo, registrar el alquiler de una película pero no su pago asociado si ocurrió justo en ese milisegundo).", "El servidor explotaría.", "Mysqldump se niega a arrancar."],
 c: "La copia podría tener inconsistencias (por ejemplo, registrar el alquiler de una película pero no su pago asociado si ocurrió justo en ese milisegundo).",
 e: "Sin aislamiento transaccional, una base de datos en caliente genera copias lógicas inconsistentes."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 1: Backup y Restauración de sakila",
 p: "En resumen, el objetivo principal del Ejercicio 1 es enseñarte a:",
 r: ["Hacer copias físicas de seguridad.", "Configurar el log binario.", "Realizar una copia lógica de emergencia y aprender el proceso de inyectarla de vuelta tras un desastre fatal en una tabla.", "Cambiar contraseñas de usuarios."],
 c: "Realizar una copia lógica de emergencia y aprender el proceso de inyectarla de vuelta tras un desastre fatal en una tabla.",
@@ -5373,831 +5373,614 @@ e: "Es la maniobra de supervivencia más básica y vital de cualquier administra
 
 const testSeguridadBBDDEjercicio2 = [
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para lograr el objetivo del Ejercicio 2, ¿qué cláusula principal de SQL debes utilizar?",
 r: ["mysqldump --csv", "SELECT ... INTO OUTFILE", "EXPORT TABLE ... AS CSV", "SAVE DATA TO ..."],
 c: "SELECT ... INTO OUTFILE",
 e: "Esta es la instrucción nativa de SQL dentro de MySQL para volcar resultados de consultas a archivos de texto en el servidor."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué columnas específicas exige el enunciado que debes extraer de la tabla customer?",
 r: ["*", "customer_id, first_name, last_name", "first_name, last_name, email", "first_name, last_name, active"],
 c: "first_name, last_name, email",
 e: "El ejercicio es muy específico: debes usar 'SELECT first_name, last_name, email' en el inicio de tu consulta."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Cómo aplicas la condición de que 'solo quieren a los clientes actualmente activos'?",
 r: ["HAVING active = 'yes'", "FILTER active = 1", "WHERE active = 1", "IF active = true"],
 c: "WHERE active = 1",
 e: "La cláusula WHERE se encarga de filtrar los registros en base a la condición solicitada antes de exportarlos."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "El archivo de destino debe llamarse 'clientes_activos.csv'. ¿Dónde se coloca este nombre en la sintaxis?",
 r: ["Al final de la sentencia SQL.", "Justo después de INTO OUTFILE y entre comillas simples (ej. INTO OUTFILE 'C:/ruta/clientes_activos.csv').", "Después del FROM customer.", "Antes del SELECT."],
 c: "Justo después de INTO OUTFILE y entre comillas simples (ej. INTO OUTFILE 'C:/ruta/clientes_activos.csv').",
 e: "La ruta y el nombre del archivo se definen inmediatamente como argumento de OUTFILE."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para cumplir el requisito: 'Las columnas deben estar separadas por punto y coma (;)', ¿qué cláusula debes añadir?",
 r: ["COLUMNS SEPARATED BY ';'", "FIELDS TERMINATED BY ';'", "SPLIT BY ';'", "DELIMITER ';'"],
 c: "FIELDS TERMINATED BY ';'",
 e: "En MySQL, la instrucción para definir el separador de columnas en exportaciones/importaciones es FIELDS TERMINATED BY."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Según el enunciado, ¿por qué se pide separar por punto y coma (;) y no por comas (,) en un archivo CSV (Comma Separated Values)?",
 r: ["Porque MySQL no admite comas.", "Porque el punto y coma ocupa menos espacio en disco.", "Porque en España y Europa Excel usa la coma (,) para los decimales matemáticos, y usar comas como separador rompería las tablas.", "Porque es un formato exclusivo de Linux."],
 c: "Porque en España y Europa Excel usa la coma (,) para los decimales matemáticos, y usar comas como separador rompería las tablas.",
 e: "Es un problema de localización clásica. Si exportas con comas, Excel europeo mezclará las columnas con los números decimales."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para cumplir el requisito: 'Los textos deben ir entre comillas dobles', ¿qué cláusula usas?",
 r: ["TEXT WITH '\"'", "WRAPPED BY '\"'", "ENCLOSED BY '\"'", "QUOTED BY '\"'"],
 c: "ENCLOSED BY '\"'",
 e: "OPTIONALLY ENCLOSED BY o simplemente ENCLOSED BY indica qué carácter envolverá el contenido de cada celda de texto."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Cómo evitas que la comilla doble ( \") dentro de ENCLOSED BY '\"' rompa la sintaxis del string en SQL?",
 r: ["No se puede evitar.", "Encerrando la comilla doble entre comillas simples: '\"'", "Escribiendo la palabra DOUBLE_QUOTE.", "Usando un hashtag #."],
 c: "Encerrando la comilla doble entre comillas simples: '\"'",
 e: "MySQL interpreta la comilla simple como delimitador de la cadena y la comilla doble del interior como el carácter literal que quieres usar."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para que 'Cada fila termine con un salto de línea', ¿cuál es la instrucción correcta al final del bloque?",
 r: ["ROWS ENDED BY '\\n'", "LINES TERMINATED BY '\\n'", "END LINE '\\n'", "NEWLINE '\\n'"],
 c: "LINES TERMINATED BY '\\n'",
 e: "Esta cláusula le indica a MySQL qué carácter invisible utilizar para marcar el final de cada registro (fila) en el archivo de texto."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Cuál de las siguientes es la sintaxis COMPLETA y CORRECTA para el Ejercicio 2?",
 r: ["SELECT first_name, last_name, email INTO OUTFILE 'C:/clientes_activos.csv' FIELDS TERMINATED BY ';' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' FROM customer WHERE active=1;", "SELECT first_name, last_name, email FROM customer WHERE active=1 INTO OUTFILE 'C:/clientes_activos.csv';", "mysqldump -u root -p sakila customer --csv > clientes.csv", "LOAD DATA INFILE 'clientes.csv' INTO TABLE customer FIELDS TERMINATED BY ';' WHERE active=1;"],
 c: "SELECT first_name, last_name, email INTO OUTFILE 'C:/clientes_activos.csv' FIELDS TERMINATED BY ';' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' FROM customer WHERE active=1;",
 e: "Esta es la estructura canónica: SELECT [columnas] INTO OUTFILE [ruta] [formato de campos y líneas] FROM [tabla] WHERE [condición]."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si en vez de un PC local ejecutas esto en un servidor en la nube, ¿dónde se guarda el archivo 'clientes_activos.csv'?",
 r: ["En tu carpeta de Descargas del navegador.", "Se envía por correo.", "En el sistema de ficheros del servidor remoto que aloja MySQL, en la ruta especificada.", "En la base de datos como una tabla nueva."],
 c: "En el sistema de ficheros del servidor remoto que aloja MySQL, en la ruta especificada.",
 e: "OUTFILE siempre interactúa con el disco duro de la máquina donde se está ejecutando el servicio mysqld, no la máquina cliente."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si omites la cláusula `WHERE active = 1`, ¿qué pasará con el archivo resultante?",
 r: ["Estará vacío.", "Incluirá a todos los clientes de la tabla, tanto activos como inactivos.", "Dará error de sintaxis.", "Solo incluirá inactivos."],
 c: "Incluirá a todos los clientes de la tabla, tanto activos como inactivos.",
 e: "La ausencia de WHERE provoca que la consulta exporte la totalidad de las filas devueltas por el SELECT."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Al abrir el archivo en Excel o en el Bloc de notas, ¿cómo se vería exactamente el registro de un cliente llamado John Doe con correo john@mail.com?",
 r: ["John;Doe;john@mail.com", "John,Doe,john@mail.com", "\"John\";\"Doe\";\"john@mail.com\"", "'John';'Doe';'john@mail.com'"],
 c: "\"John\";\"Doe\";\"john@mail.com\"",
 e: "Los textos están encerrados por comillas dobles (ENCLOSED BY '\"') y separados por punto y coma (FIELDS TERMINATED BY ';')."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Intentas exportar a 'C:/clientes.csv' pero el servidor devuelve el error de permisos 'Errcode: 13 - Permission denied'. ¿Cuál es la causa?",
 r: ["La tabla customer está vacía.", "El servicio MySQL no tiene permisos a nivel de Windows para escribir archivos en la raíz de C:.", "El usuario root de MySQL está bloqueado.", "Falta el punto y coma final."],
 c: "El servicio MySQL no tiene permisos a nivel de Windows para escribir archivos en la raíz de C:.",
 e: "Es el error más común al usar OUTFILE. El S.O. protege ciertas carpetas. Debes exportar a carpetas permitidas (ej. 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/')."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para solucionar el error de permisos en Windows y asegurar la exportación, ¿qué carpeta especial y configurada por defecto de MySQL deberías usar?",
 r: ["C:/Windows/System32", "El escritorio.", "La carpeta indicada en la variable 'secure_file_priv' (usualmente la carpeta Uploads de ProgramData).", "La papelera de reciclaje."],
 c: "La carpeta indicada en la variable 'secure_file_priv' (usualmente la carpeta Uploads de ProgramData).",
 e: "Por seguridad, MySQL restringe la exportación e importación masiva a la ruta definida en secure_file_priv."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si ya ejecutaste la consulta una vez y el archivo 'clientes_activos.csv' existe, y vuelves a ejecutar el mismo comando exacto, ¿qué ocurre?",
 r: ["Se machaca y se sobrescribe el archivo con los nuevos datos.", "Se añaden los nuevos datos al final (modo append).", "Dará un error indicando que el archivo ya existe; MySQL no sobrescribe archivos por seguridad mediante OUTFILE.", "Pregunta si quieres reemplazarlo."],
 c: "Dará un error indicando que el archivo ya existe; MySQL no sobrescribe archivos por seguridad mediante OUTFILE.",
 e: "Esta es una medida de seguridad interna. Deberás borrar el archivo anterior manualmente del disco duro o cambiarle el nombre a la salida."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "En el código, has puesto la ruta como 'C:\\Users\\admin\\clientes.csv'. MySQL lanza error. ¿Por qué?",
 r: ["En Windows, dentro de sentencias SQL debes usar dobles barras (\\\\) o barras normales (/) porque la barra simple (\\) es el carácter de escape.", "MySQL no funciona en discos C.", "Falta la extensión .txt.", "El nombre del archivo es muy largo."],
 c: "En Windows, dentro de sentencias SQL debes usar dobles barras (\\\\) o barras normales (/) porque la barra simple (\\) es el carácter de escape.",
 e: "Es un error de formato de ruta vital. 'C:/Users/admin/clientes.csv' o 'C:\\\\Users\\\\admin\\\\clientes.csv' funcionarían correctamente."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quieres asegurarte de revisar el archivo de salida con un Bloc de notas y ver los saltos de línea correctamente en Windows antiguos, a veces es mejor usar:",
 r: ["LINES TERMINATED BY '\\n'", "LINES TERMINATED BY '\\r\\n'", "LINES TERMINATED BY '\\t'", "LINES ENDED BY EOF"],
 c: "LINES TERMINATED BY '\\r\\n'",
 e: "El retorno de carro (\\r) seguido de salto de línea (\\n) es el estándar de Windows para nuevas líneas, aunque \\n suele bastar en sistemas modernos."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué pasaría si usas 'SELECT * INTO OUTFILE...' en este ejercicio?",
 r: ["Daría un error.", "Exportaría el nombre, apellido y email únicamente.", "Exportaría todas y cada una de las columnas de la tabla customer (id, store_id, address_id, active, create_date, etc.), incumpliendo el requisito.", "Crearía múltiples archivos."],
 c: "Exportaría todas y cada una de las columnas de la tabla customer (id, store_id, address_id, active, create_date, etc.), incumpliendo el requisito.",
 e: "El asterisco saca todo, por eso se exige listar explícitamente las tres columnas deseadas."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "El comando OUTFILE de este ejercicio se considera:",
 r: ["Una copia de seguridad física completa.", "Un Point-in-Time Recovery.", "Una exportación de datos lógicos específica o volcado de resultados.", "Una restauración diferencial."],
 c: "Una exportación de datos lógicos específica o volcado de resultados.",
 e: "No es un sistema de respaldo como tal, es una herramienta de extracción de datos puntuales para interactuar con otros sistemas."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para ejecutar este comando con éxito, ¿necesitas parar la base de datos (systemctl stop mysql)?",
 r: ["Sí, para que los clientes no cambien sus datos.", "No, la consulta SELECT se ejecuta en caliente y en tiempo real como cualquier otra petición a la base de datos.", "Solo si el servidor es Linux.", "Sí, OUTFILE requiere un Cold Backup."],
 c: "No, la consulta SELECT se ejecuta en caliente y en tiempo real como cualquier otra petición a la base de datos.",
 e: "Es una consulta de lectura estándar que se aprovecha para escribir su output al disco duro sin interrumpir el servicio."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quieres comprobar qué valor tiene tu variable 'secure_file_priv' para saber a qué carpeta puedes exportar, ¿qué ejecutas en MySQL?",
 r: ["SHOW VARIABLES LIKE 'secure_file_priv';", "SELECT secure_file_priv;", "GET FOLDER PRIVILEGES;", "DIR secure_file_priv;"],
 c: "SHOW VARIABLES LIKE 'secure_file_priv';",
 e: "Este comando del sistema te devuelve la ruta exacta autorizada por el motor para leer y escribir archivos."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Al usar `FIELDS TERMINATED BY ';'`, ¿qué ocurre si un cliente se llama 'Luis;Carlos' y lo exportamos sin usar ENCLOSED BY?",
 r: ["Nada, se exporta bien.", "El sistema cambiará el nombre a 'Luis Carlos'.", "El archivo CSV se corromperá lógicamente porque Excel interpretará el ';' del nombre como una nueva columna.", "MySQL lanzará un error y detendrá la exportación."],
 c: "El archivo CSV se corromperá lógicamente porque Excel interpretará el ';' del nombre como una nueva columna.",
 e: "Por eso es vital usar ENCLOSED BY '\"'. Al poner \"Luis;Carlos\", los programas saben que el punto y coma interno pertenece al texto y no es un separador de campo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué tipo de estructura SQL es la que precede a INTO OUTFILE?",
 r: ["Obligatoriamente un UPDATE.", "Un simple SELECT, que puede incluir JOINs, funciones de agregación (SUM, COUNT) u ordenamientos (ORDER BY) con total libertad.", "Solo puede ser un SELECT de una sola tabla sin WHERE.", "Un mysqldump interno."],
 c: "Un simple SELECT, que puede incluir JOINs, funciones de agregación (SUM, COUNT) u ordenamientos (ORDER BY) con total libertad.",
 e: "El bloque SELECT puede ser todo lo complejo que quieras. INTO OUTFILE solo coge el resultado final que saldría por pantalla y lo mete en el archivo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Imagina que el archivo CSV que generaste se debe devolver a la tabla. ¿Qué comando revertiría tu OUTFILE inyectando de vuelta los datos?",
 r: ["INSERT INTO customer FROM 'clientes_activos.csv'", "LOAD DATA INFILE 'C:/.../clientes_activos.csv' INTO TABLE customer FIELDS TERMINATED BY ';' ENCLOSED BY '\"';", "READ OUTFILE 'clientes_activos.csv';", "IMPORT CSV TO customer;"],
 c: "LOAD DATA INFILE 'C:/.../clientes_activos.csv' INTO TABLE customer FIELDS TERMINATED BY ';' ENCLOSED BY '\"';",
 e: "LOAD DATA INFILE es el gemelo inverso de OUTFILE. Necesita que le digas exactamente cómo están separados (;) y encerrados (\") los datos en el fichero para que sepa leerlos."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si un compañero escribe `SELECT email, last_name, first_name INTO OUTFILE ...`, ¿qué cambiará en el archivo respecto a lo pedido?",
 r: ["Nada, SQL ordena alfabéticamente.", "Dará error de compilación.", "Las columnas en el archivo .csv aparecerán en ese orden alterado: primero el correo, luego el apellido y finalmente el nombre.", "MySQL ignorará las columnas."],
 c: "Las columnas en el archivo .csv aparecerán en ese orden alterado: primero el correo, luego el apellido y finalmente el nombre.",
 e: "El orden de las columnas en el archivo CSV dependerá estricta y exclusivamente del orden en el que las listes en el SELECT."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Por qué el ejercicio exige explícitamente usar '\\n' en LINES TERMINATED BY?",
 r: ["Para cifrar el archivo.", "Para asegurar que cada cliente aparezca en una fila nueva (salto de línea), de lo contrario todos los clientes saldrían apelotonados en una sola y larguísima línea de texto.", "Para añadir espacios en blanco.", "Para indicar el final del archivo (End of File)."],
 c: "Para asegurar que cada cliente aparezca en una fila nueva (salto de línea), de lo contrario todos los clientes saldrían apelotonados en una sola y larguísima línea de texto.",
 e: "Sin un finalizador de línea, el sistema de texto no sabe cuándo termina un registro y empieza el siguiente."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Te piden que los encabezados de las columnas (First Name, Last Name, Email) aparezcan en la primera línea del archivo CSV. ¿Puede OUTFILE hacerlo automáticamente?",
 r: ["Sí, es la opción por defecto.", "Sí, añadiendo WITH HEADERS.", "No de forma nativa sencilla; OUTFILE solo exporta los datos brutos. Para añadir cabeceras suele recurrirse a un truco uniendo (UNION) un select con textos manuales.", "Sí, usando INCLUDE TITLES."],
 c: "No de forma nativa sencilla; OUTFILE solo exporta los datos brutos. Para añadir cabeceras suele recurrirse a un truco uniendo (UNION) un select con textos manuales.",
 e: "Es una limitación famosa de OUTFILE: solo escupe las filas resultantes, no la metadata de las columnas."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Al exportar con el cliente activo, ¿qué valor exacto debes poner en el comando? `active = ...`",
 r: ["active = TRUE", "active = 'active'", "active = 1", "active = YES"],
 c: "active = 1",
 e: "En la base de datos sakila, la columna active suele ser un tinyint(1) usado como booleano, donde 1 representa verdadero (activo)."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Imagina que olvidas poner el `ENCLOSED BY '\"'`. En su lugar, el texto de un apellido contiene un punto y coma (;). ¿Qué pasará al abrirlo en Excel?",
 r: ["Excel lo leerá perfectamente.", "Excel desplazará los datos de ese cliente hacia la derecha, arruinando la alineación de la columna email.", "El archivo no se podrá abrir.", "MySQL crasheará el sistema operativo."],
 c: "Excel desplazará los datos de ese cliente hacia la derecha, arruinando la alineación de la columna email.",
 e: "Excel ve el ';' y dice: '¡Ah! ¡Nueva columna!', rompiendo la estructura tabular para esa fila concreta."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Ejecutas el comando completo del Ejercicio 2 en la terminal y pulsas Enter. ¿Qué mensaje de éxito muestra MySQL?",
 r: ["Backup completed successfully.", "CSV File generated at C:/...", "Query OK, X rows affected (Y sec)", "Data Exported: 100%"],
 c: "Query OK, X rows affected (Y sec)",
 e: "MySQL te devuelve el mensaje estándar de éxito, indicando cuántas filas (rows) ha logrado volcar al archivo."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para abrir el archivo generado 'clientes_activos.csv' de forma inmediata desde un PC con Windows para comprobar que ha salido bien, la mejor herramienta rápida es:",
 r: ["Microsoft Word.", "Bloc de notas (Notepad) o Notepad++.", "Adobe Reader.", "Photoshop."],
 c: "Bloc de notas (Notepad) o Notepad++.",
 e: "Un archivo CSV es texto crudo. Abrirlo con un editor de texto simple es la mejor manera de verificar los delimitadores (;) y las comillas (\") sin que Excel lo formatee antes."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si la tabla 'customer' tuviera 10 millones de clientes activos, ¿qué pasaría al ejecutar el OUTFILE?",
 r: ["Daría error por exceso de filas.", "Solo exportaría los primeros 1000.", "Tardaría bastante tiempo en escribir el archivo y generaría un fichero de texto de gran peso (varios Gigabytes).", "Crearía automáticamente varios archivos CSV segmentados."],
 c: "Tardaría bastante tiempo en escribir el archivo y generaría un fichero de texto de gran peso (varios Gigabytes).",
 e: "OUTFILE no tiene paginación automática. Escribirá el archivo completo de un tirón, pudiendo llenar el disco si no hay espacio."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "¿Qué pasaría si usas la cláusula `FIELDS TERMINATED BY ','` pero en tu ordenador europeo haces doble clic para abrirlo con Excel?",
 r: ["Saldría perfectamente estructurado.", "Excel pondría toda la línea junta en la columna A porque está esperando puntos y comas (;).", "Excel traducirá el archivo a español automáticamente.", "Las comas se borrarán."],
 c: "Excel pondría toda la línea junta en la columna A porque está esperando puntos y comas (;).",
 e: "En configuraciones regionales donde la coma (,) es el decimal (ej. 3,14), Excel asume que el separador de listas de un CSV es el punto y coma (;)."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "En la sentencia de exportación, ¿en qué punto exacto debe escribirse la parte de INTO OUTFILE?",
 r: ["Siempre después del WHERE final.", "Obligatoriamente en la primera línea.", "Se acostumbra a poner justo antes del FROM, entre el listado de columnas (SELECT) y la tabla de origen.", "Al final del todo seguido de un punto."],
 c: "Se acostumbra a poner justo antes del FROM, entre el listado de columnas (SELECT) y la tabla de origen.",
 e: "Aunque en algunas versiones se tolera al final, el estándar y la mejor práctica de legibilidad de MySQL lo ubica antes del FROM."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quisieras añadir también un filtro para exportar solo a los clientes de la tienda 1, ¿cómo modificarías el bloque WHERE?",
 r: ["WHERE active = 1 AND store_id = 1", "WHERE active = 1 OR store_id = 1", "WHERE active = 1 FILTER store_id = 1", "WHERE store_id = 1 THEN active = 1"],
 c: "WHERE active = 1 AND store_id = 1",
 e: "Simplemente añades más lógica booleana con AND para restringir aún más el bloque de datos que será volcado."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Imagina que la tabla customer está sufriendo constantes inserciones y actualizaciones simultáneas (muchos usuarios a la vez). ¿El comando OUTFILE bloquea la tabla entera mientras se crea el archivo?",
 r: ["Sí, bloquea la base de datos hasta que termine.", "En InnoDB, si no se especifica un bloqueo explícito, actúa como una consulta de lectura consistente normal y no bloquea las inserciones concurrentes.", "Borra los datos a medida que los exporta.", "Desconecta al resto de usuarios."],
 c: "En InnoDB, si no se especifica un bloqueo explícito, actúa como una consulta de lectura consistente normal y no bloquea las inserciones concurrentes.",
 e: "Es una operación de lectura (SELECT). Gracias a la concurrencia multiversión de InnoDB, la operatividad del sistema no se detiene."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Si quieres exportar los nombres en orden alfabético, ¿qué cláusula añadirías justo ANTES del INTO OUTFILE o al FINAL del comando?",
 r: ["ALPHABETICAL last_name", "ORDER BY last_name ASC", "SORT last_name", "GROUP BY last_name"],
 c: "ORDER BY last_name ASC",
 e: "Un SELECT es un SELECT. Puedes aplicar ordenamiento al final de la consulta (después del WHERE) para que el CSV nazca ya ordenado."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Una vez completado el Ejercicio 2 con éxito, ¿cuál es la mayor vulnerabilidad de seguridad del archivo generado 'clientes_activos.csv'?",
 r: ["Que tiene un virus.", "Que el texto plano no está encriptado y contiene información personal (nombres, emails) vulnerable a robo de datos si el servidor no es seguro.", "Que caduca al mes.", "Que cambia los datos internamente de forma aleatoria."],
 c: "Que el texto plano no está encriptado y contiene información personal (nombres, emails) vulnerable a robo de datos si el servidor no es seguro.",
 e: "Los CSV con PII (Información Personal Identificable) son un riesgo grave de seguridad; deben eliminarse o protegerse inmediatamente tras la exportación."
 },
 {
-m: "Gestión de BBDD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
+m: "Gestión de BD", t: "Copias de Seguridad", u: "Ejercicio 2: Exportar clientes a CSV",
 p: "Para verificar rápidamente desde MySQL cuántos registros exactos se han debido exportar al CSV, usarías la consulta:",
 r: ["SELECT AMOUNT FROM customer WHERE active=1;", "SELECT COUNT(*) FROM customer WHERE active=1;", "CALCULATE ROWS FROM customer WHERE active=1;", "SHOW COUNT FROM customer;"],
 c: "SELECT COUNT(*) FROM customer WHERE active=1;",
 e: "Realizar un COUNT con las mismas condiciones te da el número mágico (las filas esperadas). Si el CSV tiene esas líneas, la exportación fue un éxito."
 },
 // =========================================================================
-    // CATEGORÍA: SOSTENIBILIDAD
-    // TEST 1 DE 5 (15 PREGUNTAS MEZCLADAS)
+    // TEMA: SOSTENIBILIDAD
+    // TEST 1 (ESTRUCTURA CORREGIDA PARA COMPILACIÓN)
     // =========================================================================
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Conceptos Básicos", u: "Bloque 1",
-        p: "¿Cómo se define el concepto de sostenibilidad según el temario?",
-        r: ["La capacidad de producir recursos ilimitados para el crecimiento industrial.", "La capacidad de satisfacer las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer las suyas.", "El equilibrio exclusivo entre el beneficio económico de la empresa y sus accionistas.", "La protección total de los ecosistemas sin intervención humana."],
-        c: "La capacidad de satisfacer las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer las suyas.",
-        e: "Este concepto busca el equilibrio entre el crecimiento económico, la equidad social y la protección ambiental[cite: 3026, 3027]."
+        m: "Sostenibilidad", t: "Conceptos Fundamentales", u: "TEST 1 - EXAMEN",
+        p: "¿Cómo se define la sostenibilidad según el temario?",
+        r: ["La capacidad de producir recursos ilimitados para la industria.", "La capacidad de satisfacer las necesidades del presente sin comprometer las de las futuras generaciones.", "El crecimiento económico por encima de la equidad social.", "La protección de los ecosistemas sin presencia humana."],
+        c: "La capacidad de satisfacer las necesidades del presente sin comprometer las de las futuras generaciones.",
+        e: "Este concepto busca el equilibrio entre el crecimiento económico, la equidad social y la protección ambiental[cite: 7, 8]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "ODS",
-        p: "¿Cuáles son los cinco ejes centrales (las '5 P') en los que se basa la Agenda 2030?",
-        r: ["Pobreza, Planeta, Producción, Paz y Alianzas.", "Población, Planeta, Prosperidad, Paz y Participación.", "Planeta, Personas, Prosperidad, Paz y Alianzas (Partnership).", "Planificación, Personas, Producción, Paz y Alianzas."],
-        c: "Planeta, Personas, Prosperidad, Paz y Alianzas (Partnership).",
-        e: "Estos cinco ejes agrupan los 17 Objetivos de Desarrollo Sostenible aprobados por la ONU[cite: 1753]."
+        m: "Sostenibilidad", t: "Ecosistemas", u: "TEST 1 - EXAMEN",
+        p: "¿Qué es un 'sumidero' en el ciclo de la actividad económica?",
+        r: ["El lugar de donde se extraen las materias primas primarias.", "El lugar donde van a parar los residuos para ser transformados en fuentes por los ecosistemas.", "Una herramienta de cálculo de impuestos ambientales.", "El departamento encargado de la gestión de residuos sólidos."],
+        c: "El lugar donde van a parar los residuos para ser transformados en fuentes por los ecosistemas.",
+        e: "Los sumideros permiten que los residuos vuelvan a estar a disposición de la actividad económica tras su degradación natural[cite: 11, 12]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores Ambientales", u: "Bloque 1",
-        p: "¿Qué calcula el indicador ambiental conocido como 'huella ecológica'?",
-        r: ["La cantidad de Gases de Efecto Invernadero generados por una actividad.", "La superficie ecológicamente productiva necesaria para producir los recursos consumidos y absorber los desechos.", "El volumen de agua potable utilizado en los procesos de fabricación.", "La capacidad de absorción de residuos de un ecosistema específico."],
-        c: "La superficie ecológicamente productiva necesaria para producir los recursos consumidos y absorber los desechos.",
-        e: "Es un indicador clave para medir el impacto de las actividades humanas en el entorno[cite: 3034]."
+        m: "Sostenibilidad", t: "Indicadores", u: "TEST 1 - EXAMEN",
+        p: "¿Qué mide el indicador conocido como 'huella ecológica'?",
+        r: ["Las emisiones totales de Gases de Efecto Invernadero.", "La superficie ecológicamente productiva necesaria para producir recursos y absorber desechos.", "El consumo de agua por unidad de producto.", "La capacidad de carga de un ecosistema marino."],
+        c: "La superficie ecológicamente productiva necesaria para producir recursos y absorber desechos.",
+        e: "Es un medidor del impacto ambiental generado por las actividades humanas sobre el territorio[cite: 14, 15]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobierno Abierto", u: "V Plan",
-        p: "¿Cuál es el periodo de vigencia del Quinto Plan de Gobierno Abierto de España?",
-        r: ["2020-2024.", "2024-2028.", "2023-2030.", "2025-2029."],
-        c: "2024-2028.",
-        e: "Aprobado en febrero de 2024, marca la hoja de ruta participativa para los próximos cuatro años[cite: 1592]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "¿Cuáles son las dos acciones principales para mitigar el cambio climático?",
+        r: ["Reciclar y reutilizar.", "Desmaterializar y descarbonizar.", "Exportar e importar.", "Aprovisionar y desechar."],
+        c: "Desmaterializar y descarbonizar.",
+        e: "Desmaterializar busca reducir el uso de materiales y descarbonizar sustituir fósiles por renovables[cite: 52, 53, 54]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "Estructura",
-        p: "¿Cuántas metas y objetivos integran la Agenda 2030 para el Desarrollo Sostenible?",
-        r: ["10 objetivos y 100 metas.", "17 objetivos y 169 metas.", "15 objetivos y 150 metas.", "21 objetivos y 8 metas."],
-        c: "17 objetivos y 169 metas.",
-        e: "La Agenda 2030 amplía el alcance de los anteriores Objetivos del Milenio con mayor número de metas y universalidad[cite: 1751]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "En relación con las empresas, ¿qué efecto económico directo tiene el cambio climático en sus edificios?",
+        r: ["Reducción de los impuestos de bienes inmuebles.", "Gasto adicional en climatización por las elevadas temperaturas.", "Aumento del valor de mercado automático.", "Eliminación de la necesidad de seguros."],
+        c: "Gasto adicional en climatización por las elevadas temperaturas.",
+        e: "Muchas infraestructuras no están diseñadas para el calor extremo, obligando a inversiones extras[cite: 36, 37]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Sostenibilidad Empresarial", u: "Documentación",
-        p: "¿Cuál es el objetivo principal de un 'Plan de Sostenibilidad' en una organización?",
-        r: ["Reflejar los resultados de sostenibilidad durante el periodo de un año.", "Guiar las acciones de la organización en materia de sostenibilidad a medio y largo plazo.", "Dar cuenta exclusivamente a la autoridad de los riesgos financieros.", "Valorar los impactos medioambientales de un proyecto de obra concreto."],
-        c: "Guiar las acciones de la organización en materia de sostenibilidad a medio y largo plazo.",
-        e: "A diferencia de la memoria (anual), el plan es estratégico y se proyecta habitualmente a 2-4 años[cite: 3022, 3154, 3166]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "¿Por qué el reciclaje se considera la 'opción menos mala' y no la perfecta?",
+        r: ["Porque es demasiado caro para las pequeñas empresas.", "Porque las propias plantas de reciclado generan contaminación mediante emisiones de gases.", "Porque los productos reciclados son de peor calidad.", "Porque no reduce la huella de carbono."],
+        c: "Porque las propias plantas de reciclado generan contaminación mediante emisiones de gases.",
+        e: "Aunque su impacto es menor que no reciclar, el proceso de tratamiento también emite contaminantes[cite: 49, 50, 51]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecosistemas", u: "Conceptos",
-        p: "¿Qué función cumple un 'sumidero' en el ciclo de la actividad económica?",
-        r: ["Es el lugar de donde se extraen las materias primas primarias.", "Es el lugar donde van a parar los residuos generados que los ecosistemas degradan y transforman en fuentes.", "Es una herramienta financiera para compensar emisiones de carbono.", "Es el departamento encargado de la gestión de aguas residuales."],
-        c: "Es el lugar donde van a parar los residuos generados que los ecosistemas degradan y transforman en fuentes.",
-        e: "Los sumideros son fundamentales para que los residuos vuelvan a estar a disposición de la actividad económica tras su degradación natural[cite: 3030, 3031]."
+        m: "Sostenibilidad", t: "Ecosistemas", u: "TEST 1 - EXAMEN",
+        p: "¿Qué es un ecosistema según la definición biológica?",
+        r: ["Un grupo de personas que trabajan en sostenibilidad.", "Un sistema formado por una comunidad de seres vivos y su medio físico.", "Una base de datos de especies protegidas.", "Un acuerdo internacional para proteger el clima."],
+        c: "Un sistema formado por una comunidad de seres vivos y su medio físico.",
+        e: "Los organismos en él mantienen relaciones de interdependencia para conservar el equilibrio[cite: 9, 10]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "Acciones",
-        p: "¿En qué consiste la acción de 'desmaterializar' para combatir el cambio climático?",
-        r: ["Eliminar por completo el uso de plásticos en la empresa.", "Reducir la necesidad de materiales en la producción y utilizar materiales reciclados.", "Sustituir combustibles fósiles por energías renovables.", "Digitalizar todos los procesos administrativos de la administración pública."],
-        c: "Reducir la necesidad de materiales en la producción y utilizar materiales reciclados.",
-        e: "Junto con descarbonizar, es una de las dos acciones principales para mitigar el cambio climático[cite: 3072]."
+        m: "Sostenibilidad", t: "Indicadores", u: "TEST 1 - EXAMEN",
+        p: "¿Qué cuantifica específicamente la 'huella de carbono'?",
+        r: ["La cantidad de papel consumido en un año.", "Las emisiones de Gases de Efecto Invernadero generadas por un individuo o actividad.", "El uso de superficie terrestre para la agricultura.", "El nivel de ruido generado por una fábrica."],
+        c: "Las emisiones de Gases de Efecto Invernadero generadas por un individuo o actividad.",
+        e: "Es el indicador estándar para medir la contribución al calentamiento global[cite: 16]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "Bloque 5",
-        p: "Frente al modelo de producción lineal, ¿qué pretende la economía circular?",
-        r: ["Acelerar la producción de productos 'low cost' para aumentar el consumo.", "Conservar el valor de los productos el mayor tiempo posible y generar el mínimo de residuos.", "Fomentar el desecho rápido para incentivar la innovación constante.", "Eliminar la fase de distribución para reducir la huella de transporte."],
-        c: "Conservar el valor de los productos el mayor tiempo posible y generar el mínimo de residuos.",
-        e: "La economía circular busca mejorar el bienestar social reduciendo los riesgos ambientales y de escasez[cite: 3129, 3130]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "¿Cuál es un reto social agravado directamente por el cambio climático?",
+        r: ["La digitalización de las escuelas.", "Los fenómenos migratorios.", "La mejora del transporte público.", "El aumento del teletrabajo."],
+        c: "Los fenómenos migratorios.",
+        e: "La escasez de recursos y los desastres naturales fuerzan desplazamientos de población[cite: 19, 22]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "Ventajas",
-        p: "¿Qué ventaja competitiva aporta a una empresa la atracción y retención de talento mediante aspectos ASG?",
-        r: ["Permite pagar salarios más bajos gracias a la imagen de marca.", "Aumenta la motivación y el compromiso de la plantilla al cumplir con su responsabilidad social.", "Exime a la empresa de cumplir con la normativa laboral básica.", "Reduce el número de empleados necesarios para realizar la misma tarea."],
-        c: "Aumenta la motivación y el compromiso de la plantilla al cumplir con su responsabilidad social.",
-        e: "La responsabilidad social y medioambiental es un factor clave para la retención de trabajadores cualificados en la actualidad[cite: 3117, 3118]."
+        m: "Sostenibilidad", t: "Conceptos", u: "TEST 1 - EXAMEN",
+        p: "¿Qué significa la 'capacidad de carga' o biocapacidad?",
+        r: ["El peso máximo que soporta un puente industrial.", "La capacidad de un área para producir recursos renovables y absorber sus desechos.", "El número de empleados que puede tener una empresa verde.", "La cantidad de energía solar que puede captar un panel."],
+        c: "La capacidad de un área para producir recursos renovables y absorber sus desechos.",
+        e: "Mide la regeneración natural frente a la extracción y manejo vigentes[cite: 13]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Evaluación de Impacto", u: "Doble Materialidad",
-        p: "En el análisis de la 'Doble Materialidad', ¿a qué se refiere la materialidad de impacto?",
-        r: ["A cómo afectan los factores externos al éxito económico de la empresa.", "A cómo afecta la actividad de la empresa a las personas o al entorno (hacia fuera).", "A la valoración de activos físicos de la organización tras un desastre natural.", "A la probabilidad de recibir sanciones administrativas por contaminación."],
-        c: "A cómo afecta la actividad de la empresa a las personas o al entorno (hacia fuera).",
-        e: "La doble materialidad analiza tanto el impacto externo de la empresa como el impacto financiero interno de los factores ASG[cite: 3156]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "¿Cómo afecta el cambio climático a la productividad del trabajo al aire libre?",
+        r: ["La aumenta gracias a que hay más horas de sol.", "La reduce y supone riesgos para la salud debido a las altas temperaturas.", "No tiene impacto en la productividad laboral.", "Mejora la salud de los trabajadores por la vitamina D."],
+        c: "La reduce y supone riesgos para la salud debido a las altas temperaturas.",
+        e: "El calor excesivo y la contaminación ambiental penalizan el rendimiento físico[cite: 45, 46]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Políticas Europeas", u: "Pacto Verde",
-        p: "¿Cuál es el objetivo principal del Pacto Verde Europeo para el año 2050?",
-        r: ["Reducir las emisiones de carbono en un 50%.", "Alcanzar la neutralidad en emisiones de carbono (emisiones netas cero).", "Prohibir totalmente el uso de vehículos de combustión en las ciudades.", "Eliminar la dependencia de materiales procedentes de fuera de la Unión Europea."],
-        c: "Alcanzar la neutralidad en emisiones de carbono (emisiones netas cero).",
-        e: "La neutralidad implica que el carbono emitido sea igual al capturado por la naturaleza o tecnología[cite: 3075, 3076]."
+        m: "Sostenibilidad", t: "Retos", u: "TEST 1 - EXAMEN",
+        p: "¿Cuál de estos es un reto medioambiental consecuencia del cambio climático?",
+        r: ["El aumento de la velocidad de internet.", "La deforestación y desertización.", "La creación de nuevas zonas peatonales.", "El abaratamiento de los seguros."],
+        c: "La deforestación y desertización.",
+        e: "Es una de las alteraciones graves del entorno natural derivadas del aumento de temperaturas[cite: 24, 25]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobierno Abierto", u: "Herramientas",
-        p: "¿Qué es 'HazLab' según el Documento Marco del V Plan de Gobierno Abierto?",
-        r: ["Un sistema de tramitación electrónica de expedientes de sostenibilidad.", "El laboratorio de innovación para la participación creado en el marco del IV Plan.", "Un portal de datos abiertos sobre el cambio climático.", "Un organismo de control de la transparencia en las subvenciones."],
-        c: "El laboratorio de innovación para la participación creado en el marco del IV Plan.",
-        e: "Es una herramienta fundamental para asegurar la participación y la propuesta de soluciones innovadoras[cite: 1647]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "¿Por qué se encarecen los seguros para las empresas agrícolas debido al clima?",
+        r: ["Por el aumento del precio del combustible.", "Por el mayor riesgo de pérdidas debido a fenómenos meteorológicos extremos.", "Porque los agricultores tienen más beneficios.", "Por una nueva ley de la Unión Europea."],
+        c: "Por el mayor riesgo de pérdidas debido a fenómenos meteorológicos extremos.",
+        e: "Las aseguradoras elevan las primas ante la mayor frecuencia de sequías e incendios[cite: 43, 44]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "Instituciones",
-        p: "¿Qué Ministerio es el responsable en España de la Secretaría de Estado para la Agenda 2030?",
-        r: ["Ministerio de Asuntos Exteriores y Cooperación.", "Ministerio de Derechos Sociales, Consumo y Agenda 2030.", "Ministerio de Transición Ecológica y Reto Demográfico.", "Ministerio de la Presidencia y Justicia."],
-        c: "Ministerio de Derechos Sociales, Consumo y Agenda 2030.",
-        e: "Este ministerio coordina las políticas gubernamentales para el cumplimiento de los ODS en España."
+        m: "Sostenibilidad", t: "Empresa", u: "TEST 1 - EXAMEN",
+        p: "¿Qué impacto tiene el calor extremo en el turismo del sur de Europa?",
+        r: ["Aumenta el número de visitantes en agosto.", "Reduce el atractivo de destinos como la costa mediterránea en verano.", "No influye en la decisión de los turistas.", "Abarata los precios de los hoteles automáticamente."],
+        c: "Reduce el atractivo de destinos como la costa mediterránea en verano.",
+        e: "El calor excesivo puede desplazar la demanda hacia zonas con climas más suaves[cite: 41, 42]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "Principios",
-        p: "¿Cuál de los siguientes es un principio básico del ecodiseño?",
-        r: ["Obsolescencia programada.", "Multifuncionalidad (que el producto sirva para varias tareas).", "Uso exclusivo de materiales sintéticos no biodegradables.", "Complejidad en el desmontaje para evitar manipulaciones."],
-        c: "Multifuncionalidad (que el producto sirva para varias tareas).",
-        e: "El ecodiseño busca minimizar el impacto ambiental integrando factores sostenibles desde la fase de diseño[cite: 3140, 3143]."
+        m: "Sostenibilidad", t: "Cambio Climático", u: "TEST 1 - EXAMEN",
+        p: "En el sector de la energía, ¿qué cambio se observa en la demanda debido al calentamiento global?",
+        r: ["Aumentará la demanda de calefacción en verano.", "Aumentará la demanda de energía para climatización en verano.", "Bajará el consumo total de electricidad.", "Se dejarán de usar las energías hidráulica y eólica."],
+        c: "Aumentará la demanda de energía para climatización en verano.",
+        e: "El uso de aire acondicionado crece en la época de menor producción eólica e hidráulica[cite: 39, 40]."
     },
-// =========================================================================
-    // CATEGORÍA: SOSTENIBILIDAD
-    // TEST 2 DE 5 (15 PREGUNTAS - ETIQUETA ESPECIAL)
+    // =========================================================================
+    // TEMA: SOSTENIBILIDAD
+    // TEST 2 (ESTRUCTURA CORREGIDA PARA COMPILACIÓN)
     // =========================================================================
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 2",
-        p: "¿Qué significan las siglas ASG (o ESG en inglés) en el contexto de la sostenibilidad empresarial?",
-        r: ["Administración, Seguridad y Gerencia.", "Ambiental, Social y Gobernanza.", "Ahorro, Sostenibilidad y Garantía.", "Asistencia, Sociedad y Gestión."],
-        c: "Ambiental, Social y Gobernanza.",
-        e: "Son los tres pilares que se utilizan para medir el impacto ético y de sostenibilidad de una inversión o empresa."
+        m: "Sostenibilidad", t: "Pacto Verde", u: "TEST 2 - EXAMEN",
+        p: "¿Cuál es el objetivo principal del Pacto Verde Europeo?",
+        r: ["Prohibir la industria pesada en Europa.", "Alcanzar la neutralidad en emisiones de carbono para 2050.", "Plantar un billón de árboles antes de 2030.", "Eliminar el uso de papel en la administración."],
+        c: "Alcanzar la neutralidad en emisiones de carbono para 2050.",
+        e: "Busca que la cantidad de carbono emitida sea igual a la capturada por el entorno[cite: 56, 57]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Información No Financiera", u: "TEST 2",
-        p: "¿Qué documento tiene como objetivo principal dar cuenta a la autoridad de la evolución de aspectos ASG?",
-        r: ["Memoria de Sostenibilidad.", "Estado de Información No Financiera.", "Plan de Sostenibilidad.", "Informe de Impacto Ambiental."],
-        c: "Estado de Información No Financiera.",
-        e: "Este documento está enfocado específicamente en la rendición de cuentas ante la autoridad administrativa."
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "¿Qué son los 'indicadores' en el marco de los ODS?",
+        r: ["Los nombres de los 17 objetivos.", "Medidores que determinan el grado de cumplimiento y la distancia hacia las metas.", "Las leyes que aprueba cada país.", "Los logotipos de colores de la Agenda 2030."],
+        c: "Medidores que determinan el grado de cumplimiento y la distancia hacia las metas.",
+        e: "Permiten evaluar de forma objetiva el progreso de cada país en cada objetivo[cite: 58, 60]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "TEST 2",
-        p: "¿Cuál es el objetivo principal de la denominada 'economía circular'?",
-        r: ["Aumentar la velocidad de rotación de los productos.", "Optimizar el uso de recursos, reducir el consumo de materias primas y aprovechar los residuos.", "Sustituir el consumo de energía eléctrica por gas natural.", "Eliminar por completo la propiedad privada de los bienes de consumo."],
-        c: "Optimizar el uso de recursos, reducir el consumo de materias primas y aprovechar los residuos.",
-        e: "Busca que el valor de los productos y materiales se mantenga en el ciclo económico durante el mayor tiempo posible."
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "Si hablamos del ODS 8, ¿cuál es su meta principal?",
+        r: ["Proteger la vida submarina.", "Promover el crecimiento económico, el empleo pleno y el trabajo decente.", "Garantizar la paz mundial.", "Eliminar el uso de plásticos."],
+        c: "Promover el crecimiento económico, el empleo pleno y el trabajo decente.",
+        e: "Busca un desarrollo que incluya derechos laborales y entornos seguros[cite: 61, 62]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobernanza", u: "TEST 2",
-        p: "Dentro de los criterios ASG, ¿qué aspecto se evalúa en el pilar de 'Gobernanza'?",
-        r: ["Las emisiones de gases de efecto invernadero.", "La diversidad de la plantilla.", "La estructura de los consejos de administración y la transparencia en la gestión.", "La gestión del agua en las fábricas."],
-        c: "La estructura de los consejos de administración y la transparencia en la gestión.",
-        e: "La gobernanza se refiere a cómo se dirige y controla la empresa, incluyendo ética y anticorrupción."
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "¿Cuál de estos es un indicador válido para medir el progreso del ODS 8?",
+        r: ["El número de parques naturales.", "El número de accidentes laborales en un país.", "La cantidad de agua por grifo.", "La velocidad de los trenes."],
+        c: "El número de accidentes laborales en un país.",
+        e: "Mide directamente la seguridad en el entorno de trabajo, que es parte de la meta[cite: 63, 64]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 2",
-        p: "En el análisis de doble materialidad, ¿qué evalúa la 'materialidad financiera'?",
-        r: ["Cómo afecta la actividad de la empresa al cambio climático.", "Cómo afectan los factores externos de sostenibilidad al éxito económico de la empresa.", "El balance de pérdidas y ganancias ordinario.", "La cantidad de subvenciones recibidas."],
-        c: "Cómo afectan los factores externos de sostenibilidad al éxito económico de la empresa.",
-        e: "Es el enfoque 'del entorno hacia dentro', analizando riesgos y oportunidades financieras derivadas de la sostenibilidad."
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "Para el ODS 6 (Agua limpia), ¿qué acción ciudadana se recomienda?",
+        r: ["Lavar el coche todos los días.", "Cargar electrodomésticos como lavadoras al máximo de su capacidad.", "Dejar correr el agua fría hasta que salga caliente.", "Eliminar todos los grifos de la casa."],
+        c: "Cargar electrodomésticos como lavadoras al máximo de su capacidad.",
+        e: "Optimizar cada lavado ahorra grandes cantidades de agua potable[cite: 65, 66]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores", u: "TEST 2",
-        p: "¿Qué es la 'huella de carbono'?",
-        r: ["La superficie de tierra necesaria para producir alimentos.", "La totalidad de gases de efecto invernadero emitidos por efecto directo o indirecto de un individuo o producto.", "La cantidad de residuos sólidos no reciclables que genera una empresa.", "El consumo total de energía eléctrica anual."],
-        c: "La totalidad de gases de efecto invernadero emitidos por efecto directo o indirecto de un individuo o producto.",
-        e: "Se mide en unidades de dióxido de carbono equivalente (CO2eq)."
+        m: "Sostenibilidad", t: "Movilidad", u: "TEST 2 - EXAMEN",
+        p: "¿Qué meta persigue la Estrategia de Movilidad Sostenible para Europa en relación con las ciudades?",
+        r: ["Alcanzar la neutralidad de emisiones en 100 ciudades para 2030.", "Prohibir los coches en todas las capitales.", "Sustituir los autobuses por bicicletas obligatoriamente.", "Eliminar los vuelos de menos de 500 kilómetros."],
+        c: "Alcanzar la neutralidad de emisiones en 100 ciudades para 2030.",
+        e: "La estrategia busca ciudades inteligentes y climáticamente neutras[cite: 69, 70]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 2",
-        p: "¿Cuál es el ODS número 13?",
-        r: ["Paz, justicia e instituciones sólidas.", "Acción por el clima.", "Vida de ecosistemas terrestres.", "Energía asequible y no contaminante."],
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "En el contexto de los ODS, ¿qué diferencia a una 'meta' de un 'objetivo'?",
+        r: ["No hay diferencia.", "Las metas son divisiones específicas del objetivo para facilitar su cumplimiento.", "Los objetivos son para empresas y las metas para ciudadanos.", "Las metas son obligatorias y los objetivos voluntarios."],
+        c: "Las metas son divisiones específicas del objetivo para facilitar su cumplimiento.",
+        e: "Cada ODS tiene varias metas que concretan qué se quiere lograr exactamente[cite: 58, 59]."
+    },
+    {
+        m: "Sostenibilidad", t: "Movilidad", u: "TEST 2 - EXAMEN",
+        p: "¿Cuántos coches eléctricos o híbridos prevé Europa alcanzar según su Estrategia de Movilidad?",
+        r: ["1 millón.", "10 millones.", "30 millones.", "100 millones."],
+        c: "30 millones.",
+        e: "Se busca una transición masiva hacia vehículos de bajas emisiones para 2030[cite: 70]."
+    },
+    {
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "¿Qué medida de ahorro de agua en el hogar se menciona específicamente en el temario?",
+        r: ["Ducharse solo con agua fría.", "Colocar economizadores de agua en los grifos.", "Recoger agua de lluvia para beber.", "Usar platos desechables."],
+        c: "Colocar economizadores de agua en los grifos.",
+        e: "Es una forma técnica sencilla de reducir el caudal de consumo diario[cite: 67]."
+    },
+    {
+        m: "Sostenibilidad", t: "Pacto Verde", u: "TEST 2 - EXAMEN",
+        p: "¿Qué significa el concepto de 'emisiones netas cero'?",
+        r: ["Que no se emite nada de carbono a la atmósfera.", "Que la cantidad emitida es igual a la capturada por bosques o tecnología.", "Que se pagan todos los impuestos por contaminar.", "Que la empresa ha cerrado su producción."],
+        c: "Que la cantidad emitida es igual a la capturada por bosques o tecnología.",
+        e: "Es el equilibrio necesario para frenar el efecto invernadero adicional[cite: 57]."
+    },
+    {
+        m: "Sostenibilidad", t: "Agenda 2030", u: "TEST 2 - EXAMEN",
+        p: "¿Qué organismo emite la Declaración de Impacto Ambiental en España?",
+        r: ["La propia empresa promotora.", "La autoridad medioambiental, como el Ministerio de Transición Ecológica.", "Un juez del Tribunal Supremo.", "El Defensor del Pueblo."],
+        c: "La autoridad medioambiental, como el Ministerio de Transición Ecológica.",
+        e: "Es el organismo que valora el estudio y autoriza o no el proyecto[cite: 143]."
+    },
+    {
+        m: "Sostenibilidad", t: "Gestión", u: "TEST 2 - EXAMEN",
+        p: "¿Qué documento valora los impactos asociados a un proyecto para evitar o compensar daños?",
+        r: ["Plan de sostenibilidad.", "Informe de impacto ambiental.", "Estado de información no financiera.", "Memoria anual de resultados."],
+        c: "Informe de impacto ambiental.",
+        e: "Es una herramienta preventiva específica para proyectos concretos[cite: 5]."
+    },
+    {
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "¿Cuál es el primer ODS de la lista oficial?",
+        r: ["Hambre Cero.", "Fin de la Pobreza.", "Salud y Bienestar.", "Igualdad de Género."],
+        c: "Fin de la Pobreza.",
+        e: "Busca erradicar la pobreza extrema en todo el mundo."
+    },
+    {
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "¿Qué ODS garantiza modalidades de consumo y producción sostenibles?",
+        r: ["ODS 5.", "ODS 12.", "ODS 17.", "ODS 9."],
+        c: "ODS 12.",
+        e: "Se centra en la eficiencia de recursos y la reducción de desechos."
+    },
+    {
+        m: "Sostenibilidad", t: "ODS", u: "TEST 2 - EXAMEN",
+        p: "El ODS 13 está dedicado a:",
+        r: ["Paz y justicia.", "Acción por el clima.", "Vida submarina.", "Energía asequible."],
         c: "Acción por el clima.",
-        e: "Este objetivo insta a adoptar medidas urgentes para combatir el cambio climático y sus efectos."
+        e: "Insta a tomar medidas urgentes para combatir el cambio climático."
     },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Documentación", u: "TEST 2",
-        p: "¿Qué periodo de tiempo suele abarcar un 'Plan de Sostenibilidad' estratégico?",
-        r: ["Un año.", "De dos a cuatro años.", "Diez años obligatoriamente.", "Seis meses."],
-        c: "De dos a cuatro años.",
-        e: "A diferencia de la memoria anual, el plan es un documento de guía a medio y largo plazo."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Impacto Ambiental", u: "TEST 2",
-        p: "¿Qué documento valora específicamente los impactos ambientales de un proyecto concreto para tomar decisiones previas?",
-        r: ["Plan de Sostenibilidad.", "Informe o Estudio de Impacto Ambiental.", "Estado de Información No Financiera.", "Balance de Sostenibilidad."],
-        c: "Informe o Estudio de Impacto Ambiental.",
-        e: "Es obligatorio para grandes proyectos y busca evitar o minimizar daños antes de que se produzcan."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Etiquetado", u: "TEST 2",
-        p: "¿Qué caracteriza a las 'autodeclaraciones ambientales' según el temario?",
-        r: ["Son verificadas por un organismo externo acreditado.", "Son declaraciones de la propia empresa sobre su producto sin verificación externa.", "Son obligatorias para todos los productos electrónicos.", "Solo pueden usarse en el sector alimentario."],
-        c: "Son declaraciones de la propia empresa sobre su producto sin verificación externa.",
-        e: "Se diferencian de las ecoetiquetas oficiales en que no requieren auditoría externa de terceros."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Inversión Responsable", u: "TEST 2",
-        p: "¿Qué es la Inversión Socialmente Responsable (ISR)?",
-        r: ["Aquella que solo busca la rentabilidad máxima sin importar el sector.", "Aquella que valora rentabilidad y riesgo junto con el impacto ASG de la empresa.", "Una inversión exclusiva de los gobiernos.", "Un fondo de pensiones para funcionarios."],
-        c: "Aquella que valora rentabilidad y riesgo junto con el impacto ASG de la empresa.",
-        e: "Integra criterios extra-financieros en el proceso de análisis y toma de decisiones de inversión."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Principios", u: "TEST 2",
-        p: "¿En qué consiste la acción de 'descarbonizar'?",
-        r: ["Eliminar el uso de papel en las oficinas.", "Reducir o eliminar las emisiones de carbono mediante el uso de energías renovables.", "Prohibir la fabricación de productos de plástico.", "Reducir la plantilla de una organización."],
-        c: "Reducir o eliminar las emisiones de carbono mediante el uso de energías renovables.",
-        e: "Es una estrategia fundamental para alcanzar la neutralidad climática."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Análisis de Priorización", u: "TEST 2",
-        p: "¿Para qué sirve la 'matriz de impacto o factibilidad' en sostenibilidad?",
-        r: ["Para calcular el sueldo de los directivos.", "Para priorizar qué medidas implementar según su relevancia frente a la dificultad de ponerlas en marcha.", "Para medir el nivel de ruido de una fábrica.", "Para registrar las patentes de ecodiseño."],
-        c: "Para priorizar qué medidas implementar según su relevancia frente a la dificultad de ponerlas en marcha.",
-        e: "Es una herramienta de gestión estratégica para optimizar recursos en sostenibilidad."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 2",
-        p: "El ODS 17 se denomina:",
-        r: ["Alianzas para lograr los objetivos.", "Ciudades y comunidades sostenibles.", "Reducción de las desigualdades.", "Vida submarina."],
-        c: "Alianzas para lograr los objetivos.",
-        e: "Se centra en fortalecer la movilización de recursos y la cooperación internacional."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 2",
-        p: "El principio de 'multifuncionalidad' en el ecodiseño busca:",
-        r: ["Que el producto tenga muchas piezas distintas.", "Que un mismo producto pueda realizar varias tareas para evitar comprar otros.", "Que el producto sea difícil de reparar.", "Que el envase sea más grande que el producto."],
-        c: "Que un mismo producto pueda realizar varias tareas para evitar comprar otros.",
-        e: "Busca la eficiencia en el uso de recursos desde la concepción del producto."
-    },
-// =========================================================================
-    // CATEGORÍA: SOSTENIBILIDAD
-    // TEST 3 DE 5 (15 PREGUNTAS - PROPIEDAD EXAMENE PARA COLOR DIFERENCIADO)
+    // =========================================================================
+    // TEMA: SOSTENIBILIDAD
+    // TEST 3 (ESTRUCTURA CORREGIDA PARA COMPILACIÓN)
     // =========================================================================
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores", u: "TEST 3",
-        p: "¿Qué mide específicamente el indicador conocido como 'huella hídrica'?",
-        r: ["La profundidad de los pozos de agua de una empresa.", "El volumen total de agua dulce utilizada para producir los bienes y servicios producidos.", "La cantidad de agua contaminada que se vierte al mar.", "El consumo de agua exclusivamente en el hogar del empleado."],
-        c: "El volumen total de agua dulce utilizada para producir los bienes y servicios producidos.",
-        e: "Es un indicador multidimensional que permite conocer el consumo de agua en toda la cadena de valor."
+        m: "Sostenibilidad", t: "Stakeholders", u: "TEST 3 - EXAMEN",
+        p: "¿Qué son los 'stakeholders' o grupos de interés?",
+        r: ["Solo los accionistas que ponen dinero.", "Colectivos humanos con objetivos propios que dependen de las decisiones de la empresa.", "Los inspectores de Hacienda.", "Los competidores directos únicamente."],
+        c: "Colectivos humanos con objetivos propios que dependen de las decisiones de la empresa.",
+        e: "Existe una influencia mutua entre estos grupos y la organización[cite: 72, 73]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Grupos de Interés", u: "TEST 3",
-        p: "¿Cuál de estos se considera un 'stakeholder' o grupo de interés INTERNO de una organización?",
-        r: ["Los proveedores de materias primas.", "Los accionistas y empleados.", "Los medios de comunicación locales.", "Las administraciones públicas."],
-        c: "Los accionistas y empleados.",
-        e: "Los grupos de interés internos son aquellos que forman parte directa de la estructura de la empresa."
+        m: "Sostenibilidad", t: "Stakeholders", u: "TEST 3 - EXAMEN",
+        p: "¿Cuál es el principal interés del grupo 'Clientes'?",
+        r: ["Que la empresa gane mucho dinero.", "Obtener el mejor producto al menor precio posible.", "Vender materias primas a la organización.", "Cobrar sus salarios a fin de mes."],
+        c: "Obtener el mejor producto al menor precio posible.",
+        e: "Su aportación es la compra y su riesgo es que dejen de hacerlo o den mal feedback[cite: 75, 76]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Normativa", u: "TEST 3",
-        p: "¿Es obligatorio para una empresa elaborar una Memoria de Sostenibilidad o un Plan de Sostenibilidad?",
-        r: ["Sí, para todas las empresas de más de 10 trabajadores.", "No, con carácter general no son obligatorios, salvo regulaciones específicas de información no financiera.", "Solo si la empresa recibe subvenciones europeas.", "Solo para las empresas que fabrican plásticos."],
-        c: "No, con carácter general no son obligatorios, salvo regulaciones específicas de información no financiera.",
-        e: "A diferencia del impacto ambiental para grandes obras, la memoria y el plan suelen ser voluntarios o sujetos a umbrales de capital/empleo."
+        m: "Sostenibilidad", t: "Gestión ASG", u: "TEST 3 - EXAMEN",
+        p: "¿Qué ventaja tiene para una empresa atraer y retener talento mediante criterios ASG?",
+        r: ["Que puede pagar sueldos más bajos.", "Que aumenta la motivación y el compromiso de su plantilla.", "Que no necesita realizar selección de personal.", "Que los empleados trabajan más horas gratis."],
+        c: "Que aumenta la motivación y el compromiso de su plantilla.",
+        e: "El cumplimiento de la responsabilidad social motiva a los trabajadores actuales y futuros[cite: 98, 99]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 3",
-        p: "Dentro del análisis de Doble Materialidad, ¿qué aspecto se considera material desde la perspectiva financiera?",
-        r: ["Aquel que afecta a las personas o al entorno (hacia fuera).", "Aquel que afecta al éxito económico y al valor de la empresa (hacia dentro).", "Solo los gastos en publicidad institucional.", "La cantidad de residuos que se envían al vertedero."],
-        c: "Aquel que afecta al éxito económico y al valor de la empresa (hacia dentro).",
-        e: "La materialidad financiera analiza cómo los riesgos y oportunidades de sostenibilidad influyen en las cuentas de la empresa."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 3",
-        p: "¿Cuál es la característica principal de las etiquetas ecológicas Tipo I (ISO 14024)?",
-        r: ["Son autodeclaraciones de la propia empresa sin control.", "Son sistemas voluntarios de calificación ambiental que requieren certificación de un tercero independiente.", "Son obligatorias para todos los electrodomésticos.", "Solo informan sobre el consumo de energía."],
-        c: "Son sistemas voluntarios de calificación ambiental que requieren certificación de un tercero independiente.",
-        e: "Al ser verificadas por terceros, ofrecen la mayor fiabilidad al consumidor."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 3",
-        p: "El ODS 12 se refiere a:",
-        r: ["Poner fin a la pobreza en todas sus formas.", "Garantizar modalidades de consumo y producción sostenibles.", "Conservar y utilizar sosteniblemente los océanos.", "Promover sociedades justas, pacíficas e inclusivas."],
-        c: "Garantizar modalidades de consumo y producción sostenibles.",
-        e: "Este objetivo busca reducir la huella ecológica mediante cambios en los métodos de producción y consumo."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecosistemas", u: "TEST 3",
-        p: "¿Cómo se denomina al lugar donde la naturaleza absorbe los residuos para transformarlos de nuevo en recursos?",
-        r: ["Vertedero controlado.", "Sumidero.", "Fuente primaria.", "Depuradora natural."],
-        c: "Sumidero.",
-        e: "Los sumideros son esenciales para el equilibrio económico, permitiendo que los residuos vuelvan a estar a disposición del ciclo productivo."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 3",
-        p: "¿Qué colectivo tiene prioridad en el criterio de Inclusión Social del V Plan para combatir la brecha digital?",
-        r: ["Estudiantes universitarios de informática.", "Población mayor de 65 años.", "Personal de las fuerzas armadas.", "Empresas con menos de 3 empleados."],
-        c: "Población mayor de 65 años.",
-        e: "El plan pone especial foco en asegurar que los mayores no queden excluidos de la administración digital."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Inversión Responsable", u: "TEST 3",
-        p: "¿Qué criterio es fundamental en la Inversión Socialmente Responsable (ISR)?",
-        r: ["Ignorar los riesgos ambientales para maximizar dividendos.", "Valorar el impacto ASG (Ambiental, Social y Gobernanza) junto a la rentabilidad y el riesgo.", "Invertir exclusivamente en empresas estatales.", "Eliminar la inversión en el sector servicios."],
-        c: "Valorar el impacto ASG (Ambiental, Social y Gobernanza) junto a la rentabilidad y el riesgo.",
-        e: "La ISR busca un equilibrio entre el beneficio económico y el impacto ético de los fondos invertidos."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 3",
-        p: "¿Qué se pretende lograr con el principio de ecodiseño 'facilidad de desmontaje'?",
-        r: ["Que el producto se rompa antes para comprar otro.", "Facilitar la reparación del producto y el reciclaje de sus componentes al final de su vida útil.", "Ahorrar costes en la fase de embalaje.", "Evitar que los consumidores manipulen el interior del producto."],
-        c: "Facilitar la reparación del producto y el reciclaje de sus componentes al final de su vida útil.",
-        e: "El desmontaje sencillo permite separar piezas para su reutilización o correcto tratamiento de residuos."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "TEST 3",
-        p: "En el contexto de la acción climática, ¿qué significa 'desmaterializar'?",
-        r: ["Sustituir trabajadores por inteligencia artificial.", "Reducir la cantidad de materiales necesarios para producir un bien o utilizar materiales reciclados.", "Enviar los residuos a plantas de incineración.", "Utilizar solo energía procedente de la biomasa."],
-        c: "Reducir la cantidad de materiales necesarios para producir un bien o utilizar materiales reciclados.",
-        e: "Es una de las claves de la economía circular para reducir la presión sobre los recursos naturales."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 3",
-        p: "¿En qué año se constituyó el Foro de Gobierno Abierto como órgano paritario de colaboración?",
-        r: ["En 2012.", "En 2018.", "En 2024.", "En 2015."],
-        c: "En 2018.",
-        e: "Su creación fue un hito para coordinar la participación entre la Administración y la sociedad civil."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 3",
-        p: "El eje central de la Agenda 2030 referente a 'Partnership' se traduce al español como:",
-        r: ["Participación.", "Alianzas.", "Patrimonio.", "Producción."],
-        c: "Alianzas.",
-        e: "Representa el ODS 17: la necesidad de colaborar entre países, sector público y privado."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 3",
-        p: "¿A qué pilar de las siglas ASG corresponde la preocupación por la diversidad y la seguridad laboral?",
-        r: ["Ambiental (A).", "Social (S).", "Gobernanza (G).", "Administración (A)."],
-        c: "Social (S).",
-        e: "El pilar Social abarca los derechos humanos, la salud laboral y las relaciones con la comunidad."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 3",
-        p: "¿Cuál es el objetivo principal del Estudio de Impacto Ambiental (EIA)?",
-        r: ["Calcular el beneficio neto de la empresa.", "Proporcionar información para prevenir, minimizar o compensar impactos negativos de un proyecto.", "Garantizar que el proyecto sea el más barato posible.", "Informar a los accionistas sobre los dividendos futuros."],
-        c: "Proporcionar información para prevenir, minimizar o compensar impactos negativos de un proyecto.",
-        e: "Es una herramienta preventiva que debe realizarse antes de la ejecución de grandes obras o proyectos."
-    },
-// =========================================================================
-    // CATEGORÍA: SOSTENIBILIDAD
-    // TEST 4 DE 5 (15 PREGUNTAS - ETIQUETA EXAMENE)
-    // =========================================================================
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 4",
-        p: "¿Cuál es el objetivo del ODS 11?",
-        r: ["Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles.", "Garantizar la vida submarina.", "Poner fin al hambre en el mundo.", "Asegurar el pleno empleo para los jóvenes."],
-        c: "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles.",
-        e: "Este objetivo aborda problemas como el transporte público, la vivienda y la reducción del impacto ambiental de las ciudades."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Información No Financiera", u: "TEST 4",
-        p: "¿Cuál es el 'truco' o regla nemotécnica para recordar el objetivo del Estado no financiero?",
-        r: ["1 año = Estado.", "Autoridad = Financiero.", "Medio plazo = Memoria.", "Social = Rendición."],
-        c: "Autoridad = Financiero.",
-        e: "El Estado de Información No Financiera es el documento que sirve específicamente para dar cuenta ante la autoridad administrativa."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "TEST 4",
-        p: "En la economía circular, ¿qué se busca hacer con los residuos que no se pueden evitar?",
-        r: ["Enterrarlos en vertederos alejados de las ciudades.", "Convertirlos en nuevas materias primas para que vuelvan al ciclo económico.", "Incinerarlos para producir energía exclusivamente.", "Exportarlos a países en desarrollo."],
-        c: "Convertirlos en nuevas materias primas para que vuelvan al ciclo económico.",
-        e: "El residuo se considera un recurso mal aprovechado que debe ser reintegrado en la cadena de valor."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 4",
-        p: "¿A qué norma ISO corresponden las etiquetas ambientales Tipo II (Autodeclaraciones)?",
-        r: ["ISO 14024.", "ISO 14021.", "ISO 14025.", "ISO 9001."],
-        c: "ISO 14021.",
-        e: "La norma ISO 14021 regula las declaraciones informativas de la propia empresa sin certificación de terceros."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gobernanza", u: "TEST 4",
-        p: "¿Qué aspecto ASG incluye el control de la corrupción y el soborno?",
-        r: ["Ambiental.", "Social.", "Gobernanza.", "Ética Laboral."],
-        c: "Gobernanza.",
-        e: "La gobernanza (G) mide la calidad de la gestión interna, la ética empresarial y el cumplimiento normativo."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 4",
-        p: "El Compromiso 6 del V Plan de Gobierno Abierto se titula:",
-        r: ["Gobernanza Digital.", "Transparencia Activa.", "Educación en Valores.", "Alianzas Internacionales."],
-        c: "Gobernanza Digital.",
-        e: "Se centra en la Estrategia de Datos y Algoritmos Abiertos para una Administración más moderna y ética."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Huella Ecológica", u: "TEST 4",
-        p: "Si la huella ecológica de una población es mayor que la capacidad de su territorio, se dice que hay:",
-        r: ["Superávit ecológico.", "Déficit ecológico.", "Equilibrio estacionario.", "Sostenibilidad absoluta."],
-        c: "Déficit ecológico.",
-        e: "Significa que la población está consumiendo recursos más rápido de lo que el territorio puede regenerarlos."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Principios", u: "TEST 4",
-        p: "El principio de 'quien contamina paga' es un pilar de:",
-        r: ["La caridad empresarial.", "La política medioambiental de la UE.", "El ecodiseño multifuncional.", "La economía lineal."],
-        c: "La política medioambiental de la UE.",
-        e: "Busca que los costes de prevención y reparación del daño ambiental sean asumidos por el responsable."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 4",
-        p: "¿Qué ODS tiene como meta el 'Trabajo decente y crecimiento económico'?",
-        r: ["ODS 1.", "ODS 8.", "ODS 10.", "ODS 12."],
-        c: "ODS 8.",
-        e: "Promueve el crecimiento económico sostenido, el empleo pleno y productivo para todos."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 4",
-        p: "Un aspecto es material en sostenibilidad cuando cumple:",
-        r: ["Solo la materialidad financiera.", "Solo la materialidad de impacto.", "Una o ambas (financiera o de impacto).", "Únicamente si lo decide el Ministerio."],
-        c: "Una o ambas (financiera o de impacto).",
-        e: "Es el criterio para decidir qué información es relevante publicar en las memorias de sostenibilidad."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecodiseño", u: "TEST 4",
-        p: "El principio de 'uso de materiales con bajo impacto' en ecodiseño recomienda:",
-        r: ["Usar materiales reciclados, renovables y no tóxicos.", "Usar solo metales preciosos por su durabilidad.", "Priorizar el plástico virgen por su coste.", "Eliminar el uso de cualquier metal."],
-        c: "Usar materiales reciclados, renovables y no tóxicos.",
-        e: "Busca reducir la toxicidad y el consumo de recursos no renovables desde el inicio."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 4",
-        p: "¿Qué ventaja tiene para una empresa tener un buen desempeño social (S)?",
-        r: ["Pagar menos impuestos directos.", "Mejora de la reputación y las relaciones con la comunidad local.", "Poder contratar a menores de edad.", "Evitar el registro de jornada."],
-        c: "Mejora de la reputación y las relaciones con la comunidad local.",
-        e: "Un impacto social positivo fortalece la 'licencia social' para operar en un territorio."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "TEST 4",
-        p: "¿Qué es el efecto invernadero?",
-        r: ["La limpieza de la atmósfera por la lluvia.", "Un proceso natural donde ciertos gases retienen calor en la atmósfera, manteniendo una temperatura habitable.", "La rotura de la capa de ozono.", "El enfriamiento del planeta debido a la falta de sol."],
-        c: "Un proceso natural donde ciertos gases retienen calor en la atmósfera, manteniendo una temperatura habitable.",
-        e: "El problema actual es el aumento artificial de este proceso por las emisiones humanas (calentamiento global)."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 4",
-        p: "Las Declaraciones Ambientales de Producto (DAP) corresponden al:",
-        r: ["Tipo I.", "Tipo II.", "Tipo III (ISO 14025).", "Tipo IV."],
-        c: "Tipo III (ISO 14025).",
-        e: "Son inventarios de datos ambientales cuantificados basados en el Análisis de Ciclo de Vida (ACV)."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión", u: "TEST 4",
-        p: "¿Quién emite la Declaración de Impacto Ambiental (DIA) tras valorar un proyecto?",
-        r: ["La propia empresa promotora.", "La autoridad medioambiental (ej. Ministerio de Transición Ecológica).", "Un notario público.", "El ayuntamiento más cercano exclusivamente."],
-        c: "La autoridad medioambiental (ej. Ministerio de Transición Ecológica).",
-        e: "La DIA es el documento vinculante que autoriza o no la ejecución del proyecto desde el punto de vista ambiental."
-    },
-// =========================================================================
-    // CATEGORÍA: SOSTENIBILIDAD
-    // TEST 5 DE 5 (15 PREGUNTAS - FINAL SERIE)
-    // =========================================================================
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Documentación", u: "TEST 5",
+        m: "Sostenibilidad", t: "Información No Financiera", u: "TEST 3 - EXAMEN",
         p: "¿Qué documento refleja los resultados de sostenibilidad de una empresa durante UN AÑO?",
-        r: ["Estado no financiero.", "Memoria o Informe de Sostenibilidad.", "Plan de Sostenibilidad.", "ISO 14001."],
-        c: "Memoria o Informe de Sostenibilidad.",
-        e: "Es el documento de reporte anual estándar para comunicar el desempeño a los grupos de interés."
+        r: ["Estado no financiero.", "Informe o memoria de sostenibilidad.", "Plan de sostenibilidad estratégico.", "Declaración de impacto ambiental."],
+        c: "Informe o memoria de sostenibilidad.",
+        e: "Es el reporte periódico de carácter anual sobre el desempeño de la empresa[cite: 4, 146]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 5",
-        p: "¿Qué principio asegura que se informe sobre las propuestas ciudadanas no aceptadas en el V Plan?",
-        r: ["Rendición de cuentas.", "Innovación tecnológica.", "Publicidad pasiva.", "Jerarquía normativa."],
-        c: "Rendición de cuentas.",
-        e: "La administración debe explicar razonadamente por qué unas propuestas entran en el plan y otras no."
+        m: "Sostenibilidad", t: "Economía Circular", u: "TEST 3 - EXAMEN",
+        p: "¿En qué consiste el modelo de 'economía lineal'?",
+        r: ["En producir solo lo que se necesita.", "En un ciclo de: extraer, fabricar, usar y tirar.", "En reciclar todos los componentes.", "En usar solo energía solar."],
+        c: "En un ciclo de: extraer, fabricar, usar y tirar.",
+        e: "Es el modelo tradicional donde cada fase se conecta solo con la anterior y la siguiente[cite: 105]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Principios", u: "TEST 5",
-        p: "¿En qué pilar de la sostenibilidad se encuadra la 'Igualdad de Oportunidades'?",
-        r: ["Económico.", "Social.", "Ambiental.", "Institucional."],
-        c: "Social.",
-        e: "El pilar social busca la equidad, la justicia y la igualdad de derechos entre las personas."
+        m: "Sostenibilidad", t: "Economía Circular", u: "TEST 3 - EXAMEN",
+        p: "¿Qué busca la economía circular frente al modelo lineal?",
+        r: ["Acelerar la fabricación de productos baratos.", "Conservar el valor de los productos el mayor tiempo posible y generar el mínimo de residuos.", "Eliminar la competencia entre empresas.", "Reducir el número de trabajadores."],
+        c: "Conservar el valor de los productos el mayor tiempo posible y generar el mínimo de residuos.",
+        e: "Persigue mejorar el bienestar social reduciendo los riesgos ambientales[cite: 110, 111]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 5",
-        p: "¿Cuál es el ODS dedicado a la 'Vida de ecosistemas terrestres'?",
-        r: ["ODS 6.", "ODS 13.", "ODS 15.", "ODS 2."],
-        c: "ODS 15.",
-        e: "Busca gestionar sosteniblemente los bosques, luchar contra la desertificación y frenar la pérdida de biodiversidad."
+        m: "Sostenibilidad", t: "Ecodiseño", u: "TEST 3 - EXAMEN",
+        p: "¿Cuál es el objetivo principal del ecodiseño?",
+        r: ["Que el producto sea más bonito visualmente.", "Integrar aspectos medioambientales para minimizar el impacto en todo el ciclo de vida.", "Hacer el producto más difícil de copiar por la competencia.", "Reducir el precio de venta al público."],
+        c: "Integrar aspectos medioambientales para minimizar el impacto en todo el ciclo de vida.",
+        e: "Se busca la sostenibilidad desde la fase de concepción del producto[cite: 121]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Economía Circular", u: "TEST 5",
-        p: "El modelo de economía opuesto a la circular se denomina:",
-        r: ["Economía de escala.", "Economía lineal (extraer, fabricar, usar, tirar).", "Economía colaborativa.", "Economía sumergida."],
-        c: "Economía lineal (extraer, fabricar, usar, tirar).",
-        e: "La economía lineal es insostenible porque asume que los recursos son infinitos y los sumideros ilimitados."
+        m: "Sostenibilidad", t: "Ecodiseño", u: "TEST 3 - EXAMEN",
+        p: "¿Qué significa el principio de 'multifuncionalidad' en el diseño de un producto?",
+        r: ["Que el producto se rompa de varias formas.", "Que un mismo producto sirva para realizar varias tareas diferentes.", "Que el producto se venda en muchos países.", "Que necesite muchas piezas para funcionar."],
+        c: "Que un mismo producto sirva para realizar varias tareas diferentes.",
+        e: "Evita que el consumidor tenga que comprar varios productos distintos, ahorrando recursos[cite: 124]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Conceptos", u: "TEST 5",
-        p: "¿Qué es un 'ecosistema' según el temario?",
-        r: ["Un grupo de empresas del mismo sector.", "Un sistema biológico formado por una comunidad de seres vivos y su medio físico.", "La base de datos de especies protegidas.", "Un programa informático de gestión ambiental."],
-        c: "Un sistema biológico formado por una comunidad de seres vivos y su medio físico.",
-        e: "Sus componentes mantienen relaciones de interdependencia que aseguran el equilibrio de la vida."
+        m: "Sostenibilidad", t: "Gestión", u: "TEST 3 - EXAMEN",
+        p: "¿Qué documento estratégico (a 2-4 años) guía las acciones de sostenibilidad de una organización?",
+        r: ["Memoria de sostenibilidad.", "Plan de sostenibilidad.", "Balance de situación ambiental.", "Cuenta de pérdidas y ganancias."],
+        c: "Plan de sostenibilidad.",
+        e: "Es el documento que marca la hoja de ruta a medio y largo plazo[cite: 3, 135, 147]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Indicadores", u: "TEST 5",
-        p: "¿Para qué sirve el Análisis de Ciclo de Vida (ACV)?",
-        r: ["Para calcular la edad de los empleados.", "Para evaluar el impacto ambiental de un producto desde la extracción de materia prima hasta su desecho.", "Para medir el tiempo de respuesta de los servidores informáticos.", "Para predecir el cierre de una empresa por falta de ventas."],
-        c: "Para evaluar el impacto ambiental de un producto desde la extracción de materia prima hasta su desecho.",
-        e: "Es una visión 'de la cuna a la tumba' fundamental para el ecodiseño."
+        m: "Sostenibilidad", t: "Doble Materialidad", u: "TEST 3 - EXAMEN",
+        p: "En el análisis de doble materialidad, ¿qué evalúa la 'materialidad financiera'?",
+        r: ["Cómo afecta la empresa al entorno exterior.", "Cómo afectan los factores externos de sostenibilidad al éxito económico de la empresa.", "El saldo de las cuentas bancarias.", "La cantidad de multas pagadas."],
+        c: "Cómo afectan los factores externos de sostenibilidad al éxito económico de la empresa.",
+        e: "Es la visión 'del entorno hacia dentro' de la organización[cite: 138, 145]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Gestión ASG", u: "TEST 5",
-        p: "La 'atracción de inversores' es una ventaja de los criterios ASG porque:",
-        r: ["Los inversores buscan empresas con menos riesgos éticos y ambientales.", "Permite ocultar las pérdidas financieras.", "Obliga al estado a comprar acciones de la empresa.", "Reduce el interés de los préstamos bancarios automáticamente."],
-        c: "Los inversores buscan empresas con menos riesgos éticos y ambientales.",
-        e: "El capital financiero prefiere activos que demuestren resiliencia y compromiso a largo plazo."
+        m: "Sostenibilidad", t: "Matriz de Priorización", u: "TEST 3 - EXAMEN",
+        p: "¿Para qué sirve la matriz de impacto o factibilidad?",
+        r: ["Para calcular la nómina de los empleados.", "Para priorizar medidas según su relevancia frente a la dificultad de implantación.", "Para elegir los colores del logotipo.", "Para registrar las patentes industriales."],
+        c: "Para priorizar medidas según su relevancia frente a la dificultad de implantación.",
+        e: "Permite optimizar los recursos centrándose en lo más efectivo y viable[cite: 139, 140]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "V Plan Gobierno Abierto", u: "TEST 5",
-        p: "El eje transversal 'Transición Ecológica' del V Plan busca:",
-        r: ["Vender todos los coches oficiales de gasolina.", "Fortalecer la rendición de cuentas sobre los fondos verdes.", "Plantar un árbol por cada funcionario.", "Digitalizar los parques naturales."],
-        c: "Fortalecer la rendición de cuentas sobre los fondos verdes.",
-        e: "Se busca transparencia en el uso del dinero público destinado a la sostenibilidad climática."
+        m: "Sostenibilidad", t: "Etiquetado", u: "TEST 3 - EXAMEN",
+        p: "¿Qué es una ecoetiqueta?",
+        r: ["Una pegatina que pone la propia empresa porque quiere.", "Una licencia otorgada por una institución ajena que distingue al producto como preferible ambientalmente.", "El código de barras de los productos reciclados.", "Una advertencia de peligro químico."],
+        c: "Una licencia otorgada por una institución ajena que distingue al producto como preferible ambientalmente.",
+        e: "Requiere la verificación de terceros basándose en el ciclo de vida del producto[cite: 132]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Impacto Ambiental", u: "TEST 5",
-        p: "¿Es obligatorio el Plan de Sostenibilidad para todas las empresas?",
-        r: ["Sí, por la Ley de Cambio Climático.", "No, es un documento voluntario de carácter estratégico.", "Solo para empresas con más de 500 empleados.", "Solo para las administraciones públicas."],
-        c: "No, es un documento voluntario de carácter estratégico.",
-        e: "Aunque es altamente recomendable, no existe una obligación legal universal de tener un Plan (a diferencia del EIA para ciertos proyectos)."
+        m: "Sostenibilidad", t: "Etiquetado", u: "TEST 3 - EXAMEN",
+        p: "¿Qué caracteriza a las autodeclaraciones ambientales?",
+        r: ["Están verificadas por el Ministerio.", "Son declaraciones de la propia empresa sin verificación externa.", "Son obligatorias para todos los productos.", "Solo se usan en el sector de la alimentación."],
+        c: "Son declaraciones de la propia empresa sin verificación externa.",
+        e: "Al no ser externas, tienen menor fiabilidad que las ecoetiquetas oficiales[cite: 133]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Ecoetiquetado", u: "TEST 5",
-        p: "La etiqueta ecológica de la Unión Europea (la flor) es de:",
-        r: ["Tipo I.", "Tipo II.", "Tipo III.", "Obligatoria para alimentos."],
-        c: "Tipo I.",
-        e: "Es un sistema de certificación oficial de la UE que requiere la verificación de un organismo independiente."
+        m: "Sostenibilidad", t: "Inversión", u: "TEST 3 - EXAMEN",
+        p: "¿Qué valora la Inversión Socialmente Responsable (ISR)?",
+        r: ["Solo la rentabilidad económica.", "La rentabilidad y el riesgo junto con el impacto ASG de la empresa.", "Exclusivamente el impacto social sin importar el dinero.", "Las inversiones realizadas por ONGs únicamente."],
+        c: "La rentabilidad y el riesgo junto con el impacto ASG de la empresa.",
+        e: "Integra criterios éticos y ambientales en las decisiones financieras[cite: 134]."
     },
     {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Agenda 2030", u: "TEST 5",
-        p: "El ODS 3 se centra en:",
-        r: ["Educación de calidad.", "Salud y Bienestar.", "Energía asequible.", "Paz y Justicia."],
-        c: "Salud y Bienestar.",
-        e: "Busca garantizar una vida sana y promover el bienestar para todos en todas las edades."
+        m: "Sostenibilidad", t: "Gestión", u: "TEST 3 - EXAMEN",
+        p: "¿Cuál de estos documentos es obligatorio para proyectos de grandes infraestructuras?",
+        r: ["Memoria de sostenibilidad.", "Informe de impacto ambiental.", "Plan de sostenibilidad estratégico.", "Manual de ecodiseño."],
+        c: "Informe de impacto ambiental.",
+        e: "A diferencia del Plan o la Memoria, el Impacto Ambiental es preceptivo para grandes obras[cite: 148, 149]."
     },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Matriz de Priorización", u: "TEST 5",
-        p: "En una matriz de impacto/factibilidad, ¿qué medidas se deben implementar primero?",
-        r: ["Las de bajo impacto y alta dificultad.", "Las de alto impacto y baja dificultad (fáciles de hacer y muy relevantes).", "Las que cuestan menos de 100 euros.", "Las que decide el empleado más nuevo."],
-        c: "Las de alto impacto y baja dificultad (fáciles de hacer y muy relevantes).",
-        e: "Se busca maximizar los resultados con el menor esfuerzo organizativo inicial (ganancias rápidas o 'quick wins')."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Inversión Responsable", u: "TEST 5",
-        p: "El acrónimo ISR significa:",
-        r: ["Impuesto sobre Riqueza Sostenible.", "Inversión Socialmente Responsable.", "Informe de Sostenibilidad Regional.", "Innovación Social y Resiliencia."],
-        c: "Inversión Socialmente Responsable.",
-        e: "Es la práctica de invertir de acuerdo con valores éticos y de sostenibilidad ambiental."
-    },
-    {
-        m: "Sostenibilidad", examene: "Sostenibilidad", t: "Cambio Climático", u: "TEST 5",
-        p: "España fue elegida en 2023 para copresidir el Comité Directivo de:",
-        r: ["Naciones Unidas.", "La Alianza para el Gobierno Abierto (OGP).", "La OTAN.", "El Fondo Monetario Internacional."],
-        c: "La Alianza para el Gobierno Abierto (OGP).",
-        e: "Este nombramiento reconoce el liderazgo de España en la promoción de la transparencia y participación ciudadana."
-    }
 ];
+
 
 
 // ==========================================
